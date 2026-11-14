@@ -49,16 +49,12 @@ Four production applications authored, engineered, and published live on the **G
 
 <br/>
 
-<table>
-<tr>
-<td width="50%" valign="top">
+### 🏛️ 01 · CivicCoach — AI US Citizenship 2026
+*AI Voice Mock Interviews · Spaced Repetition · Official 128 Questions*
 
 <a href="https://play.google.com/store/apps/details?id=com.us.citizenship.test.naturalization.civics.prep&hl=en">
-  <img src="assets/projects/civic_coach_showcase.jpeg" width="100%" alt="CivicCoach Showcase"/>
+  <img src="assets/projects/civic_coach_tablet.png" width="100%" alt="CivicCoach Tablet Showcase"/>
 </a>
-
-### 🏛️ CivicCoach — AI US Citizenship 2026
-*AI Voice Mock Interviews · Spaced Repetition · Official 128 Questions*
 
 An educational civics preparation application simulating official USCIS officer oral examinations with automated voice scoring:
 
@@ -73,15 +69,18 @@ Stack: Flutter · Dart · Drift ORM · SQLite · Speech-to-Text · flutter_tts �
 
 <a href="https://play.google.com/store/apps/details?id=com.us.citizenship.test.naturalization.civics.prep&hl=en"><img src="https://img.shields.io/badge/VIEW_ON_GOOGLE_PLAY-FAFAFA?style=for-the-badge&logo=googleplay&logoColor=0A0A0A" alt="CivicCoach on Google Play"/></a>
 
-</td>
-<td width="50%" valign="top">
+<br/><br/>
+
+---
+
+<br/>
+
+### 📅 02 · Ethiopian Calendar — Zemen App
+*13-Month Ge'ez Navigation · 12H Sunrise Clock · Cultural Hub*
 
 <a href="https://play.google.com/store/apps/details?id=com.ethiopia.zemen.calendar.aqotater.ethiopian.habesha&hl=en">
-  <img src="assets/projects/zemen_showcase.png" width="100%" alt="Zemen Calendar Showcase"/>
+  <img src="assets/projects/zemen_tablet.png" width="100%" alt="Zemen Calendar Tablet Showcase"/>
 </a>
-
-### 📅 Ethiopian Calendar — Zemen App
-*13-Month Ge'ez Navigation · 12H Sunrise Clock · Cultural Hub*
 
 A cultural utility and calendar system featuring a bi-directional conversion engine between Gregorian and Ethiopian date formats:
 
@@ -96,17 +95,18 @@ Stack: Flutter · Dart · Custom Calendar Engine · Local Persistence · Provide
 
 <a href="https://play.google.com/store/apps/details?id=com.ethiopia.zemen.calendar.aqotater.ethiopian.habesha&hl=en"><img src="https://img.shields.io/badge/VIEW_ON_GOOGLE_PLAY-FAFAFA?style=for-the-badge&logo=googleplay&logoColor=0A0A0A" alt="Zemen on Google Play"/></a>
 
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
+<br/><br/>
+
+---
+
+<br/>
+
+### 🧘 03 · ZenPeace — Pomodoro & Mindful Flow
+*Ambient Soundscapes · Focus Intervals · fl_chart Analytics*
 
 <a href="https://play.google.com/store/apps/details?id=com.zenpeace.pomodoro.focus.timer.mindfulstate&hl=en">
-  <img src="assets/projects/zenpeace_showcase.png" width="100%" alt="ZenPeace Showcase"/>
+  <img src="assets/projects/zenpeace_tablet.png" width="100%" alt="ZenPeace Tablet Showcase"/>
 </a>
-
-### 🧘 ZenPeace — Pomodoro & Mindful Flow
-*Ambient Soundscapes · Focus Intervals · fl_chart Analytics*
 
 A minimalist productivity companion designed to induce deep flow states through sensory feedback and rhythm:
 
@@ -121,15 +121,18 @@ Stack: Flutter · Dart · Provider State · just_audio · fl_chart · Local Cach
 
 <a href="https://play.google.com/store/apps/details?id=com.zenpeace.pomodoro.focus.timer.mindfulstate&hl=en"><img src="https://img.shields.io/badge/VIEW_ON_GOOGLE_PLAY-FAFAFA?style=for-the-badge&logo=googleplay&logoColor=0A0A0A" alt="ZenPeace on Google Play"/></a>
 
-</td>
-<td width="50%" valign="top">
+<br/><br/>
+
+---
+
+<br/>
+
+### 💓 04 · Health Tracker — Vitals & BP Monitor
+*Blood Pressure · Pulse Rate · On-Device SQLite · Reports*
 
 <a href="https://play.google.com/store/apps/details?id=com.vitals.bp.family.health.tracker&hl=en">
-  <img src="assets/projects/health_trackor showcase.jpg" width="100%" alt="Health Tracker Showcase"/>
+  <img src="assets/projects/health_tracker_tablet.png" width="100%" alt="Health Tracker Tablet Showcase"/>
 </a>
-
-### 💓 Health Tracker — Vitals & BP Monitor
-*Blood Pressure · Pulse Rate · On-Device SQLite · Reports*
 
 A personal health companion engineered for private, offline-first vital signs logging and cardiac trend visualization:
 
@@ -143,10 +146,6 @@ Stack: Flutter · Dart · SQFlite · Provider · Data Visualization · Clean Arc
 ```
 
 <a href="https://play.google.com/store/apps/details?id=com.vitals.bp.family.health.tracker&hl=en"><img src="https://img.shields.io/badge/VIEW_ON_GOOGLE_PLAY-FAFAFA?style=for-the-badge&logo=googleplay&logoColor=0A0A0A" alt="Health Tracker on Google Play"/></a>
-
-</td>
-</tr>
-</table>
 
 <br/>
 
@@ -317,55 +316,6 @@ flowchart LR
 
 <br/>
 
-<table>
-<tr>
-<td width="33%" valign="top">
-
-<div align="center">
-  <img src="assets/projects/afaq_zahir.png" width="72" height="72" style="border-radius:50%;" alt="Afaq Zahir"/>
-  <br/>
-  <b>Afaq Zahir</b><br/>
-  <sub>Team Lead &amp; Senior Flutter Trainer<br/>@ Apptex Software Solutions</sub>
-</div>
-
-<br/>
-
-> *"Working with Rabia has been an absolute pleasure. As her mentor and team lead, I've watched her tackle complex Flutter challenges with remarkable speed and dedication. She writes clean, maintainable code, grasps complex UI/UX designs effortlessly, and consistently delivers high-performance mobile features ahead of schedule."*
-
-</td>
-<td width="33%" valign="top">
-
-<div align="center">
-  <img src="assets/projects/muhammad_uzair.png" width="72" height="72" style="border-radius:50%;" alt="Muhammad Uzair"/>
-  <br/>
-  <b>Muhammad Uzair</b><br/>
-  <sub>Lead Software Engineer<br/>@ Metasense</sub>
-</div>
-
-<br/>
-
-> *"Collaborating with Rabia in our remote team has been fantastic. She is an exceptionally skilled Flutter developer with strong technical initiative. Her attention to clean code, modular architecture, and rapid execution always stands out. She communicates proactively and consistently ships dependable, high-quality mobile apps."*
-
-</td>
-<td width="33%" valign="top">
-
-<div align="center">
-  <img src="assets/projects/ubaidullah.png" width="72" height="72" style="border-radius:50%;" alt="Ubaid Ullah"/>
-  <br/>
-  <b>Ubaid Ullah</b><br/>
-  <sub>Flutter Team Lead<br/>@ Trisol Technologies</sub>
-</div>
-
-<br/>
-
-> *"Rabia brings extraordinary dedication and craftsmanship to every application she builds, consistently maintaining high engineering standards. What truly sets her apart is her natural flair for UI design and silky-smooth animations — she crafts fluid, visually captivating mobile experiences."*
-
-</td>
-</tr>
-</table>
-
-<br/>
-
 <img src="assets/divider.svg" width="100%" alt=""/>
 
 ## 06 · Professional Journey & Credentials
@@ -386,9 +336,9 @@ flowchart LR
 
 <div align="center">
 
-<img height="180" src="https://github-readme-stats.vercel.app/api?username=swe-rabiaaziz&show_icons=true&hide_border=false&bg_color=0A0A0A&title_color=FAFAFA&text_color=A3A3A3&icon_color=FAFAFA&border_color=262626&ring_color=FAFAFA&border_radius=16&include_all_commits=true&count_private=true" alt="GitHub stats"/>
+<img height="180" src="https://github-readme-stats-sigma-five.vercel.app/api?username=swe-rabiaaziz&show_icons=true&hide_border=false&bg_color=0A0A0A&title_color=FAFAFA&text_color=A3A3A3&icon_color=FAFAFA&border_color=262626&ring_color=FAFAFA&border_radius=16&include_all_commits=true&count_private=true" alt="GitHub stats"/>
 &nbsp;
-<img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=swe-rabiaaziz&layout=compact&langs_count=6&bg_color=0A0A0A&title_color=FAFAFA&text_color=A3A3A3&border_color=262626&border_radius=16" alt="Top languages"/>
+<img height="180" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=swe-rabiaaziz&layout=compact&langs_count=6&bg_color=0A0A0A&title_color=FAFAFA&text_color=A3A3A3&border_color=262626&border_radius=16" alt="Top languages"/>
 
 <br/><br/>
 
