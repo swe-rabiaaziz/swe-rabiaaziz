@@ -1,0 +1,900 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="460" viewBox="0 0 1200 460" role="img" aria-label="Jank Slayer: Rabia Aziz's Cyber Katana slices through frame drops, memory leaks, and rebuild storms into 120 FPS Impeller perfection.">
+<defs>
+  <!-- Background clip -->
+  <clipPath id="canvas-clip">
+    <rect width="1200" height="460" rx="24"/>
+  </clipPath>
+
+  <!-- Glowing white blade filter -->
+  <filter id="blade-glow" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur stdDeviation="3" result="blur1"/>
+    <feGaussianBlur stdDeviation="7" result="blur2"/>
+    <feMerge>
+      <feMergeNode in="blur2"/>
+      <feMergeNode in="blur1"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+
+  <filter id="spark-glow" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur stdDeviation="2" result="blur"/>
+    <feMerge>
+      <feMergeNode in="blur"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+
+  <!-- True neutral dot matrix pattern -->
+  <pattern id="grid-dots" width="24" height="24" patternUnits="userSpaceOnUse">
+    <circle cx="12" cy="12" r="1" fill="#262626" opacity="0.6"/>
+  </pattern>
+
+  <!-- Scanlines pattern for CRT/arcade tactile feel -->
+  <pattern id="scanlines" width="4" height="4" patternUnits="userSpaceOnUse">
+    <line x1="0" y1="0" x2="4" y2="0" stroke="#000000" stroke-width="1" opacity="0.25"/>
+  </pattern>
+
+  <!-- Linear gradients (100% PURE NEUTRAL MONOCHROME: R == G == B) -->
+  <linearGradient id="card-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+    <stop offset="0%" stop-color="#1c1c1c"/>
+    <stop offset="100%" stop-color="#121212"/>
+  </linearGradient>
+
+  <linearGradient id="fix-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+    <stop offset="0%" stop-color="#2b2b2b"/>
+    <stop offset="100%" stop-color="#171717"/>
+  </linearGradient>
+
+  <linearGradient id="blade-edge-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#ffffff"/>
+    <stop offset="50%" stop-color="#e5e5e5"/>
+    <stop offset="100%" stop-color="#a3a3a3"/>
+  </linearGradient>
+
+  <clipPath id="split-top-0">
+    <polygon points="60,152 250,152 250,177 60,263"/>
+  </clipPath>
+  <clipPath id="split-bot-0">
+    <polygon points="60,263 250,177 250,288 60,288"/>
+  </clipPath>
+  <clipPath id="split-top-1">
+    <polygon points="280,137 470,137 470,248 280,162"/>
+  </clipPath>
+  <clipPath id="split-bot-1">
+    <polygon points="280,162 470,248 470,273 280,273"/>
+  </clipPath>
+  <clipPath id="split-top-2">
+    <polygon points="500,167 690,167 690,192 500,278"/>
+  </clipPath>
+  <clipPath id="split-bot-2">
+    <polygon points="500,278 690,192 690,303 500,303"/>
+  </clipPath>
+  <clipPath id="split-top-3">
+    <polygon points="720,137 910,137 910,248 720,162"/>
+  </clipPath>
+  <clipPath id="split-bot-3">
+    <polygon points="720,162 910,248 910,273 720,273"/>
+  </clipPath>
+  <clipPath id="split-top-4">
+    <polygon points="940,152 1130,152 1130,177 940,263"/>
+  </clipPath>
+  <clipPath id="split-bot-4">
+    <polygon points="940,263 1130,177 1130,288 940,288"/>
+  </clipPath>
+</defs>
+
+<style>
+  text {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+  .mono {
+    font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;
+  }
+
+  /* Katana Movement (10s Master Cycle) */
+  @keyframes katanaMove {
+    0% { transform: translate(70px, 130px) rotate(-45deg); opacity: 0; }
+    3% { transform: translate(85px, 140px) rotate(-42deg); opacity: 1; }
+    6% { transform: translate(95px, 150px) rotate(-40deg); }
+    7.5% { transform: translate(215px, 285px) rotate(-30deg); }
+    9.5% { transform: translate(240px, 260px) rotate(-15deg); }
+    18% { transform: translate(300px, 130px) rotate(35deg); }
+    24% { transform: translate(315px, 140px) rotate(38deg); }
+    27.5% { transform: translate(435px, 270px) rotate(30deg); }
+    29.5% { transform: translate(460px, 245px) rotate(15deg); }
+    38% { transform: translate(520px, 150px) rotate(-45deg); }
+    44% { transform: translate(535px, 165px) rotate(-45deg); }
+    47.5% { transform: translate(655px, 305px) rotate(-35deg); }
+    49.5% { transform: translate(675px, 275px) rotate(-15deg); }
+    58% { transform: translate(740px, 135px) rotate(25deg); }
+    64% { transform: translate(755px, 145px) rotate(28deg); }
+    67.5% { transform: translate(875px, 265px) rotate(20deg); }
+    69.5% { transform: translate(895px, 240px) rotate(10deg); }
+    78% { transform: translate(960px, 140px) rotate(-35deg); }
+    84% { transform: translate(975px, 155px) rotate(-38deg); }
+    87.5% { transform: translate(1095px, 285px) rotate(-25deg); }
+    90.5% { transform: translate(1125px, 255px) rotate(-10deg); opacity: 1; }
+    94% { transform: translate(1140px, 240px) rotate(0deg); opacity: 1; }
+    97% { transform: translate(1150px, 230px) rotate(10deg); opacity: 0; }
+    100% { transform: translate(70px, 130px) rotate(-45deg); opacity: 0; }
+  }
+  .katana-carrier {
+    animation: katanaMove 10s cubic-bezier(0.2, 0.8, 0.2, 1) infinite;
+  }
+
+  /* Slash Beams */
+  @keyframes slash0 {
+    0%, 7.2% { opacity: 0; stroke-dashoffset: 240; transform: scale(0.6); }
+    7.5% { opacity: 1; stroke-dashoffset: 0; transform: scale(1); }
+    8.8% { opacity: 0.9; stroke-dashoffset: 0; }
+    9.5%, 100% { opacity: 0; stroke-dashoffset: -240; transform: scale(1.1); }
+  }
+  .slash-0 { stroke-dasharray: 240; animation: slash0 10s ease-out infinite; }
+
+  @keyframes slash1 {
+    0%, 27.2% { opacity: 0; stroke-dashoffset: 240; transform: scale(0.6); }
+    27.5% { opacity: 1; stroke-dashoffset: 0; transform: scale(1); }
+    28.8% { opacity: 0.9; stroke-dashoffset: 0; }
+    29.5%, 100% { opacity: 0; stroke-dashoffset: -240; transform: scale(1.1); }
+  }
+  .slash-1 { stroke-dasharray: 240; animation: slash1 10s ease-out infinite; }
+
+  @keyframes slash2 {
+    0%, 47.2% { opacity: 0; stroke-dashoffset: 240; transform: scale(0.6); }
+    47.5% { opacity: 1; stroke-dashoffset: 0; transform: scale(1); }
+    48.8% { opacity: 0.9; stroke-dashoffset: 0; }
+    49.5%, 100% { opacity: 0; stroke-dashoffset: -240; transform: scale(1.1); }
+  }
+  .slash-2 { stroke-dasharray: 240; animation: slash2 10s ease-out infinite; }
+
+  @keyframes slash3 {
+    0%, 67.2% { opacity: 0; stroke-dashoffset: 240; transform: scale(0.6); }
+    67.5% { opacity: 1; stroke-dashoffset: 0; transform: scale(1); }
+    68.8% { opacity: 0.9; stroke-dashoffset: 0; }
+    69.5%, 100% { opacity: 0; stroke-dashoffset: -240; transform: scale(1.1); }
+  }
+  .slash-3 { stroke-dasharray: 240; animation: slash3 10s ease-out infinite; }
+
+  @keyframes slash4 {
+    0%, 87.2% { opacity: 0; stroke-dashoffset: 240; transform: scale(0.6); }
+    87.5% { opacity: 1; stroke-dashoffset: 0; transform: scale(1); }
+    88.8% { opacity: 0.9; stroke-dashoffset: 0; }
+    89.5%, 100% { opacity: 0; stroke-dashoffset: -240; transform: scale(1.1); }
+  }
+  .slash-4 { stroke-dasharray: 240; animation: slash4 10s ease-out infinite; }
+
+  /* Spark Explosions */
+  @keyframes sparkBurst0 {
+    0%, 7.2% { opacity: 0; transform: scale(0.1); }
+    7.5% { opacity: 1; transform: scale(1.2); }
+    9.2% { opacity: 0.6; transform: scale(2.0); }
+    10.5%, 100% { opacity: 0; transform: scale(2.6); }
+  }
+  .spark-0 { transform-origin: 155px 220px; animation: sparkBurst0 10s ease-out infinite; }
+
+  @keyframes sparkBurst1 {
+    0%, 27.2% { opacity: 0; transform: scale(0.1); }
+    27.5% { opacity: 1; transform: scale(1.2); }
+    29.2% { opacity: 0.6; transform: scale(2.0); }
+    30.5%, 100% { opacity: 0; transform: scale(2.6); }
+  }
+  .spark-1 { transform-origin: 375px 205px; animation: sparkBurst1 10s ease-out infinite; }
+
+  @keyframes sparkBurst2 {
+    0%, 47.2% { opacity: 0; transform: scale(0.1); }
+    47.5% { opacity: 1; transform: scale(1.2); }
+    49.2% { opacity: 0.6; transform: scale(2.0); }
+    50.5%, 100% { opacity: 0; transform: scale(2.6); }
+  }
+  .spark-2 { transform-origin: 595px 235px; animation: sparkBurst2 10s ease-out infinite; }
+
+  @keyframes sparkBurst3 {
+    0%, 67.2% { opacity: 0; transform: scale(0.1); }
+    67.5% { opacity: 1; transform: scale(1.2); }
+    69.2% { opacity: 0.6; transform: scale(2.0); }
+    70.5%, 100% { opacity: 0; transform: scale(2.6); }
+  }
+  .spark-3 { transform-origin: 815px 205px; animation: sparkBurst3 10s ease-out infinite; }
+
+  @keyframes sparkBurst4 {
+    0%, 87.2% { opacity: 0; transform: scale(0.1); }
+    87.5% { opacity: 1; transform: scale(1.2); }
+    89.2% { opacity: 0.6; transform: scale(2.0); }
+    90.5%, 100% { opacity: 0; transform: scale(2.6); }
+  }
+  .spark-4 { transform-origin: 1035px 220px; animation: sparkBurst4 10s ease-out infinite; }
+
+  /* Half Splitting Animations */
+  @keyframes splitTop0 {
+    0%, 7.5% { transform: translate(0, 0); opacity: 1; }
+    9.5% { transform: translate(16px, -16px) rotate(4deg); opacity: 0.4; }
+    10.5%, 97% { transform: translate(26px, -26px) rotate(7deg); opacity: 0; }
+    100% { transform: translate(0, 0); opacity: 1; }
+  }
+  @keyframes splitBot0 {
+    0%, 7.5% { transform: translate(0, 0); opacity: 1; }
+    9.5% { transform: translate(-16px, 16px) rotate(-4deg); opacity: 0.4; }
+    10.5%, 97% { transform: translate(-26px, 26px) rotate(-7deg); opacity: 0; }
+    100% { transform: translate(0, 0); opacity: 1; }
+  }
+  .split-top-0 { transform-origin: 155px 220px; animation: splitTop0 10s ease-out infinite; }
+  .split-bot-0 { transform-origin: 155px 220px; animation: splitBot0 10s ease-out infinite; }
+
+  @keyframes splitTop1 {
+    0%, 27.5% { transform: translate(0, 0); opacity: 1; }
+    29.5% { transform: translate(16px, -16px) rotate(4deg); opacity: 0.4; }
+    30.5%, 97% { transform: translate(26px, -26px) rotate(7deg); opacity: 0; }
+    100% { transform: translate(0, 0); opacity: 1; }
+  }
+  @keyframes splitBot1 {
+    0%, 27.5% { transform: translate(0, 0); opacity: 1; }
+    29.5% { transform: translate(-16px, 16px) rotate(-4deg); opacity: 0.4; }
+    30.5%, 97% { transform: translate(-26px, 26px) rotate(-7deg); opacity: 0; }
+    100% { transform: translate(0, 0); opacity: 1; }
+  }
+  .split-top-1 { transform-origin: 375px 205px; animation: splitTop1 10s ease-out infinite; }
+  .split-bot-1 { transform-origin: 375px 205px; animation: splitBot1 10s ease-out infinite; }
+
+  @keyframes splitTop2 {
+    0%, 47.5% { transform: translate(0, 0); opacity: 1; }
+    49.5% { transform: translate(16px, -16px) rotate(4deg); opacity: 0.4; }
+    50.5%, 97% { transform: translate(26px, -26px) rotate(7deg); opacity: 0; }
+    100% { transform: translate(0, 0); opacity: 1; }
+  }
+  @keyframes splitBot2 {
+    0%, 47.5% { transform: translate(0, 0); opacity: 1; }
+    49.5% { transform: translate(-16px, 16px) rotate(-4deg); opacity: 0.4; }
+    50.5%, 97% { transform: translate(-26px, 26px) rotate(-7deg); opacity: 0; }
+    100% { transform: translate(0, 0); opacity: 1; }
+  }
+  .split-top-2 { transform-origin: 595px 235px; animation: splitTop2 10s ease-out infinite; }
+  .split-bot-2 { transform-origin: 595px 235px; animation: splitBot2 10s ease-out infinite; }
+
+  @keyframes splitTop3 {
+    0%, 67.5% { transform: translate(0, 0); opacity: 1; }
+    69.5% { transform: translate(16px, -16px) rotate(4deg); opacity: 0.4; }
+    70.5%, 97% { transform: translate(26px, -26px) rotate(7deg); opacity: 0; }
+    100% { transform: translate(0, 0); opacity: 1; }
+  }
+  @keyframes splitBot3 {
+    0%, 67.5% { transform: translate(0, 0); opacity: 1; }
+    69.5% { transform: translate(-16px, 16px) rotate(-4deg); opacity: 0.4; }
+    70.5%, 97% { transform: translate(-26px, 26px) rotate(-7deg); opacity: 0; }
+    100% { transform: translate(0, 0); opacity: 1; }
+  }
+  .split-top-3 { transform-origin: 815px 205px; animation: splitTop3 10s ease-out infinite; }
+  .split-bot-3 { transform-origin: 815px 205px; animation: splitBot3 10s ease-out infinite; }
+
+  @keyframes splitTop4 {
+    0%, 87.5% { transform: translate(0, 0); opacity: 1; }
+    89.5% { transform: translate(16px, -16px) rotate(4deg); opacity: 0.4; }
+    90.5%, 97% { transform: translate(26px, -26px) rotate(7deg); opacity: 0; }
+    100% { transform: translate(0, 0); opacity: 1; }
+  }
+  @keyframes splitBot4 {
+    0%, 87.5% { transform: translate(0, 0); opacity: 1; }
+    89.5% { transform: translate(-16px, 16px) rotate(-4deg); opacity: 0.4; }
+    90.5%, 97% { transform: translate(-26px, 26px) rotate(-7deg); opacity: 0; }
+    100% { transform: translate(0, 0); opacity: 1; }
+  }
+  .split-top-4 { transform-origin: 1035px 220px; animation: splitTop4 10s ease-out infinite; }
+  .split-bot-4 { transform-origin: 1035px 220px; animation: splitBot4 10s ease-out infinite; }
+
+  /* Solved / Fix Cards Fade In */
+  @keyframes fixCard0 {
+    0%, 8.5% { opacity: 0; transform: scale(0.85); }
+    10.5% { opacity: 1; transform: scale(1.03); }
+    12%, 95% { opacity: 1; transform: scale(1); }
+    97%, 100% { opacity: 0; transform: scale(0.9); }
+  }
+  .fix-card-0 { transform-origin: 155px 220px; animation: fixCard0 10s cubic-bezier(0.16, 1, 0.3, 1) infinite; }
+
+  @keyframes fixCard1 {
+    0%, 28.5% { opacity: 0; transform: scale(0.85); }
+    30.5% { opacity: 1; transform: scale(1.03); }
+    32%, 95% { opacity: 1; transform: scale(1); }
+    97%, 100% { opacity: 0; transform: scale(0.9); }
+  }
+  .fix-card-1 { transform-origin: 375px 205px; animation: fixCard1 10s cubic-bezier(0.16, 1, 0.3, 1) infinite; }
+
+  @keyframes fixCard2 {
+    0%, 48.5% { opacity: 0; transform: scale(0.85); }
+    50.5% { opacity: 1; transform: scale(1.03); }
+    52%, 95% { opacity: 1; transform: scale(1); }
+    97%, 100% { opacity: 0; transform: scale(0.9); }
+  }
+  .fix-card-2 { transform-origin: 595px 235px; animation: fixCard2 10s cubic-bezier(0.16, 1, 0.3, 1) infinite; }
+
+  @keyframes fixCard3 {
+    0%, 68.5% { opacity: 0; transform: scale(0.85); }
+    70.5% { opacity: 1; transform: scale(1.03); }
+    72%, 95% { opacity: 1; transform: scale(1); }
+    97%, 100% { opacity: 0; transform: scale(0.9); }
+  }
+  .fix-card-3 { transform-origin: 815px 205px; animation: fixCard3 10s cubic-bezier(0.16, 1, 0.3, 1) infinite; }
+
+  @keyframes fixCard4 {
+    0%, 88.5% { opacity: 0; transform: scale(0.85); }
+    90.5% { opacity: 1; transform: scale(1.03); }
+    92%, 95% { opacity: 1; transform: scale(1); }
+    97%, 100% { opacity: 0; transform: scale(0.9); }
+  }
+  .fix-card-4 { transform-origin: 1035px 220px; animation: fixCard4 10s cubic-bezier(0.16, 1, 0.3, 1) infinite; }
+
+  /* Targeting Reticle Pulsing */
+  @keyframes reticle0 {
+    0%, 1% { opacity: 0; transform: scale(1.4) rotate(0deg); }
+    3%, 7.2% { opacity: 0.8; transform: scale(1) rotate(90deg); }
+    7.5%, 100% { opacity: 0; transform: scale(0.8) rotate(120deg); }
+  }
+  .reticle-0 { transform-origin: 155px 220px; animation: reticle0 10s linear infinite; }
+
+  @keyframes reticle1 {
+    0%, 21% { opacity: 0; transform: scale(1.4) rotate(0deg); }
+    23%, 27.2% { opacity: 0.8; transform: scale(1) rotate(90deg); }
+    27.5%, 100% { opacity: 0; transform: scale(0.8) rotate(120deg); }
+  }
+  .reticle-1 { transform-origin: 375px 205px; animation: reticle1 10s linear infinite; }
+
+  @keyframes reticle2 {
+    0%, 41% { opacity: 0; transform: scale(1.4) rotate(0deg); }
+    43%, 47.2% { opacity: 0.8; transform: scale(1) rotate(90deg); }
+    47.5%, 100% { opacity: 0; transform: scale(0.8) rotate(120deg); }
+  }
+  .reticle-2 { transform-origin: 595px 235px; animation: reticle2 10s linear infinite; }
+
+  @keyframes reticle3 {
+    0%, 61% { opacity: 0; transform: scale(1.4) rotate(0deg); }
+    63%, 67.2% { opacity: 0.8; transform: scale(1) rotate(90deg); }
+    67.5%, 100% { opacity: 0; transform: scale(0.8) rotate(120deg); }
+  }
+  .reticle-3 { transform-origin: 815px 205px; animation: reticle3 10s linear infinite; }
+
+  @keyframes reticle4 {
+    0%, 81% { opacity: 0; transform: scale(1.4) rotate(0deg); }
+    83%, 87.2% { opacity: 0.8; transform: scale(1) rotate(90deg); }
+    87.5%, 100% { opacity: 0; transform: scale(0.8) rotate(120deg); }
+  }
+  .reticle-4 { transform-origin: 1035px 220px; animation: reticle4 10s linear infinite; }
+
+  /* Dynamic Combo Display */
+  @keyframes combo0 { 0%, 7.5% { opacity: 1; } 8%, 100% { opacity: 0; } }
+  @keyframes combo1 { 0%, 7.5% { opacity: 0; } 8%, 27.5% { opacity: 1; } 28%, 100% { opacity: 0; } }
+  @keyframes combo2 { 0%, 27.5% { opacity: 0; } 28%, 47.5% { opacity: 1; } 48%, 100% { opacity: 0; } }
+  @keyframes combo3 { 0%, 47.5% { opacity: 0; } 48%, 67.5% { opacity: 1; } 68%, 100% { opacity: 0; } }
+  @keyframes combo4 { 0%, 67.5% { opacity: 0; } 68%, 87.5% { opacity: 1; } 88%, 100% { opacity: 0; } }
+  @keyframes combo5 { 0%, 87.5% { opacity: 0; } 88%, 97% { opacity: 1; } 98%, 100% { opacity: 0; } }
+  .c-0 { animation: combo0 10s steps(1) infinite; }
+  .c-1 { animation: combo1 10s steps(1) infinite; }
+  .c-2 { animation: combo2 10s steps(1) infinite; }
+  .c-3 { animation: combo3 10s steps(1) infinite; }
+  .c-4 { animation: combo4 10s steps(1) infinite; }
+  .c-5 { animation: combo5 10s steps(1) infinite; }
+
+  /* Energy Meter Segment Fill */
+  @keyframes barFill0 { 0%, 7.5% { opacity: 0.2; } 8%, 96% { opacity: 1; } 97%, 100% { opacity: 0.2; } }
+  @keyframes barFill1 { 0%, 27.5% { opacity: 0.2; } 28%, 96% { opacity: 1; } 97%, 100% { opacity: 0.2; } }
+  @keyframes barFill2 { 0%, 47.5% { opacity: 0.2; } 48%, 96% { opacity: 1; } 97%, 100% { opacity: 0.2; } }
+  @keyframes barFill3 { 0%, 67.5% { opacity: 0.2; } 68%, 96% { opacity: 1; } 97%, 100% { opacity: 0.2; } }
+  @keyframes barFill4 { 0%, 87.5% { opacity: 0.2; } 88%, 96% { opacity: 1; } 97%, 100% { opacity: 0.2; } }
+  .bf-0 { animation: barFill0 10s steps(1) infinite; }
+  .bf-1 { animation: barFill1 10s steps(1) infinite; }
+  .bf-2 { animation: barFill2 10s steps(1) infinite; }
+  .bf-3 { animation: barFill3 10s steps(1) infinite; }
+  .bf-4 { animation: barFill4 10s steps(1) infinite; }
+
+  /* Blinking cursor and status pulses */
+  @keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+  .cursor { animation: blink 0.9s steps(1) infinite; }
+
+  @keyframes pulseLed { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+  .led { animation: pulseLed 1.6s ease-in-out infinite; }
+
+  @keyframes floatSparks {
+    0% { transform: translateY(0); opacity: 0.3; }
+    50% { opacity: 0.7; }
+    100% { transform: translateY(-40px); opacity: 0.1; }
+  }
+  .dust { animation: floatSparks 4s linear infinite; }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; }
+    .fix-card-0, .fix-card-1, .fix-card-2, .fix-card-3, .fix-card-4 { opacity: 1 !important; transform: none !important; }
+    .split-top-0, .split-bot-0, .split-top-1, .split-bot-1, .split-top-2, .split-bot-2, .split-top-3, .split-bot-3, .split-top-4, .split-bot-4 { display: none !important; }
+  }
+</style>
+
+<g clip-path="url(#canvas-clip)">
+  <!-- Pure Neutral Obsidian Background -->
+  <rect width="1200" height="460" rx="24" fill="#0a0a0a"/>
+  <rect width="1200" height="460" fill="url(#grid-dots)"/>
+  <rect x="0.5" y="0.5" width="1199" height="459" rx="23.5" fill="none" stroke="#262626" stroke-width="1"/>
+
+  <!-- Ambient Pure Neutral Sparks Dust -->
+  <g class="dust">
+    <circle cx="120" cy="180" r="1.5" fill="#e5e5e5" opacity="0.3"/>
+    <circle cx="280" cy="340" r="1.2" fill="#fafafa" opacity="0.4"/>
+    <circle cx="490" cy="120" r="1.8" fill="#a3a3a3" opacity="0.3"/>
+    <circle cx="730" cy="380" r="1.5" fill="#ffffff" opacity="0.5"/>
+    <circle cx="920" cy="160" r="1.2" fill="#e5e5e5" opacity="0.4"/>
+    <circle cx="1110" cy="310" r="1.5" fill="#fafafa" opacity="0.3"/>
+    <circle cx="340" cy="270" r="1" fill="#737373" opacity="0.5"/>
+    <circle cx="860" cy="110" r="1" fill="#a3a3a3" opacity="0.4"/>
+  </g>
+
+  <!-- ==================== TOP TELEMETRY HUD ==================== -->
+  <g id="header-hud">
+    <line x1="28" y1="64" x2="1172" y2="64" stroke="#171717" stroke-width="1"/>
+    
+    <g transform="translate(36, 22)">
+      <circle cx="6" cy="14" r="4" fill="#ffffff" class="led"/>
+      <circle cx="6" cy="14" r="8" fill="none" stroke="#525252" stroke-width="1" opacity="0.6"/>
+      <text x="22" y="12" fill="#fafafa" font-size="13" font-weight="700" letter-spacing="1.5" class="mono">RABIA AZIZ // JANK SLAYER</text>
+      <text x="22" y="27" fill="#737373" font-size="10" font-weight="600" letter-spacing="1" class="mono">PRECISION KATANA ENGINE · ZERO JANK AT 120 FPS</text>
+    </g>
+
+    <g transform="translate(510, 26)">
+      <rect x="0" y="0" width="180" height="26" rx="6" fill="#141414" stroke="#262626" stroke-width="1"/>
+      <text x="90" y="17" fill="#a3a3a3" font-size="10" font-weight="600" text-anchor="middle" letter-spacing="1.2" class="mono">FLUTTER IMPELLER GPU</text>
+    </g>
+
+    <g transform="translate(770, 20)">
+      <g transform="translate(140, 14)">
+        <text class="mono c-0" x="0" y="0" fill="#737373" font-size="11" font-weight="700" letter-spacing="1">COMBO 0X · TARGETING</text>
+        <text class="mono c-1" x="0" y="0" fill="#e5e5e5" font-size="11" font-weight="700" letter-spacing="1">COMBO 1X · CLEAN CUT</text>
+        <text class="mono c-2" x="0" y="0" fill="#fafafa" font-size="11" font-weight="700" letter-spacing="1">COMBO 2X · DOUBLE SLICE</text>
+        <text class="mono c-3" x="0" y="0" fill="#ffffff" font-size="11" font-weight="700" letter-spacing="1">COMBO 3X · TRIPLE SLAY</text>
+        <text class="mono c-4" x="0" y="0" fill="#ffffff" font-size="11" font-weight="700" letter-spacing="1">COMBO 4X · EXECUTION</text>
+        <text class="mono c-5" x="0" y="0" fill="#ffffff" font-size="11" font-weight="700" letter-spacing="1">COMBO 5X · S-TIER 120FPS</text>
+      </g>
+
+      <g transform="translate(290, 6)">
+        <rect x="0" y="0" width="16" height="12" rx="2" fill="#e5e5e5" class="bf-0"/>
+        <rect x="20" y="0" width="16" height="12" rx="2" fill="#e5e5e5" class="bf-1"/>
+        <rect x="40" y="0" width="16" height="12" rx="2" fill="#e5e5e5" class="bf-2"/>
+        <rect x="60" y="0" width="16" height="12" rx="2" fill="#e5e5e5" class="bf-3"/>
+        <rect x="80" y="0" width="16" height="12" rx="2" fill="#e5e5e5" class="bf-4"/>
+      </g>
+
+      <text x="390" y="32" fill="#737373" font-size="9" font-weight="600" text-anchor="end" letter-spacing="1" class="mono">BUDGET: 8.33ms (120 FPS)</text>
+    </g>
+  </g>
+
+  <!-- ==================== 5 BATTLE STATIONS ==================== -->
+
+  <!-- Station 0: JANK SPIKE ➔ 120 FPS IMPELLER -->
+  <g id="station-0">
+    <!-- Lock-on reticle ring -->
+    <g class="reticle-0">
+      <circle cx="155" cy="220" r="78" fill="none" stroke="#737373" stroke-width="1" stroke-dasharray="8 6" opacity="0.6"/>
+      <line x1="69" y1="220" x2="85" y2="220" stroke="#ffffff" stroke-width="1.5"/>
+      <line x1="225" y1="220" x2="241" y2="220" stroke="#ffffff" stroke-width="1.5"/>
+      <line x1="155" y1="134" x2="155" y2="150" stroke="#ffffff" stroke-width="1.5"/>
+      <line x1="155" y1="290" x2="155" y2="306" stroke="#ffffff" stroke-width="1.5"/>
+    </g>
+
+    <!-- Bug Card Halves (Splits upon slash) -->
+    <!-- Top Half -->
+    <g clip-path="url(#split-top-0)" class="split-top-0">
+      <rect x="65" y="155" width="180" height="130" rx="12" fill="url(#card-grad)" stroke="#262626" stroke-width="1"/>
+      <path d="M 69 167 L 69 159 L 77 159" stroke="#525252" stroke-width="1.5" fill="none"/>
+      <path d="M 233 159 L 241 159 L 241 167" stroke="#525252" stroke-width="1.5" fill="none"/>
+      
+      <rect x="115" y="169" width="80" height="18" rx="4" fill="#171717" stroke="#404040" stroke-width="1"/>
+      <text x="155" y="181" fill="#a3a3a3" font-size="9" font-weight="700" text-anchor="middle" letter-spacing="1" class="mono">⚠ DETECTED</text>
+      
+      <text x="155" y="224" fill="#ffffff" font-size="13" font-weight="800" text-anchor="middle" letter-spacing="1.2" class="mono">JANK SPIKE</text>
+      <text x="155" y="242" fill="#737373" font-size="10" font-weight="600" text-anchor="middle" class="mono">42 FPS · FRAME DROP</text>
+      <text x="155" y="260" fill="#525252" font-size="8.5" font-weight="500" text-anchor="middle" class="mono">Unscheduled Layout Pass</text>
+    </g>
+
+    <!-- Bottom Half -->
+    <g clip-path="url(#split-bot-0)" class="split-bot-0">
+      <rect x="65" y="155" width="180" height="130" rx="12" fill="url(#card-grad)" stroke="#262626" stroke-width="1"/>
+      <path d="M 69 273 L 69 281 L 77 281" stroke="#525252" stroke-width="1.5" fill="none"/>
+      <path d="M 233 281 L 241 281 L 241 273" stroke="#525252" stroke-width="1.5" fill="none"/>
+      
+      <rect x="115" y="169" width="80" height="18" rx="4" fill="#171717" stroke="#404040" stroke-width="1"/>
+      <text x="155" y="181" fill="#a3a3a3" font-size="9" font-weight="700" text-anchor="middle" letter-spacing="1" class="mono">⚠ DETECTED</text>
+      
+      <text x="155" y="224" fill="#ffffff" font-size="13" font-weight="800" text-anchor="middle" letter-spacing="1.2" class="mono">JANK SPIKE</text>
+      <text x="155" y="242" fill="#737373" font-size="10" font-weight="600" text-anchor="middle" class="mono">42 FPS · FRAME DROP</text>
+      <text x="155" y="260" fill="#525252" font-size="8.5" font-weight="500" text-anchor="middle" class="mono">Unscheduled Layout Pass</text>
+    </g>
+
+    <!-- Solved Badge Card (Fades in after slash) -->
+    <g class="fix-card-0">
+      <rect x="65" y="155" width="180" height="130" rx="12" fill="url(#fix-grad)" stroke="#525252" stroke-width="1.5"/>
+      <path d="M 69 169 L 69 159 L 79 159" stroke="#ffffff" stroke-width="2" fill="none"/>
+      <path d="M 231 159 L 241 159 L 241 169" stroke="#ffffff" stroke-width="2" fill="none"/>
+      <path d="M 69 271 L 69 281 L 79 281" stroke="#ffffff" stroke-width="2" fill="none"/>
+      <path d="M 231 281 L 241 281 L 241 271" stroke="#ffffff" stroke-width="2" fill="none"/>
+      
+      <rect x="110" y="168" width="90" height="18" rx="9" fill="#262626" stroke="#737373" stroke-width="1"/>
+      <text x="155" y="180" fill="#fafafa" font-size="9" font-weight="800" text-anchor="middle" letter-spacing="1.2" class="mono">✓ SOLVED</text>
+      
+      <text x="155" y="227" fill="#ffffff" font-size="12.5" font-weight="800" text-anchor="middle" letter-spacing="1" class="mono">120 FPS IMPELLER</text>
+      <text x="155" y="245" fill="#e5e5e5" font-size="9.5" font-weight="600" text-anchor="middle" class="mono">0.00ms JANK · GPU LOCKED</text>
+      <text x="155" y="262" fill="#a3a3a3" font-size="8.5" font-weight="500" text-anchor="middle" class="mono">Pre-compiled Shader Pipeline</text>
+    </g>
+
+    <!-- Spark Burst Group -->
+    <g class="spark-0" filter="url(#spark-glow)">
+      <line x1="155" y1="220" x2="125" y2="190" stroke="#ffffff" stroke-width="2"/>
+      <line x1="155" y1="220" x2="190" y2="195" stroke="#ffffff" stroke-width="2"/>
+      <line x1="155" y1="220" x2="130" y2="255" stroke="#ffffff" stroke-width="2"/>
+      <line x1="155" y1="220" x2="185" y2="250" stroke="#ffffff" stroke-width="2"/>
+      <line x1="155" y1="220" x2="155" y2="180" stroke="#e5e5e5" stroke-width="1.5"/>
+      <line x1="155" y1="220" x2="155" y2="260" stroke="#e5e5e5" stroke-width="1.5"/>
+      <circle cx="135" cy="230" r="2" fill="#ffffff"/>
+      <circle cx="180" cy="210" r="2" fill="#ffffff"/>
+      <circle cx="165" cy="245" r="1.5" fill="#e5e5e5"/>
+    </g>
+
+    <!-- Luminous Slash Beam -->
+    <line x1="70" y1="285" 
+          x2="240" y2="155" 
+          stroke="#ffffff" stroke-width="3" stroke-linecap="round" filter="url(#blade-glow)" class="slash-0"/>
+  </g>
+
+  <!-- Station 1: STREAM LEAK ➔ AUTO-DISPOSED -->
+  <g id="station-1">
+    <!-- Lock-on reticle ring -->
+    <g class="reticle-1">
+      <circle cx="375" cy="205" r="78" fill="none" stroke="#737373" stroke-width="1" stroke-dasharray="8 6" opacity="0.6"/>
+      <line x1="289" y1="205" x2="305" y2="205" stroke="#ffffff" stroke-width="1.5"/>
+      <line x1="445" y1="205" x2="461" y2="205" stroke="#ffffff" stroke-width="1.5"/>
+      <line x1="375" y1="119" x2="375" y2="135" stroke="#ffffff" stroke-width="1.5"/>
+      <line x1="375" y1="275" x2="375" y2="291" stroke="#ffffff" stroke-width="1.5"/>
+    </g>
+
+    <!-- Bug Card Halves (Splits upon slash) -->
+    <!-- Top Half -->
+    <g clip-path="url(#split-top-1)" class="split-top-1">
+      <rect x="285" y="140" width="180" height="130" rx="12" fill="url(#card-grad)" stroke="#262626" stroke-width="1"/>
+      <path d="M 289 152 L 289 144 L 297 144" stroke="#525252" stroke-width="1.5" fill="none"/>
+      <path d="M 453 144 L 461 144 L 461 152" stroke="#525252" stroke-width="1.5" fill="none"/>
+      
+      <rect x="335" y="154" width="80" height="18" rx="4" fill="#171717" stroke="#404040" stroke-width="1"/>
+      <text x="375" y="166" fill="#a3a3a3" font-size="9" font-weight="700" text-anchor="middle" letter-spacing="1" class="mono">⚠ DETECTED</text>
+      
+      <text x="375" y="209" fill="#ffffff" font-size="13" font-weight="800" text-anchor="middle" letter-spacing="1.2" class="mono">STREAM LEAK</text>
+      <text x="375" y="227" fill="#737373" font-size="10" font-weight="600" text-anchor="middle" class="mono">UNCLOSED RX · +45MB</text>
+      <text x="375" y="245" fill="#525252" font-size="8.5" font-weight="500" text-anchor="middle" class="mono">Dangling Subscriptions</text>
+    </g>
+
+    <!-- Bottom Half -->
+    <g clip-path="url(#split-bot-1)" class="split-bot-1">
+      <rect x="285" y="140" width="180" height="130" rx="12" fill="url(#card-grad)" stroke="#262626" stroke-width="1"/>
+      <path d="M 289 258 L 289 266 L 297 266" stroke="#525252" stroke-width="1.5" fill="none"/>
+      <path d="M 453 266 L 461 266 L 461 258" stroke="#525252" stroke-width="1.5" fill="none"/>
+      
+      <rect x="335" y="154" width="80" height="18" rx="4" fill="#171717" stroke="#404040" stroke-width="1"/>
+      <text x="375" y="166" fill="#a3a3a3" font-size="9" font-weight="700" text-anchor="middle" letter-spacing="1" class="mono">⚠ DETECTED</text>
+      
+      <text x="375" y="209" fill="#ffffff" font-size="13" font-weight="800" text-anchor="middle" letter-spacing="1.2" class="mono">STREAM LEAK</text>
+      <text x="375" y="227" fill="#737373" font-size="10" font-weight="600" text-anchor="middle" class="mono">UNCLOSED RX · +45MB</text>
+      <text x="375" y="245" fill="#525252" font-size="8.5" font-weight="500" text-anchor="middle" class="mono">Dangling Subscriptions</text>
+    </g>
+
+    <!-- Solved Badge Card (Fades in after slash) -->
+    <g class="fix-card-1">
+      <rect x="285" y="140" width="180" height="130" rx="12" fill="url(#fix-grad)" stroke="#525252" stroke-width="1.5"/>
+      <path d="M 289 154 L 289 144 L 299 144" stroke="#ffffff" stroke-width="2" fill="none"/>
+      <path d="M 451 144 L 461 144 L 461 154" stroke="#ffffff" stroke-width="2" fill="none"/>
+      <path d="M 289 256 L 289 266 L 299 266" stroke="#ffffff" stroke-width="2" fill="none"/>
+      <path d="M 451 266 L 461 266 L 461 256" stroke="#ffffff" stroke-width="2" fill="none"/>
+      
+      <rect x="330" y="153" width="90" height="18" rx="9" fill="#262626" stroke="#737373" stroke-width="1"/>
+      <text x="375" y="165" fill="#fafafa" font-size="9" font-weight="800" text-anchor="middle" letter-spacing="1.2" class="mono">✓ SOLVED</text>
+      
+      <text x="375" y="212" fill="#ffffff" font-size="12.5" font-weight="800" text-anchor="middle" letter-spacing="1" class="mono">AUTO-DISPOSED</text>
+      <text x="375" y="230" fill="#e5e5e5" font-size="9.5" font-weight="600" text-anchor="middle" class="mono">STREAM CANCELLED &amp; CLEANED</text>
+      <text x="375" y="247" fill="#a3a3a3" font-size="8.5" font-weight="500" text-anchor="middle" class="mono">Reactive Drift Lifecycle</text>
+    </g>
+
+    <!-- Spark Burst Group -->
+    <g class="spark-1" filter="url(#spark-glow)">
+      <line x1="375" y1="205" x2="345" y2="175" stroke="#ffffff" stroke-width="2"/>
+      <line x1="375" y1="205" x2="410" y2="180" stroke="#ffffff" stroke-width="2"/>
+      <line x1="375" y1="205" x2="350" y2="240" stroke="#ffffff" stroke-width="2"/>
+      <line x1="375" y1="205" x2="405" y2="235" stroke="#ffffff" stroke-width="2"/>
+      <line x1="375" y1="205" x2="375" y2="165" stroke="#e5e5e5" stroke-width="1.5"/>
+      <line x1="375" y1="205" x2="375" y2="245" stroke="#e5e5e5" stroke-width="1.5"/>
+      <circle cx="355" cy="215" r="2" fill="#ffffff"/>
+      <circle cx="400" cy="195" r="2" fill="#ffffff"/>
+      <circle cx="385" cy="230" r="1.5" fill="#e5e5e5"/>
+    </g>
+
+    <!-- Luminous Slash Beam -->
+    <line x1="290" y1="140" 
+          x2="460" y2="270" 
+          stroke="#ffffff" stroke-width="3" stroke-linecap="round" filter="url(#blade-glow)" class="slash-1"/>
+  </g>
+
+  <!-- Station 2: REBUILD STORM ➔ REPAINT BOUNDARY -->
+  <g id="station-2">
+    <!-- Lock-on reticle ring -->
+    <g class="reticle-2">
+      <circle cx="595" cy="235" r="78" fill="none" stroke="#737373" stroke-width="1" stroke-dasharray="8 6" opacity="0.6"/>
+      <line x1="509" y1="235" x2="525" y2="235" stroke="#ffffff" stroke-width="1.5"/>
+      <line x1="665" y1="235" x2="681" y2="235" stroke="#ffffff" stroke-width="1.5"/>
+      <line x1="595" y1="149" x2="595" y2="165" stroke="#ffffff" stroke-width="1.5"/>
+      <line x1="595" y1="305" x2="595" y2="321" stroke="#ffffff" stroke-width="1.5"/>
+    </g>
+
+    <!-- Bug Card Halves (Splits upon slash) -->
+    <!-- Top Half -->
+    <g clip-path="url(#split-top-2)" class="split-top-2">
+      <rect x="505" y="170" width="180" height="130" rx="12" fill="url(#card-grad)" stroke="#262626" stroke-width="1"/>
+      <path d="M 509 182 L 509 174 L 517 174" stroke="#525252" stroke-width="1.5" fill="none"/>
+      <path d="M 673 174 L 681 174 L 681 182" stroke="#525252" stroke-width="1.5" fill="none"/>
+      
+      <rect x="555" y="184" width="80" height="18" rx="4" fill="#171717" stroke="#404040" stroke-width="1"/>
+      <text x="595" y="196" fill="#a3a3a3" font-size="9" font-weight="700" text-anchor="middle" letter-spacing="1" class="mono">⚠ DETECTED</text>
+      
+      <text x="595" y="239" fill="#ffffff" font-size="13" font-weight="800" text-anchor="middle" letter-spacing="1.2" class="mono">REBUILD STORM</text>
+      <text x="595" y="257" fill="#737373" font-size="10" font-weight="600" text-anchor="middle" class="mono">ROOT DIRTY · 184 NODES</text>
+      <text x="595" y="275" fill="#525252" font-size="8.5" font-weight="500" text-anchor="middle" class="mono">Full Subtree Invalidation</text>
+    </g>
+
+    <!-- Bottom Half -->
+    <g clip-path="url(#split-bot-2)" class="split-bot-2">
+      <rect x="505" y="170" width="180" height="130" rx="12" fill="url(#card-grad)" stroke="#262626" stroke-width="1"/>
+      <path d="M 509 288 L 509 296 L 517 296" stroke="#525252" stroke-width="1.5" fill="none"/>
+      <path d="M 673 296 L 681 296 L 681 288" stroke="#525252" stroke-width="1.5" fill="none"/>
+      
+      <rect x="555" y="184" width="80" height="18" rx="4" fill="#171717" stroke="#404040" stroke-width="1"/>
+      <text x="595" y="196" fill="#a3a3a3" font-size="9" font-weight="700" text-anchor="middle" letter-spacing="1" class="mono">⚠ DETECTED</text>
+      
+      <text x="595" y="239" fill="#ffffff" font-size="13" font-weight="800" text-anchor="middle" letter-spacing="1.2" class="mono">REBUILD STORM</text>
+      <text x="595" y="257" fill="#737373" font-size="10" font-weight="600" text-anchor="middle" class="mono">ROOT DIRTY · 184 NODES</text>
+      <text x="595" y="275" fill="#525252" font-size="8.5" font-weight="500" text-anchor="middle" class="mono">Full Subtree Invalidation</text>
+    </g>
+
+    <!-- Solved Badge Card (Fades in after slash) -->
+    <g class="fix-card-2">
+      <rect x="505" y="170" width="180" height="130" rx="12" fill="url(#fix-grad)" stroke="#525252" stroke-width="1.5"/>
+      <path d="M 509 184 L 509 174 L 519 174" stroke="#ffffff" stroke-width="2" fill="none"/>
+      <path d="M 671 174 L 681 174 L 681 184" stroke="#ffffff" stroke-width="2" fill="none"/>
+      <path d="M 509 286 L 509 296 L 519 296" stroke="#ffffff" stroke-width="2" fill="none"/>
+      <path d="M 671 296 L 681 296 L 681 286" stroke="#ffffff" stroke-width="2" fill="none"/>
+      
+      <rect x="550" y="183" width="90" height="18" rx="9" fill="#262626" stroke="#737373" stroke-width="1"/>
+      <text x="595" y="195" fill="#fafafa" font-size="9" font-weight="800" text-anchor="middle" letter-spacing="1.2" class="mono">✓ SOLVED</text>
+      
+      <text x="595" y="242" fill="#ffffff" font-size="12.5" font-weight="800" text-anchor="middle" letter-spacing="1" class="mono">REPAINT BOUNDARY</text>
+      <text x="595" y="260" fill="#e5e5e5" font-size="9.5" font-weight="600" text-anchor="middle" class="mono">ISOLATED CACHE LAYER</text>
+      <text x="595" y="277" fill="#a3a3a3" font-size="8.5" font-weight="500" text-anchor="middle" class="mono">Subtree Layer Shielding</text>
+    </g>
+
+    <!-- Spark Burst Group -->
+    <g class="spark-2" filter="url(#spark-glow)">
+      <line x1="595" y1="235" x2="565" y2="205" stroke="#ffffff" stroke-width="2"/>
+      <line x1="595" y1="235" x2="630" y2="210" stroke="#ffffff" stroke-width="2"/>
+      <line x1="595" y1="235" x2="570" y2="270" stroke="#ffffff" stroke-width="2"/>
+      <line x1="595" y1="235" x2="625" y2="265" stroke="#ffffff" stroke-width="2"/>
+      <line x1="595" y1="235" x2="595" y2="195" stroke="#e5e5e5" stroke-width="1.5"/>
+      <line x1="595" y1="235" x2="595" y2="275" stroke="#e5e5e5" stroke-width="1.5"/>
+      <circle cx="575" cy="245" r="2" fill="#ffffff"/>
+      <circle cx="620" cy="225" r="2" fill="#ffffff"/>
+      <circle cx="605" cy="260" r="1.5" fill="#e5e5e5"/>
+    </g>
+
+    <!-- Luminous Slash Beam -->
+    <line x1="510" y1="300" 
+          x2="680" y2="170" 
+          stroke="#ffffff" stroke-width="3" stroke-linecap="round" filter="url(#blade-glow)" class="slash-2"/>
+  </g>
+
+  <!-- Station 3: THREAD LOCK ➔ BACKGROUND ISOLATE -->
+  <g id="station-3">
+    <!-- Lock-on reticle ring -->
+    <g class="reticle-3">
+      <circle cx="815" cy="205" r="78" fill="none" stroke="#737373" stroke-width="1" stroke-dasharray="8 6" opacity="0.6"/>
+      <line x1="729" y1="205" x2="745" y2="205" stroke="#ffffff" stroke-width="1.5"/>
+      <line x1="885" y1="205" x2="901" y2="205" stroke="#ffffff" stroke-width="1.5"/>
+      <line x1="815" y1="119" x2="815" y2="135" stroke="#ffffff" stroke-width="1.5"/>
+      <line x1="815" y1="275" x2="815" y2="291" stroke="#ffffff" stroke-width="1.5"/>
+    </g>
+
+    <!-- Bug Card Halves (Splits upon slash) -->
+    <!-- Top Half -->
+    <g clip-path="url(#split-top-3)" class="split-top-3">
+      <rect x="725" y="140" width="180" height="130" rx="12" fill="url(#card-grad)" stroke="#262626" stroke-width="1"/>
+      <path d="M 729 152 L 729 144 L 737 144" stroke="#525252" stroke-width="1.5" fill="none"/>
+      <path d="M 893 144 L 901 144 L 901 152" stroke="#525252" stroke-width="1.5" fill="none"/>
+      
+      <rect x="775" y="154" width="80" height="18" rx="4" fill="#171717" stroke="#404040" stroke-width="1"/>
+      <text x="815" y="166" fill="#a3a3a3" font-size="9" font-weight="700" text-anchor="middle" letter-spacing="1" class="mono">⚠ DETECTED</text>
+      
+      <text x="815" y="209" fill="#ffffff" font-size="13" font-weight="800" text-anchor="middle" letter-spacing="1.2" class="mono">THREAD LOCK</text>
+      <text x="815" y="227" fill="#737373" font-size="10" font-weight="600" text-anchor="middle" class="mono">SYNC JSON · 88ms FREEZE</text>
+      <text x="815" y="245" fill="#525252" font-size="8.5" font-weight="500" text-anchor="middle" class="mono">Blocking Main Isolate</text>
+    </g>
+
+    <!-- Bottom Half -->
+    <g clip-path="url(#split-bot-3)" class="split-bot-3">
+      <rect x="725" y="140" width="180" height="130" rx="12" fill="url(#card-grad)" stroke="#262626" stroke-width="1"/>
+      <path d="M 729 258 L 729 266 L 737 266" stroke="#525252" stroke-width="1.5" fill="none"/>
+      <path d="M 893 266 L 901 266 L 901 258" stroke="#525252" stroke-width="1.5" fill="none"/>
+      
+      <rect x="775" y="154" width="80" height="18" rx="4" fill="#171717" stroke="#404040" stroke-width="1"/>
+      <text x="815" y="166" fill="#a3a3a3" font-size="9" font-weight="700" text-anchor="middle" letter-spacing="1" class="mono">⚠ DETECTED</text>
+      
+      <text x="815" y="209" fill="#ffffff" font-size="13" font-weight="800" text-anchor="middle" letter-spacing="1.2" class="mono">THREAD LOCK</text>
+      <text x="815" y="227" fill="#737373" font-size="10" font-weight="600" text-anchor="middle" class="mono">SYNC JSON · 88ms FREEZE</text>
+      <text x="815" y="245" fill="#525252" font-size="8.5" font-weight="500" text-anchor="middle" class="mono">Blocking Main Isolate</text>
+    </g>
+
+    <!-- Solved Badge Card (Fades in after slash) -->
+    <g class="fix-card-3">
+      <rect x="725" y="140" width="180" height="130" rx="12" fill="url(#fix-grad)" stroke="#525252" stroke-width="1.5"/>
+      <path d="M 729 154 L 729 144 L 739 144" stroke="#ffffff" stroke-width="2" fill="none"/>
+      <path d="M 891 144 L 901 144 L 901 154" stroke="#ffffff" stroke-width="2" fill="none"/>
+      <path d="M 729 256 L 729 266 L 739 266" stroke="#ffffff" stroke-width="2" fill="none"/>
+      <path d="M 891 266 L 901 266 L 901 256" stroke="#ffffff" stroke-width="2" fill="none"/>
+      
+      <rect x="770" y="153" width="90" height="18" rx="9" fill="#262626" stroke="#737373" stroke-width="1"/>
+      <text x="815" y="165" fill="#fafafa" font-size="9" font-weight="800" text-anchor="middle" letter-spacing="1.2" class="mono">✓ SOLVED</text>
+      
+      <text x="815" y="212" fill="#ffffff" font-size="12.5" font-weight="800" text-anchor="middle" letter-spacing="1" class="mono">BACKGROUND ISOLATE</text>
+      <text x="815" y="230" fill="#e5e5e5" font-size="9.5" font-weight="600" text-anchor="middle" class="mono">OFF-MAIN THREAD POOL</text>
+      <text x="815" y="247" fill="#a3a3a3" font-size="8.5" font-weight="500" text-anchor="middle" class="mono">True Concurrent Worker</text>
+    </g>
+
+    <!-- Spark Burst Group -->
+    <g class="spark-3" filter="url(#spark-glow)">
+      <line x1="815" y1="205" x2="785" y2="175" stroke="#ffffff" stroke-width="2"/>
+      <line x1="815" y1="205" x2="850" y2="180" stroke="#ffffff" stroke-width="2"/>
+      <line x1="815" y1="205" x2="790" y2="240" stroke="#ffffff" stroke-width="2"/>
+      <line x1="815" y1="205" x2="845" y2="235" stroke="#ffffff" stroke-width="2"/>
+      <line x1="815" y1="205" x2="815" y2="165" stroke="#e5e5e5" stroke-width="1.5"/>
+      <line x1="815" y1="205" x2="815" y2="245" stroke="#e5e5e5" stroke-width="1.5"/>
+      <circle cx="795" cy="215" r="2" fill="#ffffff"/>
+      <circle cx="840" cy="195" r="2" fill="#ffffff"/>
+      <circle cx="825" cy="230" r="1.5" fill="#e5e5e5"/>
+    </g>
+
+    <!-- Luminous Slash Beam -->
+    <line x1="730" y1="140" 
+          x2="900" y2="270" 
+          stroke="#ffffff" stroke-width="3" stroke-linecap="round" filter="url(#blade-glow)" class="slash-3"/>
+  </g>
+
+  <!-- Station 4: ANR DEADLOCK ➔ ASYNC ENGINE -->
+  <g id="station-4">
+    <!-- Lock-on reticle ring -->
+    <g class="reticle-4">
+      <circle cx="1035" cy="220" r="78" fill="none" stroke="#737373" stroke-width="1" stroke-dasharray="8 6" opacity="0.6"/>
+      <line x1="949" y1="220" x2="965" y2="220" stroke="#ffffff" stroke-width="1.5"/>
+      <line x1="1105" y1="220" x2="1121" y2="220" stroke="#ffffff" stroke-width="1.5"/>
+      <line x1="1035" y1="134" x2="1035" y2="150" stroke="#ffffff" stroke-width="1.5"/>
+      <line x1="1035" y1="290" x2="1035" y2="306" stroke="#ffffff" stroke-width="1.5"/>
+    </g>
+
+    <!-- Bug Card Halves (Splits upon slash) -->
+    <!-- Top Half -->
+    <g clip-path="url(#split-top-4)" class="split-top-4">
+      <rect x="945" y="155" width="180" height="130" rx="12" fill="url(#card-grad)" stroke="#262626" stroke-width="1"/>
+      <path d="M 949 167 L 949 159 L 957 159" stroke="#525252" stroke-width="1.5" fill="none"/>
+      <path d="M 1113 159 L 1121 159 L 1121 167" stroke="#525252" stroke-width="1.5" fill="none"/>
+      
+      <rect x="995" y="169" width="80" height="18" rx="4" fill="#171717" stroke="#404040" stroke-width="1"/>
+      <text x="1035" y="181" fill="#a3a3a3" font-size="9" font-weight="700" text-anchor="middle" letter-spacing="1" class="mono">⚠ DETECTED</text>
+      
+      <text x="1035" y="224" fill="#ffffff" font-size="13" font-weight="800" text-anchor="middle" letter-spacing="1.2" class="mono">ANR DEADLOCK</text>
+      <text x="1035" y="242" fill="#737373" font-size="10" font-weight="600" text-anchor="middle" class="mono">BLOCKING I/O · 5.2s HALT</text>
+      <text x="1035" y="260" fill="#525252" font-size="8.5" font-weight="500" text-anchor="middle" class="mono">Synchronous Disk Access</text>
+    </g>
+
+    <!-- Bottom Half -->
+    <g clip-path="url(#split-bot-4)" class="split-bot-4">
+      <rect x="945" y="155" width="180" height="130" rx="12" fill="url(#card-grad)" stroke="#262626" stroke-width="1"/>
+      <path d="M 949 273 L 949 281 L 957 281" stroke="#525252" stroke-width="1.5" fill="none"/>
+      <path d="M 1113 281 L 1121 281 L 1121 273" stroke="#525252" stroke-width="1.5" fill="none"/>
+      
+      <rect x="995" y="169" width="80" height="18" rx="4" fill="#171717" stroke="#404040" stroke-width="1"/>
+      <text x="1035" y="181" fill="#a3a3a3" font-size="9" font-weight="700" text-anchor="middle" letter-spacing="1" class="mono">⚠ DETECTED</text>
+      
+      <text x="1035" y="224" fill="#ffffff" font-size="13" font-weight="800" text-anchor="middle" letter-spacing="1.2" class="mono">ANR DEADLOCK</text>
+      <text x="1035" y="242" fill="#737373" font-size="10" font-weight="600" text-anchor="middle" class="mono">BLOCKING I/O · 5.2s HALT</text>
+      <text x="1035" y="260" fill="#525252" font-size="8.5" font-weight="500" text-anchor="middle" class="mono">Synchronous Disk Access</text>
+    </g>
+
+    <!-- Solved Badge Card (Fades in after slash) -->
+    <g class="fix-card-4">
+      <rect x="945" y="155" width="180" height="130" rx="12" fill="url(#fix-grad)" stroke="#525252" stroke-width="1.5"/>
+      <path d="M 949 169 L 949 159 L 959 159" stroke="#ffffff" stroke-width="2" fill="none"/>
+      <path d="M 1111 159 L 1121 159 L 1121 169" stroke="#ffffff" stroke-width="2" fill="none"/>
+      <path d="M 949 271 L 949 281 L 959 281" stroke="#ffffff" stroke-width="2" fill="none"/>
+      <path d="M 1111 281 L 1121 281 L 1121 271" stroke="#ffffff" stroke-width="2" fill="none"/>
+      
+      <rect x="990" y="168" width="90" height="18" rx="9" fill="#262626" stroke="#737373" stroke-width="1"/>
+      <text x="1035" y="180" fill="#fafafa" font-size="9" font-weight="800" text-anchor="middle" letter-spacing="1.2" class="mono">✓ SOLVED</text>
+      
+      <text x="1035" y="227" fill="#ffffff" font-size="12.5" font-weight="800" text-anchor="middle" letter-spacing="1" class="mono">ASYNC ENGINE</text>
+      <text x="1035" y="245" fill="#e5e5e5" font-size="9.5" font-weight="600" text-anchor="middle" class="mono">NON-BLOCKING DRIFT / SQL</text>
+      <text x="1035" y="262" fill="#a3a3a3" font-size="8.5" font-weight="500" text-anchor="middle" class="mono">Zero UI Micro-Stutter</text>
+    </g>
+
+    <!-- Spark Burst Group -->
+    <g class="spark-4" filter="url(#spark-glow)">
+      <line x1="1035" y1="220" x2="1005" y2="190" stroke="#ffffff" stroke-width="2"/>
+      <line x1="1035" y1="220" x2="1070" y2="195" stroke="#ffffff" stroke-width="2"/>
+      <line x1="1035" y1="220" x2="1010" y2="255" stroke="#ffffff" stroke-width="2"/>
+      <line x1="1035" y1="220" x2="1065" y2="250" stroke="#ffffff" stroke-width="2"/>
+      <line x1="1035" y1="220" x2="1035" y2="180" stroke="#e5e5e5" stroke-width="1.5"/>
+      <line x1="1035" y1="220" x2="1035" y2="260" stroke="#e5e5e5" stroke-width="1.5"/>
+      <circle cx="1015" cy="230" r="2" fill="#ffffff"/>
+      <circle cx="1060" cy="210" r="2" fill="#ffffff"/>
+      <circle cx="1045" cy="245" r="1.5" fill="#e5e5e5"/>
+    </g>
+
+    <!-- Luminous Slash Beam -->
+    <line x1="950" y1="285" 
+          x2="1120" y2="155" 
+          stroke="#ffffff" stroke-width="3" stroke-linecap="round" filter="url(#blade-glow)" class="slash-4"/>
+  </g>
+
+  <!-- ==================== KATANA BLADE ACTOR ==================== -->
+  <g class="katana-carrier">
+    <g transform="translate(-100, -20)">
+      <!-- Blade Motion Trail Glint -->
+      <path d="M 0 0 C 40 -10, 100 -15, 160 -5 L 150 5 C 90 -5, 30 0, 0 5 Z" fill="#ffffff" opacity="0.3" filter="url(#blade-glow)"/>
+
+      <!-- Polished Steel Katana Blade -->
+      <path d="M 20 0 C 60 -6, 120 -8, 180 0 C 195 2, 210 6, 220 12 C 205 10, 180 8, 160 8 L 20 5 Z" fill="url(#blade-edge-grad)"/>
+      
+      <!-- Glowing Cutting Edge (Ha) -->
+      <path d="M 20 0 C 60 -6, 120 -8, 180 0 C 195 2, 210 6, 220 12" fill="none" stroke="#ffffff" stroke-width="2.5" filter="url(#blade-glow)"/>
+      
+      <!-- Katana Hamon (Temper Line Waves) -->
+      <path d="M 30 2 Q 50 -1 70 3 Q 90 0 110 3 Q 130 1 150 4 Q 170 2 190 6" fill="none" stroke="#fafafa" stroke-width="0.8" opacity="0.7"/>
+
+      <!-- Habaki (Blade Collar) -->
+      <polygon points="16,-3 22,-3 20,7 14,7" fill="#d4d4d4" stroke="#737373" stroke-width="1"/>
+
+      <!-- Tsuba (Sword Guard) -->
+      <ellipse cx="14" cy="2" rx="4" ry="14" fill="#171717" stroke="#737373" stroke-width="1.5"/>
+      <ellipse cx="14" cy="2" rx="2" ry="8" fill="#262626"/>
+
+      <!-- Tsuka (Hilt Handle) -->
+      <rect x="-60" y="-3" width="72" height="10" rx="3" fill="#171717" stroke="#404040" stroke-width="1"/>
+      
+      <!-- Tsukaito Diamond Wrapping (Pure Neutral Platinum & Obsidian) -->
+      <polygon points="-52,-3 -44,2 -52,7 -60,2" fill="#fafafa"/>
+      <polygon points="-36,-3 -28,2 -36,7 -44,2" fill="#fafafa"/>
+      <polygon points="-20,-3 -12,2 -20,7 -28,2" fill="#fafafa"/>
+      <polygon points="-4,-3 4,2 -4,7 -12,2" fill="#fafafa"/>
+      <line x1="-60" y1="2" x2="12" y2="2" stroke="#000000" stroke-width="1.5"/>
+
+      <!-- Kashira (Hilt Pommel Cap) -->
+      <path d="M -60 -3 C -64 0, -64 4, -60 7 Z" fill="#737373" stroke="#a3a3a3" stroke-width="1"/>
+    </g>
+  </g>
+
+  <!-- ==================== BOTTOM TERMINAL STATUS CONSOLE ==================== -->
+  <g id="bottom-console">
+    <line x1="28" y1="398" x2="1172" y2="398" stroke="#171717" stroke-width="1"/>
+    
+    <g transform="translate(36, 422)">
+      <text fill="#737373" font-size="12" font-weight="700" class="mono">&gt;</text>
+      <text x="18" fill="#a3a3a3" font-size="11" font-weight="600" class="mono">blade.execute():</text>
+      <text x="135" fill="#fafafa" font-size="11" font-weight="500" class="mono">"One clean cut through every dropped frame, memory leak, and rebuild storm."</text>
+      <rect x="740" y="-10" width="7" height="13" fill="#ffffff" class="cursor"/>
+    </g>
+
+    <g transform="translate(910, 412)">
+      <rect x="0" y="0" width="254" height="28" rx="14" fill="#141414" stroke="#262626" stroke-width="1"/>
+      <polygon points="18,14 22,8 26,14 22,20" fill="#ffffff"/>
+      <text x="36" y="18" fill="#e5e5e5" font-size="10" font-weight="700" letter-spacing="1" class="mono">EXECUTE SWORD DRAW ➔</text>
+      <text x="188" y="18" fill="#737373" font-size="9" font-weight="600" class="mono">PORTFOLIO</text>
+    </g>
+  </g>
+
+  <!-- Tactile Scanline Overlay -->
+  <rect width="1200" height="460" fill="url(#scanlines)" pointer-events="none"/>
+</g>
+</svg>

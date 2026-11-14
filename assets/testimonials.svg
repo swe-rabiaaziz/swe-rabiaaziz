@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="100%" role="img" aria-label="Testimonials from Afaq Zahir, Muhammad Uzair and Ubaid Ullah">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#050505"/>
+      <stop offset="0.6" stop-color="#0a0a0a"/>
+      <stop offset="1" stop-color="#050505"/>
+    </linearGradient>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="0.9" fill="#ffffff" fill-opacity="0.06"/>
+    </pattern>
+    <radialGradient id="dotFadeG" cx="0.7" cy="0.5" r="0.7">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#000"/>
+    </radialGradient>
+    <mask id="dotFade"><rect width="1200" height="320" fill="url(#dotFadeG)"/></mask>
+
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="55"/></filter>
+
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.13"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.03"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="avatar" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e5e5e5"/>
+      <stop offset="1" stop-color="#525252"/>
+    </linearGradient>
+    <linearGradient id="vline" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="pulse" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="card"><rect x="1" y="1" width="1198" height="318" rx="24"/></clipPath>
+  </defs>
+
+  <!-- Canvas -->
+  <rect x="1" y="1" width="1198" height="318" rx="24" fill="url(#bg)"/>
+
+  <g clip-path="url(#card)">
+    <rect width="1200" height="320" fill="url(#dots)" mask="url(#dotFade)"/>
+
+    <!-- Aurora glows -->
+    <g filter="url(#blur)">
+      <circle cx="860" cy="150" r="130" fill="#ffffff" fill-opacity="0.12">
+        <animate attributeName="cx" values="800;960;800" dur="14s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines="0.45 0 0.55 1;0.45 0 0.55 1"/>
+        <animate attributeName="cy" values="120;220;120" dur="10s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines="0.45 0 0.55 1;0.45 0 0.55 1"/>
+      </circle>
+      <circle cx="120" cy="320" r="100" fill="#a3a3a3" fill-opacity="0.1"/>
+    </g>
+
+    <!-- Light sweep -->
+    <rect x="-200" y="0" width="140" height="320" fill="#ffffff" fill-opacity="0.022" transform="skewX(-20)">
+      <animate attributeName="x" values="-200;1400" dur="10s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- Big decorative quote mark -->
+    <text x="448" y="190" font-family="Georgia,'Times New Roman',serif" font-size="190" fill="#ffffff" fill-opacity="0.06">"</text>
+
+    <!-- Divider with traveling pulse -->
+    <rect x="424" y="24" width="1" height="272" fill="url(#vline)"/>
+    <rect x="423.5" y="-60" width="2" height="60" rx="1" fill="url(#pulse)">
+      <animate attributeName="y" values="-60;320" dur="5s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- ============ LEFT: TABS ============ -->
+
+    <!-- Active highlights (outside dimmed groups) -->
+    <rect x="24" y="40" width="376" height="76" rx="18" fill="url(#glass)" stroke="#ffffff" stroke-opacity="0.2" opacity="0">
+      <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.03;0.30;0.33;1" dur="15s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="24" y="128" width="376" height="76" rx="18" fill="url(#glass)" stroke="#ffffff" stroke-opacity="0.2" opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.30;0.33;0.63;0.66;1" dur="15s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="24" y="216" width="376" height="76" rx="18" fill="url(#glass)" stroke="#ffffff" stroke-opacity="0.2" opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.63;0.66;0.97;1" dur="15s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- Tab 1: Afaq Zahir -->
+    <g opacity="1">
+      <animate attributeName="opacity" values="0.45;1;1;0.45;0.45" keyTimes="0;0.03;0.30;0.33;1" dur="15s" repeatCount="indefinite"/>
+      <circle cx="62" cy="78" r="22" fill="#171717" stroke="url(#avatar)" stroke-width="1.5"/>
+      <text x="62" y="82" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,monospace" font-size="12" font-weight="700" fill="#fafafa">AZ</text>
+      <text x="96" y="74" font-family="'Inter',-apple-system,system-ui,sans-serif" font-weight="800" font-size="15" fill="#fafafa">Afaq Zahir</text>
+      <text x="96" y="94" font-family="'JetBrains Mono',ui-monospace,monospace" font-weight="500" font-size="9.5" letter-spacing="0.5" fill="#a3a3a3">Team Lead &amp; Senior Flutter Trainer @ Apptex</text>
+      <rect x="40" y="106" width="0" height="2" rx="1" fill="url(#bar)">
+        <animate attributeName="width" values="0;0;344;0;0" keyTimes="0;0.03;0.33;0.34;1" dur="15s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+
+    <!-- Tab 2: Muhammad Uzair -->
+    <g opacity="0.45">
+      <animate attributeName="opacity" values="0.45;0.45;1;1;0.45;0.45" keyTimes="0;0.30;0.33;0.63;0.66;1" dur="15s" repeatCount="indefinite"/>
+      <circle cx="62" cy="166" r="22" fill="#171717" stroke="url(#avatar)" stroke-width="1.5"/>
+      <text x="62" y="170" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,monospace" font-size="12" font-weight="700" fill="#fafafa">MU</text>
+      <text x="96" y="162" font-family="'Inter',-apple-system,system-ui,sans-serif" font-weight="800" font-size="15" fill="#fafafa">Muhammad Uzair</text>
+      <text x="96" y="182" font-family="'JetBrains Mono',ui-monospace,monospace" font-weight="500" font-size="9.5" letter-spacing="0.5" fill="#a3a3a3">Lead Software Engineer @ Metasense</text>
+      <rect x="40" y="194" width="0" height="2" rx="1" fill="url(#bar)">
+        <animate attributeName="width" values="0;0;344;0;0" keyTimes="0;0.33;0.66;0.67;1" dur="15s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+
+    <!-- Tab 3: Ubaid Ullah -->
+    <g opacity="0.45">
+      <animate attributeName="opacity" values="0.45;0.45;1;1;0.45" keyTimes="0;0.63;0.66;0.97;1" dur="15s" repeatCount="indefinite"/>
+      <circle cx="62" cy="254" r="22" fill="#171717" stroke="url(#avatar)" stroke-width="1.5"/>
+      <text x="62" y="258" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,monospace" font-size="12" font-weight="700" fill="#fafafa">UU</text>
+      <text x="96" y="250" font-family="'Inter',-apple-system,system-ui,sans-serif" font-weight="800" font-size="15" fill="#fafafa">Ubaid Ullah</text>
+      <text x="96" y="270" font-family="'JetBrains Mono',ui-monospace,monospace" font-weight="500" font-size="9.5" letter-spacing="0.5" fill="#a3a3a3">Flutter Team Lead @ Trisol Technologies</text>
+      <rect x="40" y="282" width="0" height="2" rx="1" fill="url(#bar)">
+        <animate attributeName="width" values="0;0;344;0;0" keyTimes="0;0.66;0.97;0.98;1" dur="15s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+
+    <!-- ============ RIGHT: QUOTES ============ -->
+
+    <!-- Quote 1 -->
+    <g opacity="0">
+      <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.03;0.30;0.33;1" dur="15s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="24 0;0 0;0 0;-24 0;-24 0" keyTimes="0;0.03;0.30;0.33;1" dur="15s" repeatCount="indefinite"/>
+      <rect x="484" y="62" width="36" height="2.5" rx="1.25" fill="#fafafa"/>
+      <text x="1148" y="68" text-anchor="end" font-family="'JetBrains Mono',ui-monospace,monospace" font-size="11" letter-spacing="2" fill="#737373">01 / 03</text>
+      <text font-family="'Inter',-apple-system,system-ui,sans-serif" font-weight="500" font-size="25" fill="#f5f5f5">
+        <tspan x="484" y="118">She writes clean, maintainable code,</tspan>
+        <tspan x="484" y="154">grasps complex UI/UX designs</tspan>
+        <tspan x="484" y="190">effortlessly, and consistently delivers</tspan>
+        <tspan x="484" y="226">high-performance mobile features</tspan>
+        <tspan x="484" y="262" fill="#a3a3a3">ahead of schedule.</tspan>
+      </text>
+    </g>
+
+    <!-- Quote 2 -->
+    <g opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.33;0.36;0.63;0.66;1" dur="15s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="24 0;24 0;0 0;0 0;-24 0;-24 0" keyTimes="0;0.33;0.36;0.63;0.66;1" dur="15s" repeatCount="indefinite"/>
+      <rect x="484" y="62" width="36" height="2.5" rx="1.25" fill="#fafafa"/>
+      <text x="1148" y="68" text-anchor="end" font-family="'JetBrains Mono',ui-monospace,monospace" font-size="11" letter-spacing="2" fill="#737373">02 / 03</text>
+      <text font-family="'Inter',-apple-system,system-ui,sans-serif" font-weight="500" font-size="25" fill="#f5f5f5">
+        <tspan x="484" y="118">Exceptionally skilled Flutter developer</tspan>
+        <tspan x="484" y="154">with strong technical initiative. Her</tspan>
+        <tspan x="484" y="190">attention to clean code, modular</tspan>
+        <tspan x="484" y="226">architecture, and rapid execution</tspan>
+        <tspan x="484" y="262" fill="#a3a3a3">always stands out.</tspan>
+      </text>
+    </g>
+
+    <!-- Quote 3 -->
+    <g opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.66;0.69;0.97;1" dur="15s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="24 0;24 0;0 0;0 0;-24 0" keyTimes="0;0.66;0.69;0.97;1" dur="15s" repeatCount="indefinite"/>
+      <rect x="484" y="62" width="36" height="2.5" rx="1.25" fill="#fafafa"/>
+      <text x="1148" y="68" text-anchor="end" font-family="'JetBrains Mono',ui-monospace,monospace" font-size="11" letter-spacing="2" fill="#737373">03 / 03</text>
+      <text font-family="'Inter',-apple-system,system-ui,sans-serif" font-weight="500" font-size="25" fill="#f5f5f5">
+        <tspan x="484" y="118">What truly sets her apart is her natural</tspan>
+        <tspan x="484" y="154">flair for UI design and silky-smooth</tspan>
+        <tspan x="484" y="190">animations — she crafts fluid, visually</tspan>
+        <tspan x="484" y="226">captivating mobile experiences that</tspan>
+        <tspan x="484" y="262" fill="#a3a3a3">users love.</tspan>
+      </text>
+    </g>
+
+    <!-- Rising particles -->
+    <g fill="#ffffff">
+      <circle cx="560" cy="310" r="1.3"><animate attributeName="cy" values="310;20" dur="10s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.5;0" dur="10s" repeatCount="indefinite"/></circle>
+      <circle cx="840" cy="310" r="1"><animate attributeName="cy" values="310;30" dur="12s" begin="3s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.45;0" dur="12s" begin="3s" repeatCount="indefinite"/></circle>
+      <circle cx="1080" cy="310" r="1.5"><animate attributeName="cy" values="310;40" dur="9s" begin="1s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.5;0" dur="9s" begin="1s" repeatCount="indefinite"/></circle>
+    </g>
+  </g>
+
+  <!-- Top highlight + border -->
+  <rect x="300" y="1" width="600" height="1.5" fill="url(#edge)"/>
+  <rect x="1" y="1" width="1198" height="318" rx="24" fill="none" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1.5"/>
+</svg>
