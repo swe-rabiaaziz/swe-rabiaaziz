@@ -396,10 +396,7 @@ flowchart LR
 
 <br/><br/>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/swe-rabiaaziz/swe-rabiaaziz/output/github-snake-dark.svg"/>
-  <img alt="Contribution snake" src="https://raw.githubusercontent.com/swe-rabiaaziz/swe-rabiaaziz/output/github-snake.svg" width="100%"/>
-</picture>
+<img src="assets/backlog-breaker.svg" width="100%" alt="Backlog Breaker: Breakout arcade game clearing tickets to reveal Flutter, Dart, and AI"/>
 
 </div>
 
