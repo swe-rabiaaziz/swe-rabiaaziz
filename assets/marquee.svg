@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="110" viewBox="0 0 1000 110" role="img" aria-label="Tech stack: Flutter, Dart, BLoC, Provider, Supabase, Firebase, Drift, SQLite, Hive, Figma">
+  <defs>
+    <clipPath id="clip"><rect x="0.75" y="0.75" width="998.5" height="108.5" rx="16"/></clipPath>
+    <linearGradient id="fl" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#09090b" stop-opacity="1"/>
+      <stop offset="1" stop-color="#09090b" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="fr" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#09090b" stop-opacity="0"/>
+      <stop offset="1" stop-color="#09090b" stop-opacity="1"/>
+    </linearGradient>
+    <style>
+      .chip{fill:#111113;stroke:#27272a}
+      .t{font:500 13px 'JetBrains Mono','SFMono-Regular',Consolas,monospace;fill:#d4d4d8;letter-spacing:0.5px}
+      .d{fill:#fafafa;opacity:0.55}
+    </style>
+
+    <g id="r1">
+      <g transform="translate(0 0)"><rect class="chip" width="190" height="36" rx="18"/><circle class="d" cx="22" cy="18" r="3"/><text class="t" x="38" y="22.5">Flutter</text></g>
+      <g transform="translate(206 0)"><rect class="chip" width="190" height="36" rx="18"/><circle class="d" cx="22" cy="18" r="3"/><text class="t" x="38" y="22.5">Dart</text></g>
+      <g transform="translate(412 0)"><rect class="chip" width="190" height="36" rx="18"/><circle class="d" cx="22" cy="18" r="3"/><text class="t" x="38" y="22.5">BLoC / Cubit</text></g>
+      <g transform="translate(618 0)"><rect class="chip" width="190" height="36" rx="18"/><circle class="d" cx="22" cy="18" r="3"/><text class="t" x="38" y="22.5">Provider</text></g>
+      <g transform="translate(824 0)"><rect class="chip" width="190" height="36" rx="18"/><circle class="d" cx="22" cy="18" r="3"/><text class="t" x="38" y="22.5">Supabase</text></g>
+      <g transform="translate(1030 0)"><rect class="chip" width="190" height="36" rx="18"/><circle class="d" cx="22" cy="18" r="3"/><text class="t" x="38" y="22.5">Firebase</text></g>
+      <g transform="translate(1236 0)"><rect class="chip" width="190" height="36" rx="18"/><circle class="d" cx="22" cy="18" r="3"/><text class="t" x="38" y="22.5">Drift</text></g>
+      <g transform="translate(1442 0)"><rect class="chip" width="190" height="36" rx="18"/><circle class="d" cx="22" cy="18" r="3"/><text class="t" x="38" y="22.5">SQLite</text></g>
+      <g transform="translate(1648 0)"><rect class="chip" width="190" height="36" rx="18"/><circle class="d" cx="22" cy="18" r="3"/><text class="t" x="38" y="22.5">Hive</text></g>
+      <g transform="translate(1854 0)"><rect class="chip" width="190" height="36" rx="18"/><circle class="d" cx="22" cy="18" r="3"/><text class="t" x="38" y="22.5">Figma</text></g>
+    </g>
+
+    <g id="r2">
+      <g transform="translate(0 0)"><rect class="chip" width="190" height="36" rx="18"/><circle class="d" cx="22" cy="18" r="3"/><text class="t" x="38" y="22.5">Clean Architecture</text></g>
+      <g transform="translate(206 0)"><rect class="chip" width="190" height="36" rx="18"/><circle class="d" cx="22" cy="18" r="3"/><text class="t" x="38" y="22.5">Offline-first</text></g>
+      <g transform="translate(412 0)"><rect class="chip" width="190" height="36" rx="18"/><circle class="d" cx="22" cy="18" r="3"/><text class="t" x="38" y="22.5">Impeller</text></g>
+      <g transform="translate(618 0)"><rect class="chip" width="190" height="36" rx="18"/><circle class="d" cx="22" cy="18" r="3"/><text class="t" x="38" y="22.5">60 / 120 FPS</text></g>
+      <g transform="translate(824 0)"><rect class="chip" width="190" height="36" rx="18"/><circle class="d" cx="22" cy="18" r="3"/><text class="t" x="38" y="22.5">Speech-to-Text</text></g>
+      <g transform="translate(1030 0)"><rect class="chip" width="190" height="36" rx="18"/><circle class="d" cx="22" cy="18" r="3"/><text class="t" x="38" y="22.5">Google ML Kit</text></g>
+      <g transform="translate(1236 0)"><rect class="chip" width="190" height="36" rx="18"/><circle class="d" cx="22" cy="18" r="3"/><text class="t" x="38" y="22.5">LLM Streaming</text></g>
+      <g transform="translate(1442 0)"><rect class="chip" width="190" height="36" rx="18"/><circle class="d" cx="22" cy="18" r="3"/><text class="t" x="38" y="22.5">PostgreSQL</text></g>
+      <g transform="translate(1648 0)"><rect class="chip" width="190" height="36" rx="18"/><circle class="d" cx="22" cy="18" r="3"/><text class="t" x="38" y="22.5">GitHub Actions</text></g>
+      <g transform="translate(1854 0)"><rect class="chip" width="190" height="36" rx="18"/><circle class="d" cx="22" cy="18" r="3"/><text class="t" x="38" y="22.5">Audio Players</text></g>
+    </g>
+  </defs>
+
+  <rect x="0.75" y="0.75" width="998.5" height="108.5" rx="16" fill="#09090b" stroke="#27272a" stroke-width="1.5"/>
+
+  <g clip-path="url(#clip)">
+    <g transform="translate(0 12)">
+      <g>
+        <animateTransform attributeName="transform" type="translate" from="0 0" to="-2060 0" dur="42s" repeatCount="indefinite"/>
+        <use href="#r1" x="0"/>
+        <use href="#r1" x="2060"/>
+      </g>
+    </g>
+    <g transform="translate(0 62)">
+      <g>
+        <animateTransform attributeName="transform" type="translate" from="-2060 0" to="0 0" dur="48s" repeatCount="indefinite"/>
+        <use href="#r2" x="0"/>
+        <use href="#r2" x="2060"/>
+      </g>
+    </g>
+    <rect x="0" y="0" width="110" height="110" fill="url(#fl)"/>
+    <rect x="890" y="0" width="110" height="110" fill="url(#fr)"/>
+  </g>
+</svg>

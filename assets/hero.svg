@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="420" viewBox="0 0 1000 420" role="img" aria-label="Rabia Aziz - Flutter Developer and Mobile App Engineer">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.07" stroke-width="1"/>
+    </pattern>
+    <radialGradient id="fadeG" cx="50%" cy="50%" r="60%">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#000"/>
+    </radialGradient>
+    <mask id="fade"><rect width="1000" height="420" fill="url(#fadeG)"/></mask>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="scan" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.07"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="shimmer" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1000" y2="0">
+      <stop offset="0" stop-color="#d4d4d8"/>
+      <stop offset="0.38" stop-color="#d4d4d8"/>
+      <stop offset="0.5" stop-color="#ffffff"/>
+      <stop offset="0.62" stop-color="#d4d4d8"/>
+      <stop offset="1" stop-color="#d4d4d8"/>
+      <animateTransform attributeName="gradientTransform" type="translate" from="-1000 0" to="1000 0" dur="5s" repeatCount="indefinite"/>
+    </linearGradient>
+    <clipPath id="clip"><rect x="1" y="1" width="998" height="418" rx="20"/></clipPath>
+  </defs>
+
+  <rect x="1" y="1" width="998" height="418" rx="20" fill="#09090b"/>
+
+  <g clip-path="url(#clip)">
+    <rect width="1000" height="420" fill="url(#grid)" mask="url(#fade)"/>
+
+    <!-- drifting glow -->
+    <circle r="260" cx="500" cy="210" fill="url(#glow)">
+      <animate attributeName="cx" values="300;700;300" keyTimes="0;0.5;1" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1" dur="14s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="170;260;170" keyTimes="0;0.5;1" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1" dur="9s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- orbit rings -->
+    <g transform="translate(500 215)">
+      <circle r="205" fill="none" stroke="#ffffff" stroke-opacity="0.16" stroke-dasharray="2 12" stroke-linecap="round">
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="70s" repeatCount="indefinite"/>
+      </circle>
+      <circle r="165" fill="none" stroke="#ffffff" stroke-opacity="0.1" stroke-dasharray="1 8">
+        <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="50s" repeatCount="indefinite"/>
+      </circle>
+      <g>
+        <circle cx="205" cy="0" r="3" fill="#fafafa"/>
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="22s" repeatCount="indefinite"/>
+      </g>
+      <g>
+        <circle cx="-165" cy="0" r="2" fill="#a1a1aa"/>
+        <animateTransform attributeName="transform" type="rotate" from="0" to="-360" dur="30s" repeatCount="indefinite"/>
+      </g>
+    </g>
+
+    <!-- scan line -->
+    <rect y="-90" width="1000" height="90" fill="url(#scan)">
+      <animate attributeName="y" values="-90;420" dur="7s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- floating particles -->
+    <g fill="#ffffff">
+      <circle cx="90" cy="400" r="1.5"><animate attributeName="cy" values="410;30" dur="9s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.7;0" dur="9s" repeatCount="indefinite"/></circle>
+      <circle cx="170" cy="400" r="1"><animate attributeName="cy" values="410;60" dur="12s" begin="2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.6;0" dur="12s" begin="2s" repeatCount="indefinite"/></circle>
+      <circle cx="260" cy="400" r="2"><animate attributeName="cy" values="410;40" dur="10s" begin="1s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.5;0" dur="10s" begin="1s" repeatCount="indefinite"/></circle>
+      <circle cx="340" cy="400" r="1.2"><animate attributeName="cy" values="410;80" dur="8s" begin="4s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.7;0" dur="8s" begin="4s" repeatCount="indefinite"/></circle>
+      <circle cx="430" cy="400" r="1.5"><animate attributeName="cy" values="410;50" dur="11s" begin="3s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.6;0" dur="11s" begin="3s" repeatCount="indefinite"/></circle>
+      <circle cx="570" cy="400" r="1"><animate attributeName="cy" values="410;70" dur="13s" begin="5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.6;0" dur="13s" begin="5s" repeatCount="indefinite"/></circle>
+      <circle cx="660" cy="400" r="2"><animate attributeName="cy" values="410;35" dur="9.5s" begin="1.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.5;0" dur="9.5s" begin="1.5s" repeatCount="indefinite"/></circle>
+      <circle cx="750" cy="400" r="1.5"><animate attributeName="cy" values="410;55" dur="11s" begin="6s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.7;0" dur="11s" begin="6s" repeatCount="indefinite"/></circle>
+      <circle cx="830" cy="400" r="1"><animate attributeName="cy" values="410;45" dur="10s" begin="0.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.6;0" dur="10s" begin="0.5s" repeatCount="indefinite"/></circle>
+      <circle cx="915" cy="400" r="1.8"><animate attributeName="cy" values="410;65" dur="12.5s" begin="2.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.5;0" dur="12.5s" begin="2.5s" repeatCount="indefinite"/></circle>
+    </g>
+
+    <!-- corner brackets -->
+    <g fill="none" stroke="#52525b" stroke-width="1.5" stroke-linecap="round">
+      <path d="M28 52V28H52"/>
+      <path d="M948 28H972V52"/>
+      <path d="M28 368V392H52"/>
+      <path d="M972 368V392H948"/>
+    </g>
+  </g>
+
+  <!-- status pill -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="0s" dur="0.8s" fill="freeze"/>
+    <rect x="372" y="30" width="256" height="32" rx="16" fill="#111113" stroke="#27272a"/>
+    <circle cx="394" cy="46" r="4" fill="#fafafa"/>
+    <circle cx="394" cy="46" r="4" fill="none" stroke="#fafafa">
+      <animate attributeName="r" values="4;13" dur="2.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8;0" dur="2.2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="410" y="50.5" font-family="'JetBrains Mono','SFMono-Regular',Consolas,monospace" font-size="12" letter-spacing="1.4" fill="#d4d4d8">OPEN TO REMOTE ROLES</text>
+  </g>
+
+  <!-- greeting -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="0.2s" dur="0.9s" fill="freeze"/>
+    <animateTransform attributeName="transform" type="translate" from="0 18" to="0 0" begin="0.2s" dur="0.9s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.16 1 0.3 1"/>
+    <text x="500" y="122" text-anchor="middle" font-family="'JetBrains Mono','SFMono-Regular',Consolas,monospace" font-size="16" letter-spacing="7" fill="#71717a">HI, I'M</text>
+  </g>
+
+  <!-- name -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="0.45s" dur="1s" fill="freeze"/>
+    <animateTransform attributeName="transform" type="translate" from="0 26" to="0 0" begin="0.45s" dur="1s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.16 1 0.3 1"/>
+    <text x="500" y="222" text-anchor="middle" font-family="Inter,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="94" font-weight="800" letter-spacing="-3" fill="url(#shimmer)">Rabia Aziz</text>
+  </g>
+
+  <!-- underline draw -->
+  <line x1="380" y1="246" x2="620" y2="246" stroke="#fafafa" stroke-width="2" stroke-linecap="round" stroke-dasharray="240" stroke-dashoffset="240">
+    <animate attributeName="stroke-dashoffset" from="240" to="0" begin="1.3s" dur="1.1s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.65 0 0.35 1"/>
+  </line>
+
+  <!-- title -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="1.1s" dur="0.9s" fill="freeze"/>
+    <animateTransform attributeName="transform" type="translate" from="0 14" to="0 0" begin="1.1s" dur="0.9s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.16 1 0.3 1"/>
+    <text x="500" y="288" text-anchor="middle" font-family="Inter,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="19" font-weight="600" letter-spacing="4.5" fill="#e4e4e7">FLUTTER DEVELOPER &amp; MOBILE APP ENGINEER</text>
+  </g>
+
+  <!-- rotating roles -->
+  <g font-family="'JetBrains Mono','SFMono-Regular',Consolas,monospace" font-size="16" fill="#a1a1aa" text-anchor="middle">
+    <text x="500" y="330" opacity="0">&gt; production MVPs · App Store &amp; Google Play
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0;0.02;0.23;0.25;1" dur="14s" begin="2s" repeatCount="indefinite"/></text>
+    <text x="500" y="330" opacity="0">&gt; Figma → pixel-perfect Flutter at 60/120fps
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.25;0.27;0.48;0.5;1" dur="14s" begin="2s" repeatCount="indefinite"/></text>
+    <text x="500" y="330" opacity="0">&gt; AI &amp; voice-powered mobile experiences
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.5;0.52;0.73;0.75;1" dur="14s" begin="2s" repeatCount="indefinite"/></text>
+    <text x="500" y="330" opacity="0">&gt; Supabase · Firebase · offline-first
+      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.75;0.77;0.98;1" dur="14s" begin="2s" repeatCount="indefinite"/></text>
+  </g>
+
+  <!-- manifesto -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="1.6s" dur="1s" fill="freeze"/>
+    <text x="500" y="370" text-anchor="middle" font-family="Inter,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" fill="#71717a">Engineering production-grade, AI-powered cross-platform apps with zero-jank UI and clean architecture.</text>
+  </g>
+
+  <!-- footer stats -->
+  <g font-family="'JetBrains Mono','SFMono-Regular',Consolas,monospace" font-size="11" letter-spacing="1.5" fill="#52525b">
+    <text x="48" y="400">4 APPS LIVE ON GOOGLE PLAY</text>
+    <text x="952" y="400" text-anchor="end">5.4K+ FOLLOWERS ON TIKTOK</text>
+  </g>
+
+  <rect x="1" y="1" width="998" height="418" rx="20" fill="none" stroke="#27272a" stroke-width="2"/>
+</svg>

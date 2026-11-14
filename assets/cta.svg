@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="230" viewBox="0 0 1000 230" role="img" aria-label="Let's build something that ships. Open to full-time remote roles and freelance builds.">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.06"/>
+    </pattern>
+    <radialGradient id="fadeG" cx="50%" cy="50%" r="60%">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#000"/>
+    </radialGradient>
+    <mask id="fade"><rect width="1000" height="230" fill="url(#fadeG)"/></mask>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="shimmer" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1000" y2="0">
+      <stop offset="0" stop-color="#d4d4d8"/>
+      <stop offset="0.4" stop-color="#d4d4d8"/>
+      <stop offset="0.5" stop-color="#fff"/>
+      <stop offset="0.6" stop-color="#d4d4d8"/>
+      <stop offset="1" stop-color="#d4d4d8"/>
+      <animateTransform attributeName="gradientTransform" type="translate" from="-1000 0" to="1000 0" dur="5s" repeatCount="indefinite"/>
+    </linearGradient>
+    <linearGradient id="glint" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fafafa" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#fafafa" stop-opacity="1"/>
+      <stop offset="1" stop-color="#fafafa" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="clip"><rect x="1" y="1" width="998" height="228" rx="20"/></clipPath>
+  </defs>
+
+  <rect x="1" y="1" width="998" height="228" rx="20" fill="#09090b"/>
+  <g clip-path="url(#clip)">
+    <rect width="1000" height="230" fill="url(#grid)" mask="url(#fade)"/>
+    <circle r="230" cx="500" cy="115" fill="url(#glow)">
+      <animate attributeName="cx" values="360;640;360" keyTimes="0;0.5;1" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1" dur="10s" repeatCount="indefinite"/>
+    </circle>
+    <rect y="196" width="1000" height="1" fill="#27272a"/>
+    <rect y="195" width="260" height="3" fill="url(#glint)">
+      <animate attributeName="x" values="-260;1000" dur="3.8s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <g font-family="'JetBrains Mono','SFMono-Regular',Consolas,monospace" font-size="12" letter-spacing="3" fill="#71717a" text-anchor="middle">
+    <text x="500" y="52">NEXT STEP</text>
+  </g>
+
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="0.2s" dur="1s" fill="freeze"/>
+    <animateTransform attributeName="transform" type="translate" from="0 20" to="0 0" begin="0.2s" dur="1s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.16 1 0.3 1"/>
+    <text x="500" y="112" text-anchor="middle" font-family="Inter,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="46" font-weight="800" letter-spacing="-1.5" fill="url(#shimmer)">Let's build something that ships.</text>
+  </g>
+
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="0.9s" dur="1s" fill="freeze"/>
+    <text x="500" y="152" text-anchor="middle" font-family="Inter,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="16" fill="#a1a1aa">Open to full-time remote roles and freelance builds.</text>
+  </g>
+
+  <g>
+    <circle cx="500" cy="176" r="3.5" fill="#fafafa"/>
+    <circle cx="500" cy="176" r="3.5" fill="none" stroke="#fafafa">
+      <animate attributeName="r" values="3.5;14" dur="2.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8;0" dur="2.2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  <rect x="1" y="1" width="998" height="228" rx="20" fill="none" stroke="#27272a" stroke-width="2"/>
+</svg>
