@@ -5,12 +5,13 @@
 <br/>
 
 <a href="https://swe-rabia-aziz.vercel.app/"><img src="https://img.shields.io/badge/PORTFOLIO-FAFAFA?style=for-the-badge&logo=vercel&logoColor=0A0A0A" alt="Portfolio"/></a>
+<a href="https://github.com/swe-rabiaaziz?tab=repositories"><img src="https://img.shields.io/badge/VIEW_REPOSITORIES-FAFAFA?style=for-the-badge&logo=github&logoColor=0A0A0A" alt="Repositories"/></a>
 <a href="https://www.linkedin.com/in/swe-rabiaaziz/"><img src="https://img.shields.io/badge/LINKEDIN-171717?style=for-the-badge&logo=linkedin&logoColor=FAFAFA" alt="LinkedIn"/></a>
 <a href="https://wa.me/923275676026"><img src="https://img.shields.io/badge/WHATSAPP-171717?style=for-the-badge&logo=whatsapp&logoColor=FAFAFA" alt="WhatsApp"/></a>
 <a href="https://www.tiktok.com/@swe.rabiaaziz"><img src="https://img.shields.io/badge/TIKTOK_·_5.4K-171717?style=for-the-badge&logo=tiktok&logoColor=FAFAFA" alt="TikTok"/></a>
 <a href="mailto:swe.rabiaaziz@gmail.com"><img src="https://img.shields.io/badge/EMAIL-171717?style=for-the-badge&logo=gmail&logoColor=FAFAFA" alt="Email"/></a>
 <a href="https://calendly.com/swe-rabiaaziz/30min"><img src="https://img.shields.io/badge/BOOK_A_CALL-FAFAFA?style=for-the-badge&logo=calendly&logoColor=0A0A0A" alt="Book a call"/></a>
-<a href="https://drive.google.com/file/d/1xAb2h17uqQ9PtSzpiO2XRSF1BU8fn-A5/view?usp=drive_link"><img src="https://img.shields.io/badge/RESUME_PDF-171717?style=for-the-badge&logo=googledrive&logoColor=FAFAFA" alt="Resume"/></a>
+<a href="https://drive.google.com/file/d/1-QpVie8mLQpp-96RLKbq697vNbhfo_G1/view?usp=drive_link"><img src="https://img.shields.io/badge/RESUME_PDF-171717?style=for-the-badge&logo=googledrive&logoColor=FAFAFA" alt="Resume"/></a>
 
 </div>
 
@@ -49,31 +50,30 @@ Four production applications authored, engineered, and published live on the **G
 
 <br/>
 
-### 🏛️ 01 · CivicCoach — AI US Citizenship 2026
-*AI Voice Mock Interviews · Spaced Repetition · Official 128 Questions*
+<table width="100%" border="0" cellspacing="16" cellpadding="0">
+<tr>
+<td width="50%" valign="top">
+
+### 🏛️ 01 · CivicCoach — AI US Citizenship
+*AI Voice Interviews · Spaced Repetition · Official 128 Questions*
 
 <a href="https://play.google.com/store/apps/details?id=com.us.citizenship.test.naturalization.civics.prep&hl=en">
   <img src="assets/projects/civic_coach_tablet.png" width="100%" alt="CivicCoach Tablet Showcase"/>
 </a>
 
-An educational civics preparation application simulating official USCIS officer oral examinations with automated voice scoring:
-
-- **AI Voice Mock Interviews**: Realistic speech dialogue with real-time Speech-to-Text (STT) and automated accuracy evaluation.
-- **SM-2 Algorithm**: Spaced-repetition flashcard engine tailored to user memory curves.
-- **Dynamic Officials Lookup**: Live ZIP-code based query for US Senators, Governors, and Representatives.
-- **Bilingual & Narration**: Full English & Spanish support with synchronized audio narration.
+- **AI Voice Mock Interviews**: Realistic speech dialogue with real-time Speech-to-Text &amp; automated oral scoring.
+- **SM-2 Algorithm**: Spaced-repetition flashcards tailored to individual retention curves.
+- **Dynamic Officials Lookup**: Live ZIP-code query for US Senators, Governors &amp; Reps.
+- **Bilingual &amp; Audio**: English &amp; Spanish with synchronized narration.
 
 ```text
-Stack: Flutter · Dart · Drift ORM · SQLite · Speech-to-Text · flutter_tts · Provider
+Stack: Flutter · Dart · Drift ORM · SQLite · STT/TTS · Provider
 ```
 
 <a href="https://play.google.com/store/apps/details?id=com.us.citizenship.test.naturalization.civics.prep&hl=en"><img src="https://img.shields.io/badge/VIEW_ON_GOOGLE_PLAY-FAFAFA?style=for-the-badge&logo=googleplay&logoColor=0A0A0A" alt="CivicCoach on Google Play"/></a>
 
-<br/><br/>
-
----
-
-<br/>
+</td>
+<td width="50%" valign="top">
 
 ### 📅 02 · Ethiopian Calendar — Zemen App
 *13-Month Ge'ez Navigation · 12H Sunrise Clock · Cultural Hub*
@@ -82,24 +82,21 @@ Stack: Flutter · Dart · Drift ORM · SQLite · Speech-to-Text · flutter_tts �
   <img src="assets/projects/zemen_tablet.png" width="100%" alt="Zemen Calendar Tablet Showcase"/>
 </a>
 
-A cultural utility and calendar system featuring a bi-directional conversion engine between Gregorian and Ethiopian date formats:
-
-- **13-Month Ge'ez Navigation**: Complete Ethiopian calendar year with 12 months of 30 days plus Pagume (5/6 days).
-- **12-Hour Sunrise Clock**: Interactive live widget tracking traditional Ethiopian 12-hour daytime/nighttime cycles.
-- **Orthodox & Islamic Sync**: Orthodox Tewahedo fasting periods, saints days, and prayer schedules.
-- **Holiday Reminders**: Dynamic national holiday countdowns and local event scheduling.
+- **13-Month Ge'ez Navigation**: Complete year with 12 months of 30 days plus Pagume.
+- **12-Hour Sunrise Clock**: Interactive widget tracking traditional sunrise cycles.
+- **Orthodox &amp; Islamic Sync**: Fasting periods, saints days &amp; prayer timetables.
+- **Holiday Reminders**: Dynamic national holiday countdowns &amp; local events.
 
 ```text
-Stack: Flutter · Dart · Custom Calendar Engine · Local Persistence · Provider
+Stack: Flutter · Dart · Calendar Engine · Local Persistence · Provider
 ```
 
 <a href="https://play.google.com/store/apps/details?id=com.ethiopia.zemen.calendar.aqotater.ethiopian.habesha&hl=en"><img src="https://img.shields.io/badge/VIEW_ON_GOOGLE_PLAY-FAFAFA?style=for-the-badge&logo=googleplay&logoColor=0A0A0A" alt="Zemen on Google Play"/></a>
 
-<br/><br/>
-
----
-
-<br/>
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
 
 ### 🧘 03 · ZenPeace — Pomodoro & Mindful Flow
 *Ambient Soundscapes · Focus Intervals · fl_chart Analytics*
@@ -108,44 +105,41 @@ Stack: Flutter · Dart · Custom Calendar Engine · Local Persistence · Provide
   <img src="assets/projects/zenpeace_tablet.png" width="100%" alt="ZenPeace Tablet Showcase"/>
 </a>
 
-A minimalist productivity companion designed to induce deep flow states through sensory feedback and rhythm:
-
-- **Customizable Intervals**: Configurable focus rituals, short breaks, and long restoration sessions.
-- **Curated Soundscapes**: High-fidelity looped ambient audio (rain, ocean waves, lofi beats, piano) via `just_audio`.
-- **Productivity Analytics**: Daily streaks, completion frequency bar charts, and trends powered by `fl_chart`.
-- **Sensory Touch**: Haptic feedback triggers on timer thresholds with zero visual clutter.
+- **Customizable Rituals**: Configurable focus sessions, short breaks &amp; deep flow cycles.
+- **Curated Soundscapes**: Looped high-fidelity ambient audio (rain, waves, lofi) via `just_audio`.
+- **Productivity Analytics**: Daily streaks &amp; completion frequency charts via `fl_chart`.
+- **Tactile Touch**: Haptic feedback triggers on timer thresholds with zero visual clutter.
 
 ```text
-Stack: Flutter · Dart · Provider State · just_audio · fl_chart · Local Caching
+Stack: Flutter · Dart · Provider · just_audio · fl_chart · Caching
 ```
 
 <a href="https://play.google.com/store/apps/details?id=com.zenpeace.pomodoro.focus.timer.mindfulstate&hl=en"><img src="https://img.shields.io/badge/VIEW_ON_GOOGLE_PLAY-FAFAFA?style=for-the-badge&logo=googleplay&logoColor=0A0A0A" alt="ZenPeace on Google Play"/></a>
 
-<br/><br/>
-
----
-
-<br/>
+</td>
+<td width="50%" valign="top">
 
 ### 💓 04 · Health Tracker — Vitals & BP Monitor
-*Blood Pressure · Pulse Rate · On-Device SQLite · Reports*
+*Blood Pressure · Pulse Rate · On-Device SQLite · Clinical Reports*
 
 <a href="https://play.google.com/store/apps/details?id=com.vitals.bp.family.health.tracker&hl=en">
   <img src="assets/projects/health_tracker_tablet.png" width="100%" alt="Health Tracker Tablet Showcase"/>
 </a>
 
-A personal health companion engineered for private, offline-first vital signs logging and cardiac trend visualization:
-
-- **Comprehensive Logging**: Systolic/diastolic Blood Pressure, Pulse (BPM), Blood Glucose, and Body Temperature.
-- **Cardiovascular Trends**: Interactive visual trend graphs with weekly and monthly health summary cards.
-- **100% Private & Local**: Zero cloud dependency; all telemetry stays secured in an on-device SQFlite database.
-- **Export Capabilities**: Historical health reports exportable for clinical consultation.
+- **Comprehensive Telemetry**: Blood Pressure, Pulse (BPM), Glucose &amp; Body Temp.
+- **Cardiovascular Trends**: Interactive visual graphs with weekly/monthly health summaries.
+- **100% Private &amp; Offline**: Zero cloud dependency; all telemetry secured in local SQFlite.
+- **Clinical Export**: Historical health reports exportable for physician review.
 
 ```text
-Stack: Flutter · Dart · SQFlite · Provider · Data Visualization · Clean Architecture
+Stack: Flutter · Dart · SQFlite · Provider · Data Vis · Clean Arch
 ```
 
 <a href="https://play.google.com/store/apps/details?id=com.vitals.bp.family.health.tracker&hl=en"><img src="https://img.shields.io/badge/VIEW_ON_GOOGLE_PLAY-FAFAFA?style=for-the-badge&logo=googleplay&logoColor=0A0A0A" alt="Health Tracker on Google Play"/></a>
+
+</td>
+</tr>
+</table>
 
 <br/>
 
@@ -336,9 +330,7 @@ flowchart LR
 
 <div align="center">
 
-<img height="180" src="https://github-readme-stats-sigma-five.vercel.app/api?username=swe-rabiaaziz&show_icons=true&hide_border=false&bg_color=0A0A0A&title_color=FAFAFA&text_color=A3A3A3&icon_color=FAFAFA&border_color=262626&ring_color=FAFAFA&border_radius=16&include_all_commits=true&count_private=true" alt="GitHub stats"/>
-&nbsp;
-<img height="180" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=swe-rabiaaziz&layout=compact&langs_count=6&bg_color=0A0A0A&title_color=FAFAFA&text_color=A3A3A3&border_color=262626&border_radius=16" alt="Top languages"/>
+<img src="assets/github-stats.svg" width="100%" alt="Rabia Aziz's GitHub Statistics &amp; Top Languages"/>
 
 <br/><br/>
 
@@ -356,17 +348,17 @@ flowchart LR
 
 ## 08 · Let's Connect & Collaborate
 
-<a href="https://calendly.com/swe-rabiaaziz/30min">
-  <img src="assets/cta.svg" width="100%" alt="Let's build something extraordinary together. Book a call."/>
+<a href="https://wa.me/923275676026">
+  <img src="assets/cta.svg" width="100%" alt="Let's build something extraordinary together. Start a conversation on WhatsApp."/>
 </a>
 
 <div align="center">
 
 <br/>
 
-<a href="https://calendly.com/swe-rabiaaziz/30min"><img src="https://img.shields.io/badge/BOOK_A_30_MIN_CALL-FAFAFA?style=for-the-badge&logo=calendly&logoColor=0A0A0A" alt="Book a call"/></a>
+<a href="https://wa.me/923275676026"><img src="https://img.shields.io/badge/START_A_CONVERSATION_·_WHATSAPP-FAFAFA?style=for-the-badge&logo=whatsapp&logoColor=0A0A0A" alt="WhatsApp"/></a>
 &nbsp;
-<a href="https://wa.me/923275676026"><img src="https://img.shields.io/badge/WHATSAPP_+923275676026-171717?style=for-the-badge&logo=whatsapp&logoColor=FAFAFA" alt="WhatsApp"/></a>
+<a href="https://calendly.com/swe-rabiaaziz/30min"><img src="https://img.shields.io/badge/BOOK_A_30_MIN_CALL-171717?style=for-the-badge&logo=calendly&logoColor=FAFAFA" alt="Book a call"/></a>
 &nbsp;
 <a href="mailto:swe.rabiaaziz@gmail.com"><img src="https://img.shields.io/badge/swe.rabiaaziz@gmail.com-171717?style=for-the-badge&logo=gmail&logoColor=FAFAFA" alt="Email me"/></a>
 &nbsp;
