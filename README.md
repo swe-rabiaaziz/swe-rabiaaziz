@@ -21,12 +21,12 @@
 
 ## 01 · What I Build & Deliver
 
-> **"Code is craft. Every pixel, every animation, every state transition — I obsess over the details so users don't have to."**  
+> **"Great software is defined not just by its initial experience, but by its ability to maintain performance, reliability, and consistency as complexity grows and real-world demands evolve."**
 > I engineer AI-powered experiences, scalable Flutter applications, and rock-solid cloud backends that run fluidly across mobile, web, and desktop. From idea and Figma wireframes to store release, I own the entire pipeline.
 
 <br/>
 
-<img src="assets/services.svg" width="100%" alt="Services: AI Voice &amp; Smart Apps, Cross-Platform Flutter, Tactile UI &amp; 120fps, Cloud &amp; Offline Persistence, and Clean Architecture"/>
+<img src="assets/services.svg" width="100%" alt="Services: Intelligent AI &amp; Smart Systems, Cross-Platform Flutter, Modern UI Trends &amp; 120 FPS, Cloud &amp; Local Databases, and Clean Architecture"/>
 
 <br/>
 
@@ -59,12 +59,12 @@ Four production applications authored, engineered, and published live on the **G
 </a>
 
 ### 🏛️ 01 · CivicCoach — AI US Citizenship
-*AI Voice Interviews · Spaced Repetition · Official 128 Questions*
+*AI-Powered Mock Tests · Spaced Repetition · Official 128 Questions*
 
-• **AI Voice Mock Interviews:** Speech-to-Text &amp; automated oral scoring.  
-• **SM-2 Algorithm:** Spaced-repetition flashcards tailored to retention curves.  
-• **Dynamic Officials Lookup:** Live ZIP query for US Senators &amp; Governors.  
-• **Bilingual &amp; Audio:** Full English &amp; Spanish with synchronized narration.  
+• **AI Speech & Mock Interviews:** Speech-to-Text &amp; automated oral scoring.
+• **SM-2 Algorithm:** Spaced-repetition flashcards tailored to retention curves.
+• **Dynamic Officials Lookup:** Live ZIP query for US Senators &amp; Governors.
+• **Bilingual &amp; Audio:** Full English &amp; Spanish with synchronized narration.
 
 **Stack:** `Flutter` · `Dart` · `Drift ORM` · `SQLite` · `STT/TTS` · `Provider`
 
@@ -82,10 +82,10 @@ Four production applications authored, engineered, and published live on the **G
 ### 📅 02 · Ethiopian Calendar — Zemen App
 *13-Month Ge'ez Navigation · 12H Sunrise Clock · Cultural Hub*
 
-• **13-Month Ge'ez Navigation:** Full year with 12 months of 30 days + Pagume.  
-• **12-Hour Sunrise Clock:** Interactive widget tracking traditional daytime cycles.  
-• **Orthodox &amp; Islamic Sync:** Fasting periods, saints days &amp; prayer timetables.  
-• **Holiday Reminders:** Dynamic national holiday countdowns &amp; local events.  
+• **13-Month Ge'ez Navigation:** Full year with 12 months of 30 days + Pagume.
+• **12-Hour Sunrise Clock:** Interactive widget tracking traditional daytime cycles.
+• **Orthodox &amp; Islamic Sync:** Fasting periods, saints days &amp; prayer timetables.
+• **Holiday Reminders:** Dynamic national holiday countdowns &amp; local events.
 
 **Stack:** `Flutter` · `Dart` · `Calendar Engine` · `Local Persistence` · `Provider`
 
@@ -107,10 +107,10 @@ Four production applications authored, engineered, and published live on the **G
 ### 🧘 03 · ZenPeace — Pomodoro &amp; Mindful Flow
 *Ambient Soundscapes · Focus Intervals · fl_chart Analytics*
 
-• **Customizable Rituals:** Focus intervals, short breaks &amp; restoration cycles.  
-• **Curated Soundscapes:** Looped ambient audio (rain, waves, lofi) via `just_audio`.  
-• **Productivity Analytics:** Daily streaks &amp; completion frequency via `fl_chart`.  
-• **Tactile Touch:** Haptic feedback triggers on thresholds with zero UI clutter.  
+• **Customizable Rituals:** Focus intervals, short breaks &amp; restoration cycles.
+• **Curated Soundscapes:** Looped ambient audio (rain, waves, lofi) via `just_audio`.
+• **Productivity Analytics:** Daily streaks &amp; completion frequency via `fl_chart`.
+• **Tactile Touch:** Haptic feedback triggers on thresholds with zero UI clutter.
 
 **Stack:** `Flutter` · `Dart` · `Provider` · `just_audio` · `fl_chart` · `Caching`
 
@@ -130,10 +130,10 @@ Four production applications authored, engineered, and published live on the **G
 ### 💓 04 · Health Tracker — Vitals &amp; BP Monitor
 *Blood Pressure · Pulse Rate · On-Device SQLite · Clinical Reports*
 
-• **Comprehensive Telemetry:** Blood Pressure, Pulse, Glucose &amp; Body Temp.  
-• **Cardiovascular Trends:** Interactive visual graphs with health summaries.  
-• **100% Private &amp; Offline:** Zero cloud sync; secured in local SQLite.  
-• **Clinical Export:** Historical health telemetry exportable for medical consult.  
+• **Comprehensive Telemetry:** Blood Pressure, Pulse, Glucose &amp; Body Temp.
+• **Cardiovascular Trends:** Interactive visual graphs with health summaries.
+• **Private On-Device Security:** Zero external leaks; secured in local SQLite.
+• **Clinical Export:** Historical health telemetry exportable for medical consult.
 
 **Stack:** `Flutter` · `Dart` · `SQFlite` · `Provider` · `Data Vis` · `Clean Arch`
 
@@ -155,7 +155,7 @@ Great software isn't just about how it looks on day one. It's about how it perfo
 
 <br/>
 
-<img src="assets/ui-craft-engine.svg" width="100%" alt="The 4 Pillars of Craft: Tactile Neumorphism, 120 FPS Impeller Target, AI Streaming & Voice Matrix, and Feature-First Clean Architecture"/>
+<img src="assets/ui-craft-engine.svg" width="100%" alt="The 4 Pillars of Craft: Modern UI Design Trends, 120 FPS Impeller Target, Fluid Motion &amp; Dynamic Animations, and Intelligent Multi-Modal AI Matrix"/>
 
 <br/>
 
@@ -202,7 +202,7 @@ lib/
 │   ├── zemen_calendar/   # Geez 13-month conversion engine & UI
 │   ├── pomodoro_flow/    # Soundscape engine, timer streams, haptics
 │   └── vitals_monitor/   # SQFlite reactive DB queries & report cards
-├── shared/               # Reusable atomic widgets (tactile buttons, pills, cards)
+├── shared/               # Reusable atomic widgets (modern styled buttons, pills, cards)
 └── main.dart             # Environment bootstrappers & error boundary wraps
 ```
 
@@ -222,18 +222,18 @@ Every feature is an independent module — delete any feature folder and the res
 </details>
 
 <details>
-<summary><b>💾 Offline-First Architecture Principle</b></summary>
+<summary><b>💾 Resilient Online &amp; Offline Data Architecture</b></summary>
 <br/>
 
-The local database is the single source of truth. The user interface never halts on network roundtrips.
+Unified data orchestration bridging real-time cloud backends (Supabase / Firebase) and persistent local storage (Drift / SQLite). Guarantees instantaneous UI response, bidirectional synchronization, and reliable functionality whether connected or offline.
 
 ```mermaid
 %%{init: {'theme':'base','themeVariables':{'primaryColor':'#171717','primaryTextColor':'#fafafa','primaryBorderColor':'#52525b','lineColor':'#A3A3A3','secondaryColor':'#111113','tertiaryColor':'#0A0A0A','fontFamily':'monospace'}}}%%
 flowchart LR
   UI["UI · Flutter Widgets"] <--> SM["State · BLoC / Provider"]
-  SM <--> REPO["Repository"]
+  SM <--> REPO["Repository & Sync Engine"]
+  REPO <--> CLOUD[("Cloud DB · Supabase / Firebase")]
   REPO <--> LOCAL[("Local DB · Drift / SQLite")]
-  REPO <-. background sync .-> CLOUD[("Cloud · Supabase / Firebase")]
 ```
 
 </details>
@@ -282,12 +282,22 @@ flowchart LR
 <tr>
 <td><b>AI & Machine Learning</b></td>
 <td>
+<img src="https://img.shields.io/badge/Autonomous_AI_Agents-171717?style=for-the-badge&logoColor=FAFAFA" alt="Autonomous AI Agents"/>
+<img src="https://img.shields.io/badge/Multi--Modal_LLMs-171717?style=for-the-badge&logoColor=FAFAFA" alt="Multi-Modal LLMs"/>
 <img src="https://img.shields.io/badge/Groq_LLM-171717?style=for-the-badge&logo=openai&logoColor=FAFAFA" alt="Groq LLM"/>
 <img src="https://img.shields.io/badge/Google_Gemini-171717?style=for-the-badge&logo=google&logoColor=FAFAFA" alt="Google Gemini"/>
-<img src="https://img.shields.io/badge/Google_ML_Kit-171717?style=for-the-badge&logo=google&logoColor=FAFAFA" alt="Google ML Kit"/>
-<img src="https://img.shields.io/badge/Speech--to--Text-171717?style=for-the-badge&logoColor=FAFAFA" alt="Speech-to-Text"/>
-<img src="https://img.shields.io/badge/Text--to--Speech-171717?style=for-the-badge&logoColor=FAFAFA" alt="Text-to-Speech"/>
-<img src="https://img.shields.io/badge/OCR_Recognition-171717?style=for-the-badge&logoColor=FAFAFA" alt="OCR"/>
+<img src="https://img.shields.io/badge/Computer_Vision_&_ML_Kit-171717?style=for-the-badge&logo=google&logoColor=FAFAFA" alt="Computer Vision & ML Kit"/>
+<img src="https://img.shields.io/badge/Speech_&_Audio_AI-171717?style=for-the-badge&logoColor=FAFAFA" alt="Speech & Audio AI"/>
+<img src="https://img.shields.io/badge/OCR_&_Document_AI-171717?style=for-the-badge&logoColor=FAFAFA" alt="OCR & Document AI"/>
+</td>
+</tr>
+<tr>
+<td><b>UI Trends & Motion</b></td>
+<td>
+<img src="https://img.shields.io/badge/Modern_UI_Design_Trends-171717?style=for-the-badge&logoColor=FAFAFA" alt="Modern UI Design Trends"/>
+<img src="https://img.shields.io/badge/Fluid_&_Physics_Animations-171717?style=for-the-badge&logoColor=FAFAFA" alt="Fluid & Physics Animations"/>
+<img src="https://img.shields.io/badge/Micro--Interactions-171717?style=for-the-badge&logoColor=FAFAFA" alt="Micro-Interactions"/>
+<img src="https://img.shields.io/badge/120_FPS_Impeller-171717?style=for-the-badge&logoColor=FAFAFA" alt="120 FPS Impeller"/>
 </td>
 </tr>
 <tr>

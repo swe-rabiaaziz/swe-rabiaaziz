@@ -85,7 +85,7 @@
   <g class="pk"><rect x="-110" y="-1" width="110" height="2" fill="url(#tr)"/><circle r="3.5" fill="#fff" filter="url(#gl)"/></g>
 
   <rect x="40" y="228" width="920" height="1" fill="#1e1e1e"/>
-  <text class="cap" x="40" y="248">One codebase, offline-first, AI-native.</text>
+  <text class="cap" x="40" y="248">One codebase, cloud &amp; local data, AI-native.</text>
   <text class="cap" x="960" y="248" text-anchor="end" style="fill:#5a5a5a">Rabia Aziz</text>
   <rect x=".5" y=".5" width="999" height="255" rx="21.5" fill="none" stroke="#2a2a2a"/>
 </g>

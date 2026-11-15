@@ -1,246 +1,363 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 240" width="100%" height="240" role="img" aria-label="Rabia Aziz GitHub Command Center: Activity, 2-Day Streak &amp; Most Used Languages">
   <defs>
-    <!-- Background & Plate Gradients -->
     <linearGradient id="cardBg" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#141416"/>
       <stop offset="1" stop-color="#09090b"/>
     </linearGradient>
-    <linearGradient id="borderSweep" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#3f3f46"/>
-      <stop offset="0.5" stop-color="#ffffff"/>
-      <stop offset="1" stop-color="#3f3f46"/>
-    </linearGradient>
-
-    <!-- Language Bar Gradients -->
-    <linearGradient id="barDart" x1="0" y1="0" x2="1" y2="0">
+    <linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#ffffff"/>
-      <stop offset="1" stop-color="#d4d4d8"/>
-    </linearGradient>
-    <linearGradient id="barTs" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#a1a1aa"/>
       <stop offset="1" stop-color="#71717a"/>
     </linearGradient>
-    <linearGradient id="barHtml" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#71717a"/>
-      <stop offset="1" stop-color="#52525b"/>
-    </linearGradient>
-    <linearGradient id="barCpp" x1="0" y1="0" x2="1" y2="0">
+    <linearGradient id="barGrad" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0" stop-color="#52525b"/>
-      <stop offset="1" stop-color="#3f3f46"/>
+      <stop offset="1" stop-color="#ffffff"/>
     </linearGradient>
-
-    <!-- Glow & Shadow Filters -->
+    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
     <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="130%">
       <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.85"/>
     </filter>
-    <filter id="flameGlow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="4"/>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3"/>
     </filter>
+    <clipPath id="clipCard"><rect width="316" height="228" rx="16"/></clipPath>
   </defs>
 
   <style>
     .mono { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
     .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, system-ui, sans-serif; }
-    
-    @keyframes laser {
-      0% { stroke-dashoffset: 1200; }
-      100% { stroke-dashoffset: 0; }
-    }
-    @keyframes pulseFlame {
-      0%, 100% { transform: scale(1); opacity: 0.95; }
-      50% { transform: scale(1.12); opacity: 1; }
-    }
-    @keyframes flameRing {
-      0% { r: 38px; stroke-opacity: 0.7; }
-      100% { r: 52px; stroke-opacity: 0; }
-    }
-    @keyframes liveDot {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.3; }
-    }
-    @keyframes rankPulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.06); }
-    }
 
-    .laser-stroke {
-      stroke-dasharray: 90 1110;
-      animation: laser 8s linear infinite;
-    }
+    @keyframes laser { 0% { stroke-dashoffset: 1200; } 100% { stroke-dashoffset: 0; } }
+    @keyframes pulseFlame { 0%,100% { transform: scale(1); opacity: .95; } 50% { transform: scale(1.14); opacity: 1; } }
+    @keyframes ping { 0% { r: 40px; stroke-opacity: .7; } 100% { r: 56px; stroke-opacity: 0; } }
+    @keyframes liveDot { 0%,100% { opacity: 1; } 50% { opacity: .3; } }
+    @keyframes rankPulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.07); } }
+    @keyframes cellIn { 0% { opacity: 0; transform: scale(.2); } 100% { opacity: 1; transform: scale(1); } }
+    @keyframes cellBreath { 0%,100% { opacity: 1; } 50% { opacity: .55; } }
+    @keyframes sweep { 0% { transform: translateX(-120px); } 100% { transform: translateX(340px); } }
+    @keyframes draw { from { stroke-dasharray: 0 100; } }
+    @keyframes growX { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+    @keyframes floaty { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+    @keyframes spinSlow { to { transform: rotate(360deg); } }
+    @keyframes dayIn { 0% { transform: scale(0); } 70% { transform: scale(1.25); } 100% { transform: scale(1); } }
+
+    .laser-stroke { stroke-dasharray: 90 1110; animation: laser 8s linear infinite; }
+
+    .c { transform-box: fill-box; transform-origin: center; animation: cellIn .5s cubic-bezier(.2,.9,.3,1.4) both, cellBreath 3.6s ease-in-out infinite; }
+    .l0 { fill: #1f1f23; }
+    .l1 { fill: #3f3f46; }
+    .l2 { fill: #71717a; }
+    .l3 { fill: #d4d4d8; }
+    .l4 { fill: #ffffff; }
+
+    .seg { stroke-linecap: butt; animation: draw 1.4s cubic-bezier(.3,.8,.3,1) both; }
+    .bar { transform-box: fill-box; transform-origin: left center; animation: growX 1.2s cubic-bezier(.3,.8,.3,1) both; }
+    .day { transform-box: fill-box; transform-origin: center; animation: dayIn .6s ease-out both; }
+    .chip-ico { transform-box: fill-box; transform-origin: center; animation: floaty 3s ease-in-out infinite; }
   </style>
 
-  <!-- ================= CARD 1: GITHUB ACTIVITY & RANK (LEFT, width 320) ================= -->
+  <!-- ================= CARD 1: ACTIVITY ================= -->
   <g transform="translate(6 6)">
     <rect width="316" height="228" rx="16" fill="url(#cardBg)" stroke="#27272a" stroke-width="1.2" filter="url(#cardShadow)"/>
-    
+
     <!-- Header -->
     <g transform="translate(20 22)">
-      <!-- GitHub Icon -->
       <path d="M9 1C4.58 1 1 4.58 1 9C1 12.54 3.29 15.53 6.47 16.59C6.87 16.66 7.01 16.42 7.01 16.21C7.01 16.02 7 15.52 7 14.84C4.78 15.32 4.31 13.77 4.31 13.77C3.95 12.84 3.43 12.6 3.43 12.6C2.7 12.11 3.48 12.12 3.48 12.12C4.29 12.18 4.71 12.95 4.71 12.95C5.42 14.17 6.58 13.82 7.03 13.61C7.1 13.1 7.31 12.74 7.53 12.54C5.76 12.34 3.9 11.65 3.9 8.61C3.9 7.74 4.21 7.03 4.72 6.48C4.64 6.28 4.36 5.47 4.8 4.37C4.8 4.37 5.47 4.16 6.99 5.19C7.62 5.01 8.3 4.93 9 4.93C9.7 4.93 10.38 5.01 11.01 5.19C12.53 4.16 13.2 4.37 13.2 4.37C13.64 5.47 13.36 6.28 13.28 6.48C13.79 7.03 14.1 7.74 14.1 8.61C14.1 11.66 12.23 12.33 10.46 12.53C10.75 12.78 11.01 13.28 11.01 14.03C11.01 15.12 11 16 11 16.21C11 16.42 11.14 16.67 11.55 16.59C14.72 15.53 17 12.54 17 9C17 4.58 13.42 1 9 1Z" fill="#fafafa"/>
       <text class="sans" x="24" y="14" font-size="13" font-weight="700" fill="#fafafa">GitHub Activity</text>
     </g>
 
-    <!-- Metrics List -->
-    <g transform="translate(20 54)">
-      <!-- Metric 1: Total Contributions -->
-      <g transform="translate(0 0)">
-        <text class="sans" x="0" y="14" font-size="11.5" fill="#a1a1aa">Total Contributions</text>
-        <text class="mono" x="180" y="14" font-size="13" font-weight="700" text-anchor="end" fill="#fafafa">81+</text>
-      </g>
-      <line x1="0" y1="22" x2="185" y2="22" stroke="#27272a" stroke-width="0.8"/>
+    <!-- Hero number -->
+    <g transform="translate(20 52)">
+      <ellipse cx="38" cy="22" rx="58" ry="26" fill="url(#glow)"/>
+      <text class="sans" x="0" y="42" font-size="46" font-weight="900" fill="#ffffff" letter-spacing="-1.5">81<tspan fill="#a1a1aa" font-size="30">+</tspan></text>
+    </g>
 
-      <!-- Metric 2: Repositories -->
-      <g transform="translate(0 32)">
-        <text class="sans" x="0" y="14" font-size="11.5" fill="#a1a1aa">Production Repos</text>
-        <text class="mono" x="180" y="14" font-size="13" font-weight="700" text-anchor="end" fill="#fafafa">14</text>
+    <!-- A+ Rank ring -->
+    <g transform="translate(248 76)">
+      <circle r="38" fill="none" stroke="#27272a" stroke-width="3"/>
+      <circle r="38" fill="none" stroke="url(#ringGrad)" stroke-width="3.5" pathLength="100" class="seg" stroke-dasharray="80 100" stroke-linecap="round" transform="rotate(-90)"/>
+      <circle r="31" fill="#18181b" stroke="#3f3f46" stroke-width="0.8"/>
+      <g style="transform-box: fill-box; transform-origin: center; animation: spinSlow 14s linear infinite;">
+        <circle cx="0" cy="-38" r="2.6" fill="#ffffff"/>
       </g>
-      <line x1="0" y1="54" x2="185" y2="54" stroke="#27272a" stroke-width="0.8"/>
+      <text class="sans" x="0" y="8.5" text-anchor="middle" font-size="24" font-weight="900" fill="#ffffff" style="transform-box: fill-box; transform-origin: center; animation: rankPulse 2.8s ease-in-out infinite;">A+</text>
+    </g>
 
-      <!-- Metric 3: Target FPS -->
-      <g transform="translate(0 64)">
-        <text class="sans" x="0" y="14" font-size="11.5" fill="#a1a1aa">Impeller Pipeline</text>
-        <text class="mono" x="180" y="14" font-size="13" font-weight="700" text-anchor="end" fill="#fafafa">120 FPS</text>
-      </g>
-      <line x1="0" y1="86" x2="185" y2="86" stroke="#27272a" stroke-width="0.8"/>
+    <!-- Contribution heatmap (16 cols x 3 rows) -->
+    <g>
+      <rect class="c l0" style="animation-delay:0s,0s" x="20" y="118" width="13" height="13" rx="3"/>
+      <rect class="c l1" style="animation-delay:0s,.2s" x="20" y="135" width="13" height="13" rx="3"/>
+      <rect class="c l0" style="animation-delay:0s,.4s" x="20" y="152" width="13" height="13" rx="3"/>
 
-      <!-- Metric 4: Clean Architecture -->
-      <g transform="translate(0 96)">
-        <text class="sans" x="0" y="14" font-size="11.5" fill="#a1a1aa">Clean Architecture</text>
-        <text class="mono" x="180" y="14" font-size="13" font-weight="700" text-anchor="end" fill="#fafafa">100%</text>
+      <rect class="c l1" style="animation-delay:.05s,.1s" x="37" y="118" width="13" height="13" rx="3"/>
+      <rect class="c l0" style="animation-delay:.05s,.3s" x="37" y="135" width="13" height="13" rx="3"/>
+      <rect class="c l2" style="animation-delay:.05s,.5s" x="37" y="152" width="13" height="13" rx="3"/>
+
+      <rect class="c l0" style="animation-delay:.1s,.2s" x="54" y="118" width="13" height="13" rx="3"/>
+      <rect class="c l2" style="animation-delay:.1s,.4s" x="54" y="135" width="13" height="13" rx="3"/>
+      <rect class="c l1" style="animation-delay:.1s,.6s" x="54" y="152" width="13" height="13" rx="3"/>
+
+      <rect class="c l3" style="animation-delay:.15s,.3s" x="71" y="118" width="13" height="13" rx="3"/>
+      <rect class="c l1" style="animation-delay:.15s,.5s" x="71" y="135" width="13" height="13" rx="3"/>
+      <rect class="c l0" style="animation-delay:.15s,.7s" x="71" y="152" width="13" height="13" rx="3"/>
+
+      <rect class="c l0" style="animation-delay:.2s,.4s" x="88" y="118" width="13" height="13" rx="3"/>
+      <rect class="c l0" style="animation-delay:.2s,.6s" x="88" y="135" width="13" height="13" rx="3"/>
+      <rect class="c l1" style="animation-delay:.2s,.8s" x="88" y="152" width="13" height="13" rx="3"/>
+
+      <rect class="c l2" style="animation-delay:.25s,.5s" x="105" y="118" width="13" height="13" rx="3"/>
+      <rect class="c l3" style="animation-delay:.25s,.7s" x="105" y="135" width="13" height="13" rx="3"/>
+      <rect class="c l1" style="animation-delay:.25s,.9s" x="105" y="152" width="13" height="13" rx="3"/>
+
+      <rect class="c l1" style="animation-delay:.3s,.6s" x="122" y="118" width="13" height="13" rx="3"/>
+      <rect class="c l0" style="animation-delay:.3s,.8s" x="122" y="135" width="13" height="13" rx="3"/>
+      <rect class="c l0" style="animation-delay:.3s,1s" x="122" y="152" width="13" height="13" rx="3"/>
+
+      <rect class="c l0" style="animation-delay:.35s,.7s" x="139" y="118" width="13" height="13" rx="3"/>
+      <rect class="c l1" style="animation-delay:.35s,.9s" x="139" y="135" width="13" height="13" rx="3"/>
+      <rect class="c l2" style="animation-delay:.35s,1.1s" x="139" y="152" width="13" height="13" rx="3"/>
+
+      <rect class="c l4" style="animation-delay:.4s,.8s" x="156" y="118" width="13" height="13" rx="3"/>
+      <rect class="c l2" style="animation-delay:.4s,1s" x="156" y="135" width="13" height="13" rx="3"/>
+      <rect class="c l0" style="animation-delay:.4s,1.2s" x="156" y="152" width="13" height="13" rx="3"/>
+
+      <rect class="c l1" style="animation-delay:.45s,.9s" x="173" y="118" width="13" height="13" rx="3"/>
+      <rect class="c l0" style="animation-delay:.45s,1.1s" x="173" y="135" width="13" height="13" rx="3"/>
+      <rect class="c l1" style="animation-delay:.45s,1.3s" x="173" y="152" width="13" height="13" rx="3"/>
+
+      <rect class="c l0" style="animation-delay:.5s,1s" x="190" y="118" width="13" height="13" rx="3"/>
+      <rect class="c l2" style="animation-delay:.5s,1.2s" x="190" y="135" width="13" height="13" rx="3"/>
+      <rect class="c l3" style="animation-delay:.5s,1.4s" x="190" y="152" width="13" height="13" rx="3"/>
+
+      <rect class="c l2" style="animation-delay:.55s,1.1s" x="207" y="118" width="13" height="13" rx="3"/>
+      <rect class="c l1" style="animation-delay:.55s,1.3s" x="207" y="135" width="13" height="13" rx="3"/>
+      <rect class="c l0" style="animation-delay:.55s,1.5s" x="207" y="152" width="13" height="13" rx="3"/>
+
+      <rect class="c l3" style="animation-delay:.6s,1.2s" x="224" y="118" width="13" height="13" rx="3"/>
+      <rect class="c l4" style="animation-delay:.6s,1.4s" x="224" y="135" width="13" height="13" rx="3"/>
+      <rect class="c l2" style="animation-delay:.6s,1.6s" x="224" y="152" width="13" height="13" rx="3"/>
+
+      <rect class="c l0" style="animation-delay:.65s,1.3s" x="241" y="118" width="13" height="13" rx="3"/>
+      <rect class="c l1" style="animation-delay:.65s,1.5s" x="241" y="135" width="13" height="13" rx="3"/>
+      <rect class="c l0" style="animation-delay:.65s,1.7s" x="241" y="152" width="13" height="13" rx="3"/>
+
+      <rect class="c l4" style="animation-delay:.7s,1.4s" x="258" y="118" width="13" height="13" rx="3"/>
+      <rect class="c l3" style="animation-delay:.7s,1.6s" x="258" y="135" width="13" height="13" rx="3"/>
+      <rect class="c l4" style="animation-delay:.7s,1.8s" x="258" y="152" width="13" height="13" rx="3"/>
+
+      <rect class="c l3" style="animation-delay:.75s,1.5s" x="275" y="118" width="13" height="13" rx="3"/>
+      <rect class="c l4" style="animation-delay:.75s,1.7s" x="275" y="135" width="13" height="13" rx="3"/>
+      <rect class="c l4" style="animation-delay:.75s,1.9s" x="275" y="152" width="13" height="13" rx="3"/>
+
+      <!-- scanning shine over the grid -->
+      <g clip-path="url(#clipCard)" transform="translate(-6 -6)">
+        <rect x="0" y="118" width="60" height="50" fill="url(#shine)" style="animation: sweep 4.5s ease-in-out infinite;"/>
       </g>
     </g>
 
-    <!-- Right Side: A+ Rank Badge -->
-    <g transform="translate(248 108)">
-      <circle cx="0" cy="0" r="38" fill="none" stroke="#27272a" stroke-width="2.5"/>
-      <circle cx="0" cy="0" r="38" fill="none" stroke="#fafafa" stroke-width="3" stroke-dasharray="190 50" stroke-linecap="round" transform="rotate(-45)"/>
-      <circle cx="0" cy="0" r="30" fill="#18181b" stroke="#3f3f46" stroke-width="0.8"/>
-      <text class="sans" x="0" y="8" text-anchor="middle" font-size="24" font-weight="900" fill="#ffffff" style="transform-box: fill-box; transform-origin: center; animation: rankPulse 2.8s ease-in-out infinite;">A+</text>
-      <text class="mono" x="0" y="52" text-anchor="middle" font-size="7.5" font-weight="700" letter-spacing="1" fill="#71717a">CRAFT</text>
+    <!-- Icon chips: repos / fps / architecture -->
+    <g transform="translate(20 182)">
+      <!-- production repos -->
+      <g>
+        <rect width="95" height="30" rx="8" fill="#18181b" stroke="#27272a" stroke-width="0.8"/>
+        <circle cx="15" cy="15" r="9" fill="#27272a" stroke="#3f3f46" stroke-width="0.6"/>
+        <g transform="translate(15 15)">
+          <g class="chip-ico">
+            <path d="M0 -5.5L5.5 -2.7L0 0.1L-5.5 -2.7Z" fill="#fafafa" fill-opacity=".9" stroke="#fafafa" stroke-width="1" stroke-linejoin="round"/>
+            <path d="M-5.5 0.3L0 3.1L5.5 0.3" fill="none" stroke="#a1a1aa" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M-5.5 2.9L0 5.7L5.5 2.9" fill="none" stroke="#71717a" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+        </g>
+        <text class="mono" x="30" y="14" font-size="12" font-weight="700" fill="#fafafa">14</text>
+        <text class="sans" x="30" y="24" font-size="7.5" font-weight="600" fill="#a1a1aa">Production Repos</text>
+      </g>
+      <!-- fps -->
+      <g transform="translate(102 0)">
+        <rect width="68" height="30" rx="8" fill="#18181b" stroke="#27272a" stroke-width="0.8"/>
+        <circle cx="15" cy="15" r="9" fill="#27272a" stroke="#3f3f46" stroke-width="0.6"/>
+        <g transform="translate(15 15)">
+          <g class="chip-ico" style="animation-delay:-1s">
+            <path d="M1 -6L-4.5 1H-0.5L-1.5 6L4.5 -1.5H0.5L1 -6Z" fill="#fafafa"/>
+          </g>
+        </g>
+        <text class="mono" x="29" y="19" font-size="11" font-weight="700" fill="#fafafa">120<tspan font-size="7" fill="#a1a1aa" dx="2">FPS</tspan></text>
+      </g>
+      <!-- clean architecture -->
+      <g transform="translate(177 0)">
+        <rect width="99" height="30" rx="8" fill="#18181b" stroke="#27272a" stroke-width="0.8"/>
+        <circle cx="15" cy="15" r="9" fill="#27272a" stroke="#3f3f46" stroke-width="0.6"/>
+        <g transform="translate(15 15)">
+          <g class="chip-ico" style="animation-delay:-2s">
+            <circle r="6" fill="none" stroke="#71717a" stroke-width="1.1"/>
+            <circle r="3.4" fill="none" stroke="#a1a1aa" stroke-width="1.1"/>
+            <circle r="1.3" fill="#fafafa"/>
+          </g>
+        </g>
+        <text class="mono" x="30" y="14" font-size="12" font-weight="700" fill="#fafafa">100%</text>
+        <text class="sans" x="30" y="24" font-size="7.5" font-weight="600" fill="#a1a1aa">Clean Architecture</text>
+      </g>
     </g>
 
-    <!-- Bottom Status -->
-    <g transform="translate(20 186)">
-      <rect width="276" height="24" rx="6" fill="#18181b" stroke="#27272a" stroke-width="0.8"/>
-      <text class="mono" x="138" y="15.5" text-anchor="middle" font-size="8.5" letter-spacing="0.8" fill="#a1a1aa">COMMITS · PRs · ZERO JANK</text>
-    </g>
-
-    <!-- Animated Border Laser -->
     <rect width="316" height="228" rx="16" fill="none" stroke="#ffffff" stroke-opacity="0.85" stroke-width="1.3" pathLength="1200" class="laser-stroke"/>
   </g>
 
-  <!-- ================= CARD 2: STREAK ENGINE (CENTER, width 320) ================= -->
+  <!-- ================= CARD 2: STREAK ================= -->
   <g transform="translate(342 6)">
     <rect width="316" height="228" rx="16" fill="url(#cardBg)" stroke="#27272a" stroke-width="1.2" filter="url(#cardShadow)"/>
 
     <!-- Header -->
     <g transform="translate(20 22)">
-      <!-- Flame Icon -->
       <path d="M8.5 0C8.5 0 9.8 3.5 12 5.5C13.5 7 15 9.2 15 12C15 16 11.9 19 8 19C4.1 19 1 16 1 12C1 8.8 3.5 5.5 5 4C5 6.5 7 8 7 8C7 8 7.5 4 8.5 0Z" fill="#fafafa" style="transform-box: fill-box; transform-origin: center; animation: pulseFlame 2.2s ease-in-out infinite;"/>
-      <text class="sans" x="22" y="14" font-size="13" font-weight="700" fill="#fafafa">Contribution Streak</text>
+      <text class="sans" x="22" y="14" font-size="13" font-weight="700" fill="#fafafa">Streak</text>
       <circle cx="282" cy="10" r="3" fill="#22c55e" style="animation: liveDot 1.8s infinite;"/>
     </g>
 
-    <!-- Center Streak Dial -->
-    <g transform="translate(158 100)">
-      <!-- Outer Pulsing Radar Ring -->
-      <circle cx="0" cy="0" r="40" fill="none" stroke="#ffffff" stroke-width="1.5" style="animation: flameRing 2.4s ease-out infinite;"/>
-      
-      <!-- Dial Background -->
-      <circle cx="0" cy="0" r="42" fill="#121215" stroke="#27272a" stroke-width="2.5"/>
-      <circle cx="0" cy="0" r="42" fill="none" stroke="#fafafa" stroke-width="3" stroke-dasharray="190 80" stroke-linecap="round" transform="rotate(-90)"/>
-      
-      <!-- Big Streak Number -->
-      <text class="sans" x="0" y="8" text-anchor="middle" font-size="34" font-weight="900" fill="#ffffff">2</text>
-      <text class="mono" x="0" y="24" text-anchor="middle" font-size="8" font-weight="700" letter-spacing="1" fill="#a1a1aa">DAYS</text>
+    <!-- Big dial -->
+    <g transform="translate(158 98)">
+      <circle r="62" fill="url(#glow)"/>
+      <circle r="40" fill="none" stroke="#ffffff" stroke-width="1.5" style="animation: ping 2.4s ease-out infinite;"/>
+      <circle r="46" fill="#121215" stroke="#27272a" stroke-width="3"/>
+      <circle r="46" fill="none" stroke="url(#ringGrad)" stroke-width="4" pathLength="100" class="seg" stroke-dasharray="67 100" stroke-linecap="round" transform="rotate(-90)"/>
+      <!-- orbiting spark -->
+      <g>
+        <circle cx="0" cy="-46" r="3.2" fill="#ffffff"/>
+        <circle cx="0" cy="-46" r="6" fill="#ffffff" opacity=".35" filter="url(#soft)"/>
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="6s" repeatCount="indefinite"/>
+      </g>
+      <!-- flame behind number -->
+      <g transform="translate(0 -26) scale(.45)">
+        <path d="M0 -26C0 -26 3 -18 8 -13C11.5 -9.5 14 -5 14 1C14 9 8 15 0 15C-8 15 -14 9 -14 1C-14 -5.5 -8.5 -12 -5.5 -15C-5.5 -10 -2 -7 -2 -7C-2 -7 -1.5 -17 0 -26Z" fill="#fafafa" style="transform-box: fill-box; transform-origin: center; animation: pulseFlame 2.2s ease-in-out infinite;"/>
+      </g>
+      <text class="sans" x="0" y="17" text-anchor="middle" font-size="36" font-weight="900" fill="#ffffff">2</text>
+      <text class="mono" x="0" y="31" text-anchor="middle" font-size="8" font-weight="700" letter-spacing="1.5" fill="#a1a1aa">DAYS</text>
     </g>
 
-    <!-- Streak Details (Left & Right) -->
-    <g transform="translate(20 92)">
-      <text class="sans" x="24" y="0" text-anchor="middle" font-size="11" fill="#71717a">Total</text>
-      <text class="mono" x="24" y="16" text-anchor="middle" font-size="14" font-weight="700" fill="#fafafa">81</text>
-      <text class="sans" x="24" y="28" text-anchor="middle" font-size="9" fill="#52525b">contributions</text>
+    <!-- Left: current status -->
+    <g transform="translate(52 88)">
+      <circle cx="0" cy="4" r="4" fill="#22c55e" style="animation: liveDot 1.8s infinite;"/>
+      <circle cx="0" cy="4" r="8" fill="none" stroke="#22c55e" stroke-width="1" opacity=".35"/>
+      <text class="sans" x="0" y="30" text-anchor="middle" font-size="11" font-weight="700" fill="#fafafa">Active</text>
+      <text class="mono" x="0" y="43" text-anchor="middle" font-size="8" fill="#71717a">Nov 13 – 14</text>
     </g>
 
-    <g transform="translate(252 92)">
-      <text class="sans" x="24" y="0" text-anchor="middle" font-size="11" fill="#71717a">Longest</text>
-      <text class="mono" x="24" y="16" text-anchor="middle" font-size="14" font-weight="700" fill="#fafafa">3</text>
-      <text class="sans" x="24" y="28" text-anchor="middle" font-size="9" fill="#52525b">day streak</text>
+    <!-- Right: longest streak -->
+    <g transform="translate(264 84)">
+      <g transform="translate(-10 0)">
+        <g class="chip-ico" style="animation-delay:-1.5s">
+          <path d="M0 0H20V6C20 11 16 15 10 15C4 15 0 11 0 6V0Z" fill="none" stroke="#a1a1aa" stroke-width="1.4"/>
+          <path d="M10 15V21M5 21H15" stroke="#a1a1aa" stroke-width="1.4" stroke-linecap="round"/>
+        </g>
+      </g>
+      <text class="mono" x="0" y="40" text-anchor="middle" font-size="14" font-weight="700" fill="#fafafa">3<tspan font-size="8" fill="#a1a1aa" dx="2">days</tspan></text>
+      <text class="sans" x="0" y="52" text-anchor="middle" font-size="8.5" fill="#71717a">Longest streak</text>
     </g>
 
-    <!-- Bottom Date Badge -->
-    <g transform="translate(20 174)">
-      <rect width="276" height="36" rx="8" fill="#101014" stroke="#27272a" stroke-width="0.8"/>
-      <text class="mono" x="138" y="16" text-anchor="middle" font-size="9" fill="#fafafa">CURRENT STREAK: ACTIVE</text>
-      <text class="mono" x="138" y="28" text-anchor="middle" font-size="8.5" fill="#71717a">Nov 13 – Nov 14 (Active)</text>
+    <!-- 7-day trail -->
+    <g transform="translate(20 168)">
+      <rect width="276" height="42" rx="10" fill="#101014" stroke="#27272a" stroke-width="0.8"/>
+      <line x1="38" y1="15" x2="238" y2="15" stroke="#27272a" stroke-width="2"/>
+      <line x1="204" y1="15" x2="238" y2="15" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity=".8"/>
+      <circle class="day" style="animation-delay:.1s" cx="38" cy="15" r="6" fill="#27272a"/>
+      <circle class="day" style="animation-delay:.2s" cx="72" cy="15" r="6" fill="#27272a"/>
+      <circle class="day" style="animation-delay:.3s" cx="105" cy="15" r="6" fill="#27272a"/>
+      <circle class="day" style="animation-delay:.4s" cx="138" cy="15" r="6" fill="#27272a"/>
+      <circle class="day" style="animation-delay:.5s" cx="171" cy="15" r="6" fill="#27272a"/>
+      <circle class="day" style="animation-delay:.6s" cx="204" cy="15" r="7" fill="#d4d4d8"/>
+      <circle class="day" style="animation-delay:.7s" cx="238" cy="15" r="8" fill="#ffffff"/>
+      <circle cx="238" cy="15" r="8" fill="none" stroke="#ffffff" stroke-width="1.2" style="animation: ping 2s ease-out infinite; transform-box: fill-box;" opacity=".6"/>
+      <!-- weekday labels -->
+      <g class="mono" font-size="7.5" text-anchor="middle" fill="#52525b">
+        <text x="38" y="35">S</text>
+        <text x="72" y="35">M</text>
+        <text x="105" y="35">T</text>
+        <text x="138" y="35">W</text>
+        <text x="171" y="35">T</text>
+        <text x="204" y="35" fill="#d4d4d8">F</text>
+        <text x="238" y="35" fill="#ffffff">S</text>
+      </g>
     </g>
 
-    <!-- Animated Border Laser -->
     <rect width="316" height="228" rx="16" fill="none" stroke="#ffffff" stroke-opacity="0.85" stroke-width="1.3" pathLength="1200" class="laser-stroke" style="animation-delay: -2.6s;"/>
   </g>
 
-  <!-- ================= CARD 3: TOP LANGUAGES (RIGHT, width 320) ================= -->
+  <!-- ================= CARD 3: LANGUAGES ================= -->
   <g transform="translate(678 6)">
     <rect width="316" height="228" rx="16" fill="url(#cardBg)" stroke="#27272a" stroke-width="1.2" filter="url(#cardShadow)"/>
 
     <!-- Header -->
     <g transform="translate(20 22)">
       <text class="mono" x="0" y="14" font-size="13" font-weight="700" fill="#fafafa">&lt;/&gt;</text>
-      <text class="sans" x="22" y="14" font-size="13" font-weight="700" fill="#fafafa">Most Used Languages</text>
+      <text class="sans" x="26" y="14" font-size="13" font-weight="700" fill="#fafafa">Languages</text>
     </g>
 
-    <!-- Progress Bar -->
-    <g transform="translate(20 48)">
-      <rect width="276" height="8" rx="4" fill="#27272a"/>
-      <!-- Dart: 74.2% -> 205px -->
-      <rect width="205" height="8" rx="4" fill="url(#barDart)"/>
-      <!-- TS: 14.8% -> 41px -->
-      <rect x="207" width="41" height="8" rx="2" fill="url(#barTs)"/>
-      <!-- HTML: 6.5% -> 18px -->
-      <rect x="250" width="18" height="8" rx="2" fill="url(#barHtml)"/>
-      <!-- C++: 4.5% -> 6px -->
-      <rect x="270" width="6" height="8" rx="2" fill="url(#barCpp)"/>
+    <!-- Donut -->
+    <g transform="translate(92 118)">
+      <circle r="60" fill="url(#glow)"/>
+      <circle r="46" fill="none" stroke="#1c1c20" stroke-width="14"/>
+      <g transform="rotate(-90)" fill="none" stroke-width="14">
+        <circle r="46" pathLength="100" class="seg" stroke="#ffffff" stroke-dasharray="72.6 100" stroke-dashoffset="0"/>
+        <circle r="46" pathLength="100" class="seg" stroke="#a1a1aa" stroke-dasharray="13.2 100" stroke-dashoffset="-74.2" style="animation-delay:.2s"/>
+        <circle r="46" pathLength="100" class="seg" stroke="#71717a" stroke-dasharray="5 100" stroke-dashoffset="-89.4" style="animation-delay:.4s"/>
+        <circle r="46" pathLength="100" class="seg" stroke="#52525b" stroke-dasharray="3.2 100" stroke-dashoffset="-95.6" style="animation-delay:.6s"/>
+      </g>
+      <circle r="34" fill="#121215" stroke="#27272a" stroke-width="0.8"/>
+      <!-- Dart-style diamond mark -->
+      <g style="transform-box: fill-box; transform-origin: center; animation: pulseFlame 3s ease-in-out infinite;">
+        <path d="M0 -16L14 0L0 16L-14 0Z" fill="none" stroke="#ffffff" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M0 -8L7 0L0 8L-7 0Z" fill="#ffffff"/>
+      </g>
     </g>
 
-    <!-- Languages Breakdown List -->
-    <g transform="translate(20 74)">
+    <!-- Legend: dot + animated bar + % -->
+    <g transform="translate(170 62)">
       <!-- Dart -->
-      <g transform="translate(0 0)">
-        <circle cx="5" cy="5" r="4" fill="#ffffff"/>
-        <text class="sans" x="16" y="9" font-size="11.5" font-weight="600" fill="#fafafa">Dart</text>
-        <text class="mono" x="276" y="9" font-size="11" text-anchor="end" fill="#a1a1aa">74.2%</text>
+      <g>
+        <circle cx="4" cy="5" r="4" fill="#ffffff"/>
+        <text class="sans" x="16" y="9" font-size="12" font-weight="700" fill="#fafafa">Dart</text>
+        <text class="mono" x="126" y="9" font-size="11" text-anchor="end" fill="#fafafa">74%</text>
+        <rect x="0" y="17" width="126" height="4" rx="2" fill="#1f1f23"/>
+        <rect class="bar" x="0" y="17" width="93" height="4" rx="2" fill="url(#barGrad)"/>
       </g>
-
-      <!-- TypeScript -->
-      <g transform="translate(0 26)">
-        <circle cx="5" cy="5" r="4" fill="#a1a1aa"/>
-        <text class="sans" x="16" y="9" font-size="11.5" font-weight="600" fill="#fafafa">TypeScript / JS</text>
-        <text class="mono" x="276" y="9" font-size="11" text-anchor="end" fill="#a1a1aa">14.8%</text>
+      <!-- TS -->
+      <g transform="translate(0 38)">
+        <circle cx="4" cy="5" r="4" fill="#a1a1aa"/>
+        <text class="sans" x="16" y="9" font-size="12" font-weight="700" fill="#fafafa">TS / JS</text>
+        <text class="mono" x="126" y="9" font-size="11" text-anchor="end" fill="#a1a1aa">15%</text>
+        <rect x="0" y="17" width="126" height="4" rx="2" fill="#1f1f23"/>
+        <rect class="bar" style="animation-delay:.2s" x="0" y="17" width="19" height="4" rx="2" fill="#a1a1aa"/>
       </g>
-
-      <!-- HTML / CSS -->
-      <g transform="translate(0 52)">
-        <circle cx="5" cy="5" r="4" fill="#71717a"/>
-        <text class="sans" x="16" y="9" font-size="11.5" font-weight="600" fill="#fafafa">HTML / Tailwind</text>
-        <text class="mono" x="276" y="9" font-size="11" text-anchor="end" fill="#a1a1aa">6.5%</text>
+      <!-- HTML -->
+      <g transform="translate(0 76)">
+        <circle cx="4" cy="5" r="4" fill="#71717a"/>
+        <text class="sans" x="16" y="9" font-size="12" font-weight="700" fill="#fafafa">HTML</text>
+        <text class="mono" x="126" y="9" font-size="11" text-anchor="end" fill="#a1a1aa">7%</text>
+        <rect x="0" y="17" width="126" height="4" rx="2" fill="#1f1f23"/>
+        <rect class="bar" style="animation-delay:.4s" x="0" y="17" width="8" height="4" rx="2" fill="#71717a"/>
       </g>
-
-      <!-- C++ / Native -->
-      <g transform="translate(0 78)">
-        <circle cx="5" cy="5" r="4" fill="#52525b"/>
-        <text class="sans" x="16" y="9" font-size="11.5" font-weight="600" fill="#fafafa">C++ / Native</text>
-        <text class="mono" x="276" y="9" font-size="11" text-anchor="end" fill="#a1a1aa">4.5%</text>
+      <!-- C++ -->
+      <g transform="translate(0 114)">
+        <circle cx="4" cy="5" r="4" fill="#52525b"/>
+        <text class="sans" x="16" y="9" font-size="12" font-weight="700" fill="#fafafa">C++</text>
+        <text class="mono" x="126" y="9" font-size="11" text-anchor="end" fill="#a1a1aa">5%</text>
+        <rect x="0" y="17" width="126" height="4" rx="2" fill="#1f1f23"/>
+        <rect class="bar" style="animation-delay:.6s" x="0" y="17" width="6" height="4" rx="2" fill="#52525b"/>
       </g>
     </g>
 
-    <!-- Bottom Badge -->
+    <!-- Bottom badge -->
     <g transform="translate(20 186)">
       <rect width="276" height="24" rx="6" fill="#18181b" stroke="#27272a" stroke-width="0.8"/>
       <text class="mono" x="138" y="15.5" text-anchor="middle" font-size="8.5" letter-spacing="0.8" fill="#d4d4d8">FLUTTER · DART SPECIALIST</text>
     </g>
 
-    <!-- Animated Border Laser -->
     <rect width="316" height="228" rx="16" fill="none" stroke="#ffffff" stroke-opacity="0.85" stroke-width="1.3" pathLength="1200" class="laser-stroke" style="animation-delay: -5.3s;"/>
   </g>
 </svg>

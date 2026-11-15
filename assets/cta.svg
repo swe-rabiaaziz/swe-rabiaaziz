@@ -1,30 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="380" viewBox="0 0 1000 380" role="img" aria-label="Let's build something extraordinary. Open to worldwide full-time remote engineering roles and mobile contract builds. Based in Pakistan, UTC+5, replies within 24 hours." xmlns:c2pa="http://c2pa.org/manifest">
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="380" viewBox="0 0 1000 380" role="img" aria-label="Let's build something extraordinary. Open to worldwide full-time remote engineering roles and mobile contract builds. Based in Pakistan, UTC+5, replies within 24 hours.">
 <defs>
   <linearGradient id="plate" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0a0a0a"/><stop offset="0.5" stop-color="#141414"/><stop offset="1" stop-color="#0a0a0a"/></linearGradient>
   <linearGradient id="cardBg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1a1a1a"/><stop offset="1" stop-color="#0e0e0e"/></linearGradient>
-  <linearGradient id="borderSweep" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#525252"/><stop offset="0.5" stop-color="#ffffff"/><stop offset="1" stop-color="#525252"/></linearGradient>
   <linearGradient id="hl" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="0.5" stop-color="#fff" stop-opacity="0.45"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
   <linearGradient id="shineG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="0.5" stop-color="#fff" stop-opacity="0.08"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
-  <linearGradient id="scanG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#fff" stop-opacity="0.9"/></linearGradient>
+  <linearGradient id="shine2" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="0.5" stop-color="#fff" stop-opacity="0.22"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+  <linearGradient id="trailG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#fff" stop-opacity="0.16"/></linearGradient>
   <linearGradient id="btnShine" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#000" stop-opacity="0"/><stop offset="0.5" stop-color="#000" stop-opacity="0.09"/><stop offset="1" stop-color="#000" stop-opacity="0"/></linearGradient>
   <linearGradient id="glint" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="640" y2="0">
     <stop offset="0" stop-color="#8c8c8c"/><stop offset="0.42" stop-color="#d4d4d4"/><stop offset="0.5" stop-color="#ffffff"/><stop offset="0.58" stop-color="#d4d4d4"/><stop offset="1" stop-color="#8c8c8c"/>
     <animateTransform attributeName="gradientTransform" type="translate" from="-640 0" to="640 0" dur="4.4s" repeatCount="indefinite"/>
   </linearGradient>
-  <radialGradient id="glowW" cx="1" cy="0" r="0.9"><stop offset="0" stop-color="#fff" stop-opacity="0.08"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
   <radialGradient id="orb" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#fff" stop-opacity="0.08"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+  <radialGradient id="globeG" cx="0.35" cy="0.3" r="0.85"><stop offset="0" stop-color="#202020"/><stop offset="0.55" stop-color="#0f0f0f"/><stop offset="1" stop-color="#070707"/></radialGradient>
+  <radialGradient id="sfG" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#fff"/><stop offset="0.7" stop-color="#fff"/><stop offset="1" stop-color="#2a2a2a"/></radialGradient>
+  <mask id="sphereMask"><circle cx="670" cy="185" r="175" fill="url(#sfG)"/></mask>
+  <pattern id="dotsP" width="9" height="9" patternUnits="userSpaceOnUse">
+    <circle cx="4.5" cy="4.5" r="0.9" fill="#fff" fill-opacity="0.3"/>
+    <animateTransform attributeName="patternTransform" type="translate" from="0 0" to="9 0" dur="2.2s" repeatCount="indefinite"/>
+  </pattern>
   <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" fill="none" stroke="#fff" stroke-opacity="0.04" stroke-width="0.8"/></pattern>
   <radialGradient id="fade" cx="50%" cy="50%" r="65%"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#000"/></radialGradient>
   <mask id="gridMask"><rect width="1000" height="380" fill="url(#fade)"/></mask>
-  <mask id="ticketMask"><rect width="358" height="326" fill="#fff"/><circle cx="0.5" cy="124" r="11" fill="#000"/><circle cx="357.5" cy="124" r="11" fill="#000"/></mask>
-  <clipPath id="ticketClip"><rect width="357" height="325" rx="24"/></clipPath>
   <clipPath id="plateClip"><rect width="1000" height="380" rx="28"/></clipPath>
   <clipPath id="btnClip"><rect x="0" y="0" width="256" height="46" rx="23"/></clipPath>
+  <clipPath id="scr"><rect x="-50" y="-106" width="100" height="212" rx="16"/></clipPath>
   <filter id="shadow" x="-10%" y="-10%" width="125%" height="125%">
     <feDropShadow dx="4" dy="7" stdDeviation="9" flood-color="#000" flood-opacity="0.75"/>
     <feDropShadow dx="-1" dy="-1" stdDeviation="4" flood-color="#fff" flood-opacity="0.03"/>
   </filter>
+  <filter id="glow" x="-300%" y="-300%" width="700%" height="700%"><feGaussianBlur stdDeviation="2" result="a"/><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="a"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
 </defs>
 
 <style>
@@ -33,40 +39,32 @@
   .h1g  { font: 900 52px 'Inter', -apple-system, 'Segoe UI', system-ui, sans-serif; letter-spacing: -2.2px; fill: url(#glint); }
   .sub  { font: 400 14px 'Inter', -apple-system, 'Segoe UI', system-ui, sans-serif; fill: #a3a3a3; }
   .btn  { font: 700 14px 'Inter', -apple-system, 'Segoe UI', system-ui, sans-serif; fill: #0a0a0a; letter-spacing: -0.1px; }
-  .lbl  { font: 600 9.5px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: 2px; fill: #737373; }
-  .val  { font: 600 13px 'Inter', -apple-system, 'Segoe UI', system-ui, sans-serif; fill: #fafafa; }
-  .big  { font: 900 30px 'Inter', -apple-system, 'Segoe UI', system-ui, sans-serif; letter-spacing: -1px; fill: #fafafa; }
-  .mono { font: 600 10px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: 1.5px; fill: #d4d4d4; }
+  .dk   { font: 600 8px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: .6px; fill: #d4d4d8; }
+  .tg   { font: 600 7.5px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: 1px; fill: #d4d4d8; }
+  .ph   { font: 700 8.5px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: 3px; fill: #a3a3a3; text-anchor: middle; }
+  .hi   { font: 700 10px 'Inter', -apple-system, 'Segoe UI', system-ui, sans-serif; fill: #0a0a0a; text-anchor: middle; }
 
   .rise  { animation: rise 1s cubic-bezier(.16,1,.3,1) both; }
-  .sweep { stroke-dasharray: 160 840; animation: sweep 9s linear infinite; }
-  .shine { animation: shine 8s ease-in-out infinite; }
   .drift { animation: drift 16s ease-in-out infinite alternate; }
-  .orbit { transform-origin: 798px 190px; animation: spin 50s linear infinite; }
-  .orbit2{ transform-origin: 798px 190px; animation: spin 80s linear infinite reverse; }
+  .orbit { transform-origin: 670px 185px; animation: spin 50s linear infinite; }
+  .orbit2{ transform-origin: 670px 185px; animation: spin 80s linear infinite reverse; }
   .pulse { transform-box: fill-box; transform-origin: center; animation: pulse 2.2s ease-in-out infinite; }
   .ping  { transform-box: fill-box; transform-origin: center; animation: ping 2.2s ease-out infinite; }
-  .bc    { animation: bc 2.6s ease-in-out infinite; }
-  .scan  { animation: scan 3.6s linear infinite; }
-  .arrow { animation: arrow 1.8s ease-in-out infinite; }
   .bshine{ animation: bshine 4.5s ease-in-out infinite; }
   .twinkle{ transform-box: fill-box; transform-origin: center; animation: twinkle 3.6s ease-in-out infinite; }
+  .gr    { transform-box: fill-box; transform-origin: bottom center; animation: gr 8s ease-in-out infinite; }
 
   @keyframes rise   { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
-  @keyframes sweep  { from { stroke-dashoffset: 1000; } to { stroke-dashoffset: 0; } }
-  @keyframes shine  { 0% { transform: translateX(0); } 35%,100% { transform: translateX(560px); } }
   @keyframes drift  { from { transform: translate(-60px, 0); } to { transform: translate(80px, 30px); } }
   @keyframes spin   { to { transform: rotate(360deg); } }
   @keyframes pulse  { 0%,100% { transform: scale(1); opacity: .95; } 50% { transform: scale(1.35); opacity: .6; } }
   @keyframes ping   { 0% { transform: scale(1); opacity: .7; } 100% { transform: scale(4); opacity: 0; } }
-  @keyframes bc     { 0%,100% { opacity: .25; } 50% { opacity: 1; } }
-  @keyframes scan   { from { transform: translateX(0); } to { transform: translateX(300px); } }
-  @keyframes arrow  { 0%,100% { transform: translateX(0); } 50% { transform: translateX(4px); } }
   @keyframes bshine { 0% { transform: translateX(-120px); } 40%,100% { transform: translateX(300px); } }
   @keyframes twinkle{ 0%,100% { transform: scale(.4); opacity: .15; } 50% { transform: scale(1); opacity: .9; } }
+  @keyframes gr     { 0%,42% { transform: scaleY(0); } 56%,90% { transform: scaleY(1); } 98%,100% { transform: scaleY(0); } }
 
   @media (prefers-reduced-motion: reduce) {
-    .rise,.sweep,.shine,.drift,.orbit,.orbit2,.pulse,.ping,.bc,.scan,.arrow,.bshine,.twinkle { animation: none; }
+    .rise,.drift,.orbit,.orbit2,.pulse,.ping,.bshine,.twinkle,.gr { animation: none; }
   }
 </style>
 
@@ -75,83 +73,313 @@
 <g clip-path="url(#plateClip)">
   <rect width="1000" height="380" fill="url(#grid)" mask="url(#gridMask)"/>
   <g class="drift"><circle cx="220" cy="150" r="300" fill="url(#orb)"/></g>
+
+  <!-- ===== WORLDWIDE GLOBE ===== -->
   <g fill="none" stroke="#fff" stroke-opacity="0.05">
-    <circle cx="798" cy="190" r="200"/><circle cx="798" cy="190" r="280"/><circle cx="798" cy="190" r="370"/>
+    <circle cx="670" cy="185" r="205"/><circle cx="670" cy="185" r="250"/><circle cx="670" cy="185" r="305"/>
   </g>
-  <g class="orbit"><circle cx="998" cy="190" r="2.6" fill="#fff" fill-opacity="0.7"/><circle cx="518" cy="190" r="1.8" fill="#fff" fill-opacity="0.4"/></g>
-  <g class="orbit2"><circle cx="1078" cy="190" r="2.2" fill="#fff" fill-opacity="0.5"/></g>
+  <g class="orbit"><circle cx="875" cy="185" r="2.6" fill="#fff" fill-opacity="0.7"/><circle cx="465" cy="185" r="1.8" fill="#fff" fill-opacity="0.4"/></g>
+  <g class="orbit2"><circle cx="920" cy="185" r="2.2" fill="#fff" fill-opacity="0.5"/></g>
+
+  <circle cx="670" cy="185" r="175" fill="url(#globeG)"/>
+  <circle cx="670" cy="185" r="175" fill="url(#dotsP)" mask="url(#sphereMask)"/>
+  <!-- latitude lines -->
+  <g fill="none" stroke="#fff" stroke-opacity="0.07">
+    <ellipse cx="670" cy="185" rx="175" ry="28"/>
+    <ellipse cx="670" cy="111" rx="158.6" ry="25.4"/><ellipse cx="670" cy="259" rx="158.6" ry="25.4"/>
+    <ellipse cx="670" cy="51" rx="112.5" ry="18"/><ellipse cx="670" cy="319" rx="112.5" ry="18"/>
+  </g>
+  <!-- spinning meridians -->
+  <g fill="none" stroke="#fff" stroke-opacity="0.1">
+    <ellipse cx="670" cy="185" ry="175" rx="175"><animate attributeName="rx" values="175;0;175" dur="10s" begin="0s" repeatCount="indefinite"/></ellipse>
+    <ellipse cx="670" cy="185" ry="175" rx="175"><animate attributeName="rx" values="175;0;175" dur="10s" begin="-2.5s" repeatCount="indefinite"/></ellipse>
+    <ellipse cx="670" cy="185" ry="175" rx="175"><animate attributeName="rx" values="175;0;175" dur="10s" begin="-5s" repeatCount="indefinite"/></ellipse>
+    <ellipse cx="670" cy="185" ry="175" rx="175"><animate attributeName="rx" values="175;0;175" dur="10s" begin="-7.5s" repeatCount="indefinite"/></ellipse>
+  </g>
+  <circle cx="670" cy="185" r="175" fill="none" stroke="#fff" stroke-opacity="0.14"/>
+  <circle cx="670" cy="185" r="181" fill="none" stroke="#fff" stroke-opacity="0.05"/>
+
+  <!-- connection arcs from home node -->
+  <g fill="none" stroke="#fff" stroke-opacity="0.4" stroke-width="1.2" stroke-dasharray="2 4">
+    <path d="M715 155Q650 85 590 115"><animate attributeName="stroke-dashoffset" from="0" to="-18" dur="1.4s" repeatCount="indefinite"/></path>
+    <path d="M715 155Q600 120 560 205"><animate attributeName="stroke-dashoffset" from="0" to="-18" dur="1.4s" repeatCount="indefinite"/></path>
+    <path d="M715 155Q745 255 620 275"><animate attributeName="stroke-dashoffset" from="0" to="-18" dur="1.4s" repeatCount="indefinite"/></path>
+  </g>
+  <!-- travelling pulses -->
+  <circle r="2.4" fill="#fff" filter="url(#glow)" opacity="0">
+    <animateMotion dur="3s" begin="0s" repeatCount="indefinite" path="M715 155Q650 85 590 115"/>
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.12;.85;1" dur="3s" begin="0s" repeatCount="indefinite"/>
+  </circle>
+  <circle r="2.4" fill="#fff" filter="url(#glow)" opacity="0">
+    <animateMotion dur="3s" begin="1s" repeatCount="indefinite" path="M715 155Q600 120 560 205"/>
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.12;.85;1" dur="3s" begin="1s" repeatCount="indefinite"/>
+  </circle>
+  <circle r="2.4" fill="#fff" filter="url(#glow)" opacity="0">
+    <animateMotion dur="3s" begin="2s" repeatCount="indefinite" path="M715 155Q745 255 620 275"/>
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.12;.85;1" dur="3s" begin="2s" repeatCount="indefinite"/>
+  </circle>
+  <!-- destination nodes + arrival pings -->
+  <g fill="#fff">
+    <circle cx="590" cy="115" r="3.2" fill-opacity=".9"/><circle cx="560" cy="205" r="3.2" fill-opacity=".9"/><circle cx="620" cy="275" r="3.2" fill-opacity=".9"/>
+  </g>
+  <g fill="none" stroke="#fff" stroke-width="1">
+    <circle cx="590" cy="115" r="3.2"><animate attributeName="r" values="3.2;12" dur="3s" begin="2.4s" repeatCount="indefinite"/><animate attributeName="opacity" values=".7;0" dur="3s" begin="2.4s" repeatCount="indefinite"/></circle>
+    <circle cx="560" cy="205" r="3.2"><animate attributeName="r" values="3.2;12" dur="3s" begin="0.4s" repeatCount="indefinite"/><animate attributeName="opacity" values=".7;0" dur="3s" begin="0.4s" repeatCount="indefinite"/></circle>
+    <circle cx="620" cy="275" r="3.2"><animate attributeName="r" values="3.2;12" dur="3s" begin="1.4s" repeatCount="indefinite"/><animate attributeName="opacity" values=".7;0" dur="3s" begin="1.4s" repeatCount="indefinite"/></circle>
+  </g>
+  <!-- home node (Pakistan) -->
+  <g transform="translate(715 155)">
+    <circle r="11" fill="none" stroke="#fff" stroke-opacity=".6" stroke-dasharray="3 4">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="8s" repeatCount="indefinite"/>
+    </circle>
+    <circle class="ping" r="4" fill="none" stroke="#fff"/>
+    <circle r="4.5" fill="#fff" filter="url(#glow)"/>
+  </g>
+  <path d="M718 151L730 129" stroke="#fff" stroke-opacity=".35"/>
+  <g transform="translate(722 112)">
+    <rect width="62" height="17" rx="8.5" fill="#121212" stroke="#333"/>
+    <circle cx="10" cy="8.5" r="2.4" fill="#fafafa"><animate attributeName="opacity" values="1;.3;1" dur="1.8s" repeatCount="indefinite"/></circle>
+    <text class="tg" x="17" y="11.3">PK · UTC+5</text>
+  </g>
+
   <g fill="#fff">
     <path class="twinkle" transform="translate(588,46)" d="M0-6Q0 0 6 0Q0 0 0 6Q0 0-6 0Q0 0 0-6Z" style="animation-delay:.4s"/>
-    <path class="twinkle" transform="translate(560,330)" d="M0-5Q0 0 5 0Q0 0 0 5Q0 0-5 0Q0 0 0-5Z" style="animation-delay:1.8s"/>
-    <path class="twinkle" transform="translate(966,360)" d="M0-4Q0 0 4 0Q0 0 0 4Q0 0-4 0Q0 0 0-4Z" style="animation-delay:2.6s"/>
+    <path class="twinkle" transform="translate(966,350)" d="M0-4Q0 0 4 0Q0 0 0 4Q0 0-4 0Q0 0 0-4Z" style="animation-delay:2.6s"/>
   </g>
 </g>
 
-<!-- LEFT: KICKER -->
+<!-- ===== LEFT: KICKER BADGE ===== -->
 <g class="rise" style="animation-delay:.1s">
-  <circle class="ping" cx="52" cy="52" r="3.5" fill="none" stroke="#fafafa"/>
-  <circle class="pulse" cx="52" cy="52" r="3.5" fill="#fafafa"/>
-  <text class="kick" x="68" y="56">OPEN TO WORK</text>
+  <rect x="44" y="38" width="168" height="26" rx="13" fill="#121212" stroke="#2a2a2a"/>
+  <circle class="ping" cx="60" cy="51" r="3.5" fill="none" stroke="#fafafa"/>
+  <circle class="pulse" cx="60" cy="51" r="3.5" fill="#fafafa"/>
+  <text class="kick" x="75" y="55">OPEN TO WORK</text>
 </g>
 
-<!-- LEFT: HEADLINE -->
+<!-- ===== LEFT: HEADLINE ===== -->
 <g class="rise" style="animation-delay:.25s"><text class="h1" x="46" y="124">Let’s build</text></g>
 <g class="rise" style="animation-delay:.38s"><text class="h1" x="46" y="178">something</text></g>
 <g class="rise" style="animation-delay:.51s"><text class="h1g" x="46" y="232">extraordinary.</text></g>
+<path d="M50 245H552" fill="none" stroke="url(#glint)" stroke-width="2" stroke-linecap="round" pathLength="100" stroke-dasharray="0 100" opacity=".55">
+  <animate attributeName="stroke-dasharray" from="0 100" to="100 100" dur="1.4s" begin="0.9s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines=".2 .8 .3 1"/>
+</path>
+<g fill="#fff">
+  <path class="twinkle" transform="translate(572,196)" d="M0-7Q0 0 7 0Q0 0 0 7Q0 0-7 0Q0 0 0-7Z" style="animation-delay:.2s"/>
+  <path class="twinkle" transform="translate(588,216)" d="M0-4Q0 0 4 0Q0 0 0 4Q0 0-4 0Q0 0 0-4Z" style="animation-delay:1.4s"/>
+</g>
 
-<!-- LEFT: SUBTITLE -->
+<!-- ===== LEFT: SUBTITLE ===== -->
 <g class="rise" style="animation-delay:.7s">
   <text class="sub" x="48" y="272">Open to worldwide full-time remote engineering</text>
   <text class="sub" x="48" y="292">roles &amp; mobile contract builds.</text>
 </g>
 
-<!-- LEFT: BUTTON (white pill) -->
+<!-- ===== PHONE: BUILD SOMETHING EXTRAORDINARY ===== -->
+<g class="rise" style="animation-delay:.5s">
+<g transform="translate(850 170) rotate(-4)" filter="url(#shadow)">
+  <rect x="-56" y="-112" width="112" height="224" rx="22" fill="#0b0b0b" stroke="#2f2f2f" stroke-width="2">
+    <animate attributeName="stroke" values="#2f2f2f;#2f2f2f;#ffffff;#2f2f2f;#2f2f2f" keyTimes="0;.7;.78;.92;1" dur="8s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="-50" y="-106" width="100" height="212" rx="16" fill="#0f0f0f"/>
+  <g clip-path="url(#scr)">
+    <!-- wireframe stage -->
+    <g fill="none" stroke="#3f3f46" stroke-width="1" stroke-dasharray="3 3">
+      <rect x="-42" y="-90" width="84" height="24" rx="8"/>
+      <rect x="-42" y="-58" width="84" height="54" rx="10"/>
+      <rect x="-42" y="8" width="40" height="36" rx="8"/>
+      <rect x="2" y="8" width="40" height="36" rx="8"/>
+      <rect x="-42" y="52" width="84" height="14" rx="7"/>
+      <rect x="-42" y="70" width="84" height="14" rx="7"/>
+      <rect x="-42" y="88" width="84" height="16" rx="8"/>
+    </g>
+
+    <!-- header -->
+    <g>
+      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;.12;.18;.9;1" dur="8s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="0 6;0 6;0 0;0 0;0 6" keyTimes="0;.12;.18;.9;1" dur="8s" repeatCount="indefinite"/>
+      <circle cx="-34" cy="-78" r="8" fill="#d4d4d8"/>
+      <rect x="-20" y="-84" width="52" height="6" rx="3" fill="#e5e5e5"/>
+      <rect x="-20" y="-74" width="34" height="4" rx="2" fill="#52525b"/>
+    </g>
+    <!-- hero card + sparkline -->
+    <g>
+      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;.2;.26;.9;1" dur="8s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="0 6;0 6;0 0;0 0;0 6" keyTimes="0;.2;.26;.9;1" dur="8s" repeatCount="indefinite"/>
+      <rect x="-42" y="-58" width="84" height="54" rx="10" fill="url(#cardBg)" stroke="#333"/>
+      <rect x="-32" y="-50" width="22" height="5" rx="2.5" fill="#e5e5e5"/>
+      <rect x="-32" y="-42" width="34" height="3" rx="1.5" fill="#3f3f46"/>
+      <path d="M-32 -14L-18 -24L-6 -17L8 -33L20 -27L34 -44" fill="none" stroke="#fafafa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" pathLength="100" stroke-dasharray="0 100">
+        <animate attributeName="stroke-dasharray" values="0 100;0 100;100 100;100 100;0 100" keyTimes="0;.24;.36;.9;1" dur="8s" repeatCount="indefinite"/>
+      </path>
+      <circle cx="34" cy="-44" r="3" fill="#fff" filter="url(#glow)" opacity="0">
+        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;.34;.37;.9;1" dur="8s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+    <!-- tile 1: ring -->
+    <g>
+      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;.4;.46;.9;1" dur="8s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="0 6;0 6;0 0;0 0;0 6" keyTimes="0;.4;.46;.9;1" dur="8s" repeatCount="indefinite"/>
+      <rect x="-42" y="8" width="40" height="36" rx="8" fill="#151515" stroke="#2a2a2a"/>
+      <circle cx="-22" cy="26" r="10" fill="none" stroke="#27272a" stroke-width="3"/>
+      <circle cx="-22" cy="26" r="10" fill="none" stroke="#fafafa" stroke-width="3" stroke-linecap="round" pathLength="100" stroke-dasharray="0 100" transform="rotate(-90 -22 26)">
+        <animate attributeName="stroke-dasharray" values="0 100;0 100;72 100;72 100;0 100" keyTimes="0;.42;.54;.9;1" dur="8s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+    <!-- tile 2: bars -->
+    <g>
+      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;.42;.48;.9;1" dur="8s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="0 6;0 6;0 0;0 0;0 6" keyTimes="0;.42;.48;.9;1" dur="8s" repeatCount="indefinite"/>
+      <rect x="2" y="8" width="40" height="36" rx="8" fill="#151515" stroke="#2a2a2a"/>
+      <rect class="gr" x="10" y="30" width="6" height="8" rx="2" fill="#d4d4d8"/>
+      <rect class="gr" x="20" y="24" width="6" height="14" rx="2" fill="#a1a1aa"/>
+      <rect class="gr" x="30" y="18" width="6" height="20" rx="2" fill="#fafafa"/>
+    </g>
+    <!-- list rows -->
+    <g>
+      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;.53;.59;.9;1" dur="8s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="0 6;0 6;0 0;0 0;0 6" keyTimes="0;.53;.59;.9;1" dur="8s" repeatCount="indefinite"/>
+      <rect x="-42" y="52" width="84" height="14" rx="7" fill="#151515" stroke="#2a2a2a"/>
+      <circle cx="-33" cy="59" r="4" fill="#a1a1aa"/>
+      <rect x="-24" y="57" width="38" height="4" rx="2" fill="#71717a"/>
+      <circle cx="34" cy="59" r="3" fill="#fafafa"/>
+    </g>
+    <g>
+      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;.59;.65;.9;1" dur="8s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="0 6;0 6;0 0;0 0;0 6" keyTimes="0;.59;.65;.9;1" dur="8s" repeatCount="indefinite"/>
+      <rect x="-42" y="70" width="84" height="14" rx="7" fill="#151515" stroke="#2a2a2a"/>
+      <circle cx="-33" cy="77" r="4" fill="#71717a"/>
+      <rect x="-24" y="75" width="28" height="4" rx="2" fill="#52525b"/>
+      <circle cx="34" cy="77" r="3" fill="#52525b"/>
+    </g>
+    <!-- cta button -->
+    <g>
+      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;.63;.69;.9;1" dur="8s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="0 6;0 6;0 0;0 0;0 6" keyTimes="0;.63;.69;.9;1" dur="8s" repeatCount="indefinite"/>
+      <rect x="-42" y="88" width="84" height="16" rx="8" fill="#fafafa"/>
+      <rect x="-30" y="94" width="26" height="4" rx="2" fill="#0a0a0a" opacity=".7"/>
+      <path d="M28 96H34M31.5 93L34.5 96L31.5 99" fill="none" stroke="#0a0a0a" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <!-- build beam -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0 -110;0 -110;0 110;0 110" keyTimes="0;.05;.7;1" dur="8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;.05;.68;.72;1" dur="8s" repeatCount="indefinite"/>
+      <rect x="-50" y="-26" width="100" height="26" fill="url(#trailG)"/>
+      <rect x="-50" y="-1" width="100" height="2" fill="#fff"/>
+    </g>
+    <!-- extraordinary shine -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="-130 0;-130 0;130 0;130 0" keyTimes="0;.74;.88;1" dur="8s" repeatCount="indefinite"/>
+      <rect x="-15" y="-120" width="30" height="240" fill="url(#shine2)" transform="skewX(-20)"/>
+    </g>
+  </g>
+  <rect x="-14" y="-101" width="28" height="8" rx="4" fill="#000"/>
+
+  <!-- sparkles when finished -->
+  <g transform="translate(54 -100)">
+    <g>
+      <animateTransform attributeName="transform" type="scale" values="0;0;1;0;0" keyTimes="0;.72;.79;.92;1" dur="8s" repeatCount="indefinite"/>
+      <path transform="scale(2.6)" fill="#fff" d="M0-6Q0 0 6 0Q0 0 0 6Q0 0-6 0Q0 0 0-6Z"/>
+    </g>
+  </g>
+  <g transform="translate(-55 62)">
+    <g>
+      <animateTransform attributeName="transform" type="scale" values="0;0;1;0;0" keyTimes="0;.75;.82;.94;1" dur="8s" repeatCount="indefinite"/>
+      <path transform="scale(1.7)" fill="#fff" d="M0-6Q0 0 6 0Q0 0 0 6Q0 0-6 0Q0 0 0-6Z"/>
+    </g>
+  </g>
+</g>
+</g>
+
+<!-- phase label -->
+<g>
+  <text class="ph" x="852" y="299">SKETCH<animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;.08;.12;.96;1" dur="8s" repeatCount="indefinite"/></text>
+  <text class="ph" x="852" y="299" opacity="0">BUILD<animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;.1;.14;.66;.7;1" dur="8s" repeatCount="indefinite"/></text>
+  <text class="ph" x="852" y="299" opacity="0">SHIP<animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;.68;.72;.92;.96;1" dur="8s" repeatCount="indefinite"/></text>
+</g>
+
+<!-- ===== BOTTOM DOCK ===== -->
 <g class="rise" style="animation-delay:.85s">
+  <rect x="40" y="308" width="920" height="54" rx="27" fill="#0d0d0d" fill-opacity=".92" stroke="#262626"/>
+  <rect x="100" y="308" width="800" height="1" fill="url(#hl)"/>
+
+  <!-- CTA button -->
   <g transform="translate(48,312)" filter="url(#shadow)">
     <rect width="256" height="46" rx="23" fill="#fafafa"/>
     <g clip-path="url(#btnClip)"><g class="bshine"><rect x="0" y="-6" width="60" height="58" fill="url(#btnShine)" transform="skewX(-20)"/></g></g>
     <text class="btn" x="26" y="28.5">Start a conversation</text>
-    <circle cx="228" cy="23" r="15" fill="#0a0a0a"/>
-    <g class="arrow"><path d="M221 23H234M229 18L234 23L229 28" fill="none" stroke="#fafafa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <g transform="translate(228 23)">
+      <circle r="15" fill="none" stroke="#0a0a0a" stroke-width="1.2" opacity=".5">
+        <animate attributeName="r" values="15;24" dur="2.2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values=".5;0" dur="2.2s" repeatCount="indefinite"/>
+      </circle>
+      <circle r="15" fill="#0a0a0a"/>
+      <path d="M-7.5 -2.5A4 4 0 0 1 -3.5 -6.5H3.5A4 4 0 0 1 7.5 -2.5V1.5A4 4 0 0 1 3.5 5.5H-1L-5 8.5V5.5A4 4 0 0 1 -7.5 1.5Z" fill="none" stroke="#fafafa" stroke-width="1.4" stroke-linejoin="round"/>
+      <circle cx="-3.5" cy="-0.5" r="1.1" fill="#fafafa"><animate attributeName="cy" values="-0.5;-2.3;-0.5" dur=".9s" begin="0s" repeatCount="indefinite"/></circle>
+      <circle cx="0" cy="-0.5" r="1.1" fill="#fafafa"><animate attributeName="cy" values="-0.5;-2.3;-0.5" dur=".9s" begin=".15s" repeatCount="indefinite"/></circle>
+      <circle cx="3.5" cy="-0.5" r="1.1" fill="#fafafa"><animate attributeName="cy" values="-0.5;-2.3;-0.5" dur=".9s" begin=".3s" repeatCount="indefinite"/></circle>
+    </g>
   </g>
+
+  <!-- status strip -->
+  <g stroke="#262626"><line x1="483" y1="322" x2="483" y2="348"/><line x1="633" y1="322" x2="633" y2="348"/><line x1="805" y1="322" x2="805" y2="348"/></g>
+
+  <g transform="translate(346 335)" fill="none" stroke="#d4d4d8" stroke-width="1.2">
+    <circle r="8"/>
+    <ellipse ry="8"><animate attributeName="rx" values="8;0;8" dur="3s" repeatCount="indefinite"/></ellipse>
+    <path d="M-8 0H8"/><path d="M-6 -4.5H6M-6 4.5H6" stroke-opacity=".5"/>
+  </g>
+  <text class="dk" x="362" y="338">REMOTE · WORLDWIDE</text>
+
+  <g transform="translate(507 335)" fill="none" stroke="#d4d4d8" stroke-width="1.2">
+    <path d="M0 8C-5 2.5-6.5 .5-6.5-2.5A6.5 6.5 0 0 1 6.5-2.5C6.5 .5 5 2.5 0 8Z"/>
+    <circle cy="-2.5" r="2" fill="#d4d4d8" stroke="none"/>
+    <ellipse cy="10" rx="3" ry="1.2" stroke-opacity=".6">
+      <animate attributeName="rx" values="3;9" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values=".8;0" dur="2s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+  <text class="dk" x="523" y="338">PAKISTAN · UTC+5</text>
+
+  <g transform="translate(657 335)" fill="none" stroke="#d4d4d8" stroke-width="1.2" stroke-linejoin="round">
+    <animateTransform attributeName="transform" type="translate" values="657 335;657 333.8;657 335" dur="2.4s" repeatCount="indefinite"/>
+    <rect x="-8" y="-4.5" width="16" height="11" rx="2.5"/>
+    <path d="M-3 -4.5V-6.5H3V-4.5M-8 .5H8"/>
+    <rect x="-1.5" y="-1" width="3" height="3" fill="#d4d4d8" stroke="none"/>
+  </g>
+  <text class="dk" x="673" y="338">FULL-TIME · CONTRACT</text>
+
+  <g transform="translate(829 335)" fill="none" stroke="#d4d4d8" stroke-width="1.2" stroke-linecap="round">
+    <circle r="8"/>
+    <g><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="4s" repeatCount="indefinite"/><path d="M0 0V-6"/></g>
+    <g><animateTransform attributeName="transform" type="rotate" from="90" to="450" dur="48s" repeatCount="indefinite"/><path d="M0 0V-4" stroke-width="1.5"/></g>
+  </g>
+  <text class="dk" x="845" y="338">REPLY &lt; 24 HRS</text>
 </g>
 
-<!-- RIGHT: BOARDING-PASS CARD -->
-<g transform="translate(620,28)">
-  <g class="rise" style="animation-delay:.4s" filter="url(#shadow)">
-    <g mask="url(#ticketMask)">
-      <rect x="0.5" y="0.5" width="356" height="324" rx="24" fill="url(#cardBg)" stroke="#2a2a2a"/>
-      <rect x="0.5" y="0.5" width="356" height="324" rx="24" fill="url(#glowW)"/>
-      <rect x="30" y="0.5" width="297" height="1" fill="url(#hl)"/>
-      <g clip-path="url(#ticketClip)"><g class="shine"><rect x="-140" y="-20" width="90" height="370" fill="url(#shineG)" transform="skewX(-20)"/></g></g>
+<!-- ===== CHAT BUBBLES POPPING FROM THE BUTTON ===== -->
+<g transform="translate(286 306)">
+  <!-- typing -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;.04;.30;.34;1" dur="7s" repeatCount="indefinite"/>
+    <g>
+      <animateTransform attributeName="transform" type="scale" values=".5;1;1;.5;.5" keyTimes="0;.04;.30;.34;1" dur="7s" repeatCount="indefinite"/>
+      <polygon points="12,-8 3,1 22,-8" fill="#171717" stroke="#333"/>
+      <rect x="2" y="-28" width="48" height="22" rx="11" fill="#171717" stroke="#333"/>
+      <circle cx="16" cy="-17" r="2.2" fill="#d4d4d8"><animate attributeName="cy" values="-17;-20;-17" dur=".9s" repeatCount="indefinite"/></circle>
+      <circle cx="26" cy="-17" r="2.2" fill="#d4d4d8"><animate attributeName="cy" values="-17;-20;-17" dur=".9s" begin=".15s" repeatCount="indefinite"/></circle>
+      <circle cx="36" cy="-17" r="2.2" fill="#d4d4d8"><animate attributeName="cy" values="-17;-20;-17" dur=".9s" begin=".3s" repeatCount="indefinite"/></circle>
     </g>
-    <path d="M0.5 113 A11 11 0 0 1 0.5 135" fill="none" stroke="#2a2a2a"/>
-    <path d="M357.5 113 A11 11 0 0 0 357.5 135" fill="none" stroke="#2a2a2a"/>
-
-    <!-- header -->
-    <text class="lbl" x="26" y="38">AVAILABILITY</text>
-    <circle class="ping" cx="282" cy="35" r="3.5" fill="none" stroke="#fafafa"/>
-    <circle class="pulse" cx="282" cy="35" r="3.5" fill="#fafafa"/>
-    <text class="mono" x="332" y="39" text-anchor="end">OPEN</text>
-    <text class="big" x="26" y="86">Open to work</text>
-    <text class="lbl" x="26" y="108" style="fill:#a3a3a3">REMOTE · WORLDWIDE</text>
-
-    <!-- perforation -->
-    <line x1="22" y1="124" x2="336" y2="124" stroke="#fff" stroke-opacity="0.2" stroke-dasharray="4 5"/>
-
-    <!-- details grid -->
-    <text class="lbl" x="26" y="162">ROLE</text><text class="val" x="26" y="184">Full-time · Remote</text>
-    <text class="lbl" x="196" y="162">ALSO</text><text class="val" x="196" y="184">Freelance · Mobile</text>
-    <text class="lbl" x="26" y="220">BASE</text><text class="val" x="26" y="242">Pakistan · UTC+5</text>
-    <text class="lbl" x="196" y="220">REPLY</text><text class="val" x="196" y="242">Within 24 hours</text>
-
-    <!-- barcode -->
-    <line x1="22" y1="258" x2="336" y2="258" stroke="#fff" stroke-opacity="0.08"/>
-    <rect class="bc" x="24.0" y="274.0" width="2.4" height="12.0" rx="1.2" fill="#fafafa" style="animation-delay:-0.00s"/><rect class="bc" x="30.7" y="274.0" width="2.4" height="12.0" rx="1.2" fill="#fafafa" style="animation-delay:-0.07s"/><rect class="bc" x="37.4" y="265.2" width="2.4" height="29.6" rx="1.2" fill="#fafafa" style="animation-delay:-0.14s"/><rect class="bc" x="44.1" y="274.0" width="2.4" height="12.0" rx="1.2" fill="#fafafa" style="animation-delay:-0.21s"/><rect class="bc" x="50.8" y="274.0" width="2.4" height="12.0" rx="1.2" fill="#fafafa" style="animation-delay:-0.28s"/><rect class="bc" x="57.5" y="265.2" width="2.4" height="29.6" rx="1.2" fill="#fafafa" style="animation-delay:-0.35s"/><rect class="bc" x="64.2" y="274.0" width="2.4" height="12.0" rx="1.2" fill="#fafafa" style="animation-delay:-0.42s"/><rect class="bc" x="70.9" y="274.0" width="2.4" height="12.0" rx="1.2" fill="#fafafa" style="animation-delay:-0.49s"/><rect class="bc" x="77.6" y="265.2" width="2.4" height="29.6" rx="1.2" fill="#fafafa" style="animation-delay:-0.56s"/><rect class="bc" x="84.3" y="274.0" width="2.4" height="12.0" rx="1.2" fill="#fafafa" style="animation-delay:-0.63s"/><rect class="bc" x="91.0" y="274.0" width="2.4" height="12.0" rx="1.2" fill="#fafafa" style="animation-delay:-0.70s"/><rect class="bc" x="97.7" y="265.2" width="2.4" height="29.6" rx="1.2" fill="#fafafa" style="animation-delay:-0.77s"/><rect class="bc" x="104.4" y="274.0" width="2.4" height="12.0" rx="1.2" fill="#fafafa" style="animation-delay:-0.84s"/><rect class="bc" x="111.1" y="274.0" width="2.4" height="12.0" rx="1.2" fill="#fafafa" style="animation-delay:-0.91s"/><rect class="bc" x="117.8" y="265.2" width="2.4" height="29.6" rx="1.2" fill="#fafafa" style="animation-delay:-0.98s"/><rect class="bc" x="124.5" y="274.0" width="2.4" height="12.0" rx="1.2" fill="#fafafa" style="animation-delay:-1.05s"/><rect class="bc" x="131.2" y="274.0" width="2.4" height="12.0" rx="1.2" fill="#fafafa" style="animation-delay:-1.12s"/><rect class="bc" x="137.9" y="265.2" width="2.4" height="29.6" rx="1.2" fill="#fafafa" style="animation-delay:-1.19s"/><rect class="bc" x="144.6" y="274.0" width="2.4" height="12.0" rx="1.2" fill="#fafafa" style="animation-delay:-1.26s"/><rect class="bc" x="151.3" y="274.0" width="2.4" height="12.0" rx="1.2" fill="#fafafa" style="animation-delay:-1.33s"/><rect class="bc" x="158.0" y="265.2" width="2.4" height="29.6" rx="1.2" fill="#fafafa" style="animation-delay:-1.40s"/><rect class="bc" x="164.7" y="274.0" width="2.4" height="12.0" rx="1.2" fill="#fafafa" style="animation-delay:-1.47s"/><rect class="bc" x="171.4" y="274.0" width="2.4" height="12.0" rx="1.2" fill="#fafafa" style="animation-delay:-1.54s"/><rect class="bc" x="178.1" y="265.2" width="2.4" height="29.6" rx="1.2" fill="#fafafa" style="animation-delay:-1.61s"/><rect class="bc" x="184.8" y="274.0" width="2.4" height="12.0" rx="1.2" fill="#fafafa" style="animation-delay:-1.68s"/><rect class="bc" x="191.5" y="274.0" width="2.4" height="12.0" rx="1.2" fill="#fafafa" style="animation-delay:-1.75s"/><rect class="bc" x="198.2" y="265.2" width="2.4" height="29.6" rx="1.2" fill="#fafafa" style="animation-delay:-1.82s"/><rect class="bc" x="204.9" y="274.0" width="2.4" height="12.0" rx="1.2" fill="#fafafa" style="animation-delay:-1.89s"/><rect class="bc" x="211.6" y="274.0" width="2.4" height="12.0" rx="1.2" fill="#fafafa" style="animation-delay:-1.96s"/><rect class="bc" x="218.3" y="265.2" width="2.4" height="29.6" rx="1.2" fill="#fafafa" style="animation-delay:-2.03s"/><rect class="bc" x="225.0" y="274.0" width="2.4" height="12.0" rx="1.2" fill="#fafafa" style="animation-delay:-2.10s"/><rect class="bc" x="231.7" y="274.0" width="2.4" height="12.0" rx="1.2" fill="#fafafa" style="animation-delay:-2.17s"/><rect class="bc" x="238.4" y="265.2" width="2.4" height="29.6" rx="1.2" fill="#fafafa" style="animation-delay:-2.24s"/><rect class="bc" x="245.1" y="274.0" width="2.4" height="12.0" rx="1.2" fill="#fafafa" style="animation-delay:-2.31s"/><rect class="bc" x="251.8" y="274.0" width="2.4" height="12.0" rx="1.2" fill="#fafafa" style="animation-delay:-2.38s"/><rect class="bc" x="258.5" y="265.2" width="2.4" height="29.6" rx="1.2" fill="#fafafa" style="animation-delay:-2.45s"/><rect class="bc" x="265.2" y="274.0" width="2.4" height="12.0" rx="1.2" fill="#fafafa" style="animation-delay:-2.52s"/><rect class="bc" x="271.9" y="274.0" width="2.4" height="12.0" rx="1.2" fill="#fafafa" style="animation-delay:-2.59s"/><rect class="bc" x="278.6" y="265.2" width="2.4" height="29.6" rx="1.2" fill="#fafafa" style="animation-delay:-2.66s"/><rect class="bc" x="285.3" y="274.0" width="2.4" height="12.0" rx="1.2" fill="#fafafa" style="animation-delay:-2.73s"/><rect class="bc" x="292.0" y="274.0" width="2.4" height="12.0" rx="1.2" fill="#fafafa" style="animation-delay:-2.80s"/><rect class="bc" x="298.7" y="265.2" width="2.4" height="29.6" rx="1.2" fill="#fafafa" style="animation-delay:-2.87s"/><rect class="bc" x="305.4" y="274.0" width="2.4" height="12.0" rx="1.2" fill="#fafafa" style="animation-delay:-2.94s"/><rect class="bc" x="312.1" y="274.0" width="2.4" height="12.0" rx="1.2" fill="#fafafa" style="animation-delay:-3.01s"/><rect class="bc" x="318.8" y="265.2" width="2.4" height="29.6" rx="1.2" fill="#fafafa" style="animation-delay:-3.08s"/><rect class="bc" x="325.5" y="274.0" width="2.4" height="12.0" rx="1.2" fill="#fafafa" style="animation-delay:-3.15s"/>
-    <g class="scan"><rect x="24" y="260" width="24" height="40" fill="url(#scanG)" fill-opacity="0.22"/><rect x="47" y="260" width="1.5" height="40" fill="#fff"/></g>
-    <text class="lbl" x="26" y="316" style="font-size:8.5px">PKT / UTC+5 · REPLIES WITHIN 24 HOURS</text>
-
-    <rect class="sweep" x="0.5" y="0.5" width="356" height="324" rx="24" fill="none" stroke="url(#borderSweep)" stroke-opacity="0.85" stroke-width="1.3" pathLength="1000" stroke-linecap="round"/>
+  </g>
+  <!-- sent -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;.36;.40;.80;.86;1" dur="7s" repeatCount="indefinite"/>
+    <g>
+      <animateTransform attributeName="transform" type="scale" values=".5;.5;1;1;.5;.5" keyTimes="0;.36;.40;.80;.86;1" dur="7s" repeatCount="indefinite"/>
+      <polygon points="12,-8 3,1 22,-8" fill="#fafafa"/>
+      <rect x="2" y="-28" width="64" height="22" rx="11" fill="#fafafa"/>
+      <text class="hi" x="34" y="-13">Hello!</text>
+    </g>
   </g>
 </g>
 

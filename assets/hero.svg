@@ -231,7 +231,7 @@
       <animate attributeName="r" values="4;13" dur="2s" repeatCount="indefinite"/>
       <animate attributeName="stroke-opacity" values="0.8;0" dur="2s" repeatCount="indefinite"/>
     </circle>
-    <text x="92" y="68" font-family="'JetBrains Mono','SFMono-Regular',Consolas,monospace" font-size="10.5" font-weight="600" letter-spacing="1.4" fill="#fafafa">AVAILABLE FOR HIRE · REMOTE</text>
+    <text x="92" y="68" font-family="'JetBrains Mono','SFMono-Regular',Consolas,monospace" font-size="10.5" font-weight="600" letter-spacing="1.4" fill="#fafafa">AVAILABLE FOR WORK · REMOTE</text>
   </g>
 
   <!-- Greeting -->
@@ -270,9 +270,9 @@
         <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0;0.02;0.23;0.25;1" dur="14s" begin="1.8s" repeatCount="indefinite"/></text>
       <text x="90" y="295" opacity="0">&gt; CivicCoach · Zemen Calendar · ZenPeace · Health Tracker
         <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.25;0.27;0.48;0.5;1" dur="14s" begin="1.8s" repeatCount="indefinite"/></text>
-      <text x="90" y="295" opacity="0">&gt; Tactile Neumorphism · Silky 120fps UI · Zero-Jank
+      <text x="90" y="295" opacity="0">&gt; Modern UI Trends · Silky 120fps UI · Zero-Jank
         <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.5;0.52;0.73;0.75;1" dur="14s" begin="1.8s" repeatCount="indefinite"/></text>
-      <text x="90" y="295" opacity="0">&gt; Supabase · Firebase · Drift ORM · Offline-first
+      <text x="90" y="295" opacity="0">&gt; Supabase · Firebase · Drift ORM · Online &amp; Offline
         <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.75;0.77;0.98;1;1" dur="14s" begin="1.8s" repeatCount="indefinite"/></text>
     </g>
     <!-- Blinking caret -->
