@@ -7,6 +7,7 @@
 <a href="https://swe-rabia-aziz.vercel.app/"><img src="https://img.shields.io/badge/PORTFOLIO-FAFAFA?style=for-the-badge&logo=vercel&logoColor=0A0A0A" alt="Portfolio"/></a>
 <a href="https://github.com/swe-rabiaaziz?tab=repositories"><img src="https://img.shields.io/badge/VIEW_REPOSITORIES-FAFAFA?style=for-the-badge&logo=github&logoColor=0A0A0A" alt="Repositories"/></a>
 <a href="https://www.linkedin.com/in/swe-rabiaaziz/"><img src="https://img.shields.io/badge/LINKEDIN-171717?style=for-the-badge&logo=linkedin&logoColor=FAFAFA" alt="LinkedIn"/></a>
+<a href="https://stackoverflow.com/users/33322250/rabia-aziz"><img src="https://img.shields.io/badge/STACK_OVERFLOW-171717?style=for-the-badge&logo=stackoverflow&logoColor=F58025" alt="Stack Overflow"/></a>
 <a href="https://wa.me/923275676026"><img src="https://img.shields.io/badge/WHATSAPP-171717?style=for-the-badge&logo=whatsapp&logoColor=FAFAFA" alt="WhatsApp"/></a>
 <a href="https://www.tiktok.com/@swe.rabiaaziz"><img src="https://img.shields.io/badge/TIKTOK_·_5.4K-171717?style=for-the-badge&logo=tiktok&logoColor=FAFAFA" alt="TikTok"/></a>
 <a href="mailto:swe.rabiaaziz@gmail.com"><img src="https://img.shields.io/badge/EMAIL-171717?style=for-the-badge&logo=gmail&logoColor=FAFAFA" alt="Email"/></a>
@@ -373,6 +374,8 @@ flowchart LR
 <a href="mailto:swe.rabiaaziz@gmail.com"><img src="https://img.shields.io/badge/swe.rabiaaziz@gmail.com-171717?style=for-the-badge&logo=gmail&logoColor=FAFAFA" alt="Email me"/></a>
 &nbsp;
 <a href="https://swe-rabia-aziz.vercel.app/"><img src="https://img.shields.io/badge/VIEW_PORTFOLIO-171717?style=for-the-badge&logo=vercel&logoColor=FAFAFA" alt="Portfolio"/></a>
+&nbsp;
+<a href="https://stackoverflow.com/users/33322250/rabia-aziz"><img src="https://img.shields.io/badge/STACK_OVERFLOW-171717?style=for-the-badge&logo=stackoverflow&logoColor=F58025" alt="Stack Overflow"/></a>
 
 <br/><br/>
 
